@@ -1,0 +1,324 @@
+{
+  "scope": "offline_evaluation_only",
+  "robustness": {
+    "seeds": [
+      20260821,
+      20260822,
+      20260823,
+      20260824,
+      20260825
+    ],
+    "seed_count": 5,
+    "settlement_records": 375,
+    "bank_entries": 435,
+    "dubious_entries": 55,
+    "bank_match_precision": "100.0%",
+    "bank_recall_on_resolvable": "100.0%",
+    "component_closure_precision": "100.0%",
+    "false_auto_closures": 0,
+    "risk_precision": "100.0%",
+    "risk_recall": "100.0%",
+    "risk_specificity": "100.0%",
+    "risk_exact_class_accuracy": "100.0%",
+    "risk_false_positives": 0,
+    "risk_false_negatives": 0,
+    "by_direction": {
+      "credit": {
+        "records": 383,
+        "dubious_records": 38,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0
+      },
+      "debit": {
+        "records": 52,
+        "dubious_records": 17,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0
+      }
+    },
+    "safety_gate_passed": true,
+    "duration_ms": 17393,
+    "per_seed": [
+      {
+        "seed": 20260821,
+        "settlement_records": 75,
+        "bank_entries": 87,
+        "bank_match_precision": "100.0%",
+        "bank_recall": "100.0%",
+        "false_auto_closures": 0,
+        "risk_precision": "100.0%",
+        "risk_recall": "100.0%",
+        "risk_false_positives": 0,
+        "risk_false_negatives": 0,
+        "duration_ms": 3582
+      },
+      {
+        "seed": 20260822,
+        "settlement_records": 75,
+        "bank_entries": 87,
+        "bank_match_precision": "100.0%",
+        "bank_recall": "100.0%",
+        "false_auto_closures": 0,
+        "risk_precision": "100.0%",
+        "risk_recall": "100.0%",
+        "risk_false_positives": 0,
+        "risk_false_negatives": 0,
+        "duration_ms": 3478
+      },
+      {
+        "seed": 20260823,
+        "settlement_records": 75,
+        "bank_entries": 87,
+        "bank_match_precision": "100.0%",
+        "bank_recall": "100.0%",
+        "false_auto_closures": 0,
+        "risk_precision": "100.0%",
+        "risk_recall": "100.0%",
+        "risk_false_positives": 0,
+        "risk_false_negatives": 0,
+        "duration_ms": 3304
+      },
+      {
+        "seed": 20260824,
+        "settlement_records": 75,
+        "bank_entries": 87,
+        "bank_match_precision": "100.0%",
+        "bank_recall": "100.0%",
+        "false_auto_closures": 0,
+        "risk_precision": "100.0%",
+        "risk_recall": "100.0%",
+        "risk_false_positives": 0,
+        "risk_false_negatives": 0,
+        "duration_ms": 3792
+      },
+      {
+        "seed": 20260825,
+        "settlement_records": 75,
+        "bank_entries": 87,
+        "bank_match_precision": "100.0%",
+        "bank_recall": "100.0%",
+        "false_auto_closures": 0,
+        "risk_precision": "100.0%",
+        "risk_recall": "100.0%",
+        "risk_false_positives": 0,
+        "risk_false_negatives": 0,
+        "duration_ms": 3194
+      }
+    ]
+  },
+  "known_miss_replay": {
+    "suite": "known_miss_control_replay",
+    "seed_count": 5,
+    "bank_entries": 440,
+    "mutations": 20,
+    "true_positives": 64,
+    "true_negatives": 376,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": "100.0%",
+    "precision_95_ci": [
+      "94.3%",
+      "100.0%"
+    ],
+    "recall": "100.0%",
+    "recall_95_ci": [
+      "94.3%",
+      "100.0%"
+    ],
+    "specificity": "100.0%",
+    "false_negative_exposure_inr": "0.00",
+    "false_positive_review_value_inr": "0.00",
+    "missed_classes": {},
+    "false_positive_classes": {},
+    "baseline_without_graph": {
+      "true_positives": 54,
+      "true_negatives": 376,
+      "false_positives": 0,
+      "false_negatives": 10,
+      "precision": "100.0%",
+      "recall": "84.4%"
+    },
+    "graph_intelligence_delta": {
+      "additional_true_positives": 10,
+      "false_negatives_removed": 10,
+      "false_positives_added": 0,
+      "recall_change": "84.4% -> 100.0%"
+    },
+    "by_mutation_class": {
+      "amount_mismatch": {
+        "records": 10,
+        "baseline_detected": 10,
+        "graph_detected": 10,
+        "baseline_recall": "100.0%",
+        "graph_recall": "100.0%"
+      },
+      "balance_rollforward_mismatch": {
+        "records": 5,
+        "baseline_detected": 5,
+        "graph_detected": 5,
+        "baseline_recall": "100.0%",
+        "graph_recall": "100.0%"
+      },
+      "collusive_duplicate": {
+        "records": 5,
+        "baseline_detected": 0,
+        "graph_detected": 5,
+        "baseline_recall": "0.0%",
+        "graph_recall": "100.0%"
+      },
+      "counterparty_substitution": {
+        "records": 5,
+        "baseline_detected": 0,
+        "graph_detected": 5,
+        "baseline_recall": "0.0%",
+        "graph_recall": "100.0%"
+      },
+      "duplicate_reference": {
+        "records": 10,
+        "baseline_detected": 10,
+        "graph_detected": 10,
+        "baseline_recall": "100.0%",
+        "graph_recall": "100.0%"
+      },
+      "unattributed_settlement_component": {
+        "records": 19,
+        "baseline_detected": 19,
+        "graph_detected": 19,
+        "baseline_recall": "100.0%",
+        "graph_recall": "100.0%"
+      },
+      "unsupported_transaction": {
+        "records": 10,
+        "baseline_detected": 10,
+        "graph_detected": 10,
+        "baseline_recall": "100.0%",
+        "graph_recall": "100.0%"
+      }
+    },
+    "known_control_gap": "GraphShield closes the two declared identity/motif gaps in this synthetic replay. Its features were designed after analysis of these misses, so this is regression evidence only\u2014not validation on unseen fraud families.",
+    "duration_ms": 15988,
+    "per_seed": [
+      {
+        "seed": 20260831,
+        "bank_entries": 88,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0,
+        "baseline_recall": "85.7%",
+        "baseline_false_negatives": 2
+      },
+      {
+        "seed": 20260832,
+        "bank_entries": 88,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0,
+        "baseline_recall": "84.6%",
+        "baseline_false_negatives": 2
+      },
+      {
+        "seed": 20260833,
+        "bank_entries": 88,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0,
+        "baseline_recall": "81.8%",
+        "baseline_false_negatives": 2
+      },
+      {
+        "seed": 20260834,
+        "bank_entries": 88,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0,
+        "baseline_recall": "83.3%",
+        "baseline_false_negatives": 2
+      },
+      {
+        "seed": 20260835,
+        "bank_entries": 88,
+        "precision": "100.0%",
+        "recall": "100.0%",
+        "false_positives": 0,
+        "false_negatives": 0,
+        "baseline_recall": "85.7%",
+        "baseline_false_negatives": 2
+      }
+    ]
+  },
+  "post_freeze_fraud_holdout": {
+    "suite": "post_freeze_synthetic_fraud_holdout",
+    "partition_status": "never used to modify the frozen detector",
+    "detector_version": "graphshield-v1-before-fresh-holdout",
+    "detector_sha256": "59526f93d4ab45e37f3c61f44d8f239945f8ce4413e8814dffbcd4ab95bedbe1",
+    "seed_count": 5,
+    "holdout_records": 50,
+    "holdout_positive_records": 35,
+    "holdout_negative_records": 15,
+    "true_positives": 0,
+    "true_negatives": 15,
+    "false_positives": 0,
+    "false_negatives": 35,
+    "precision": "n/a",
+    "recall": "0.0%",
+    "recall_95_ci": [
+      "0.0%",
+      "9.9%"
+    ],
+    "specificity": "100.0%",
+    "baseline_without_graph": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 35,
+      "true_negatives": 15
+    },
+    "missed_classes": {
+      "approver_velocity_burst": 15,
+      "structured_split_payment": 10,
+      "coordinated_vendor_master_takeover": 5,
+      "out_of_hours_approval": 5
+    },
+    "by_mutation_class": {
+      "approver_velocity_burst": {
+        "records": 15,
+        "dubious_records": 15,
+        "detected": 0,
+        "recall": "0.0%"
+      },
+      "benign_uncommon_operating_path": {
+        "records": 15,
+        "dubious_records": 0,
+        "detected": 0,
+        "recall": "n/a"
+      },
+      "coordinated_vendor_master_takeover": {
+        "records": 5,
+        "dubious_records": 5,
+        "detected": 0,
+        "recall": "0.0%"
+      },
+      "out_of_hours_approval": {
+        "records": 5,
+        "dubious_records": 5,
+        "detected": 0,
+        "recall": "0.0%"
+      },
+      "structured_split_payment": {
+        "records": 10,
+        "dubious_records": 10,
+        "detected": 0,
+        "recall": "0.0%"
+      }
+    },
+    "methodological_limit": "This post-freeze partition tests new synthetic temporal, aggregate, and control-plane families without changing GraphShield. It is stronger than the known-miss replay but still does not estimate production fraud recall.",
+    "duration_ms": 15837
+  }
+}

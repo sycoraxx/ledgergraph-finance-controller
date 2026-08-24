@@ -1,0 +1,76 @@
+settlement_id,capture_date,capture_weekday,settlement_cycle,scheduled_business_days,settled_at,settled_weekday,working_day_path,chronology_valid
+setl_2ybSd4d7inlUpZ,2026-06-01,Monday,T+1,1,2026-06-02,Tuesday,2026-06-01 T -> 2026-06-02 B1,True
+setl_gG78kZpIihQKJA,2026-06-02,Tuesday,T+2,2,2026-06-04,Thursday,2026-06-02 T -> 2026-06-03 B1 -> 2026-06-04 B2,True
+setl_5g70VduXp32PWu,2026-06-03,Wednesday,T+1,1,2026-06-04,Thursday,2026-06-03 T -> 2026-06-04 B1,True
+setl_NoLryaazIk7Una,2026-06-04,Thursday,T+2,2,2026-06-08,Monday,2026-06-04 T -> 2026-06-05 B1 -> 2026-06-06 skipped -> 2026-06-07 skipped -> 2026-06-08 B2,True
+setl_SvLhOsF67sYjC8,2026-06-05,Friday,T+1,1,2026-06-08,Monday,2026-06-05 T -> 2026-06-06 skipped -> 2026-06-07 skipped -> 2026-06-08 B1,True
+setl_eY8Iar1EG6FfsC,2026-06-06,Saturday,T+2,2,2026-06-09,Tuesday,2026-06-06 T -> 2026-06-07 skipped -> 2026-06-08 B1 -> 2026-06-09 B2,True
+setl_yKlQPY9aOctIsT,2026-06-07,Sunday,T+1,1,2026-06-08,Monday,2026-06-07 T -> 2026-06-08 B1,True
+setl_GZzsTxZYNNlnv9,2026-06-08,Monday,T+2,2,2026-06-10,Wednesday,2026-06-08 T -> 2026-06-09 B1 -> 2026-06-10 B2,True
+setl_AfvzLGXEflJBNc,2026-06-09,Tuesday,T+1,1,2026-06-10,Wednesday,2026-06-09 T -> 2026-06-10 B1,True
+setl_OP5TkGL3e7wdAi,2026-06-10,Wednesday,T+2,2,2026-06-12,Friday,2026-06-10 T -> 2026-06-11 B1 -> 2026-06-12 B2,True
+setl_uXcZN6esCTFSCg,2026-06-11,Thursday,T+2,2,2026-06-15,Monday,2026-06-11 T -> 2026-06-12 B1 -> 2026-06-13 skipped -> 2026-06-14 skipped -> 2026-06-15 B2,True
+setl_KSklJTfm2dg9pe,2026-06-12,Friday,T+2,2,2026-06-16,Tuesday,2026-06-12 T -> 2026-06-13 skipped -> 2026-06-14 skipped -> 2026-06-15 B1 -> 2026-06-16 B2,True
+setl_oQwyQ0L0q0qDds,2026-06-13,Saturday,T+1,1,2026-06-15,Monday,2026-06-13 T -> 2026-06-14 skipped -> 2026-06-15 B1,True
+setl_LGp7r8z6FNmFNz,2026-06-14,Sunday,T+2,2,2026-06-16,Tuesday,2026-06-14 T -> 2026-06-15 B1 -> 2026-06-16 B2,True
+setl_oXgs4X2opWeFaH,2026-06-15,Monday,T+1,1,2026-06-16,Tuesday,2026-06-15 T -> 2026-06-16 B1,True
+setl_8fyCkNhhJEhjAV,2026-06-16,Tuesday,T+2,2,2026-06-18,Thursday,2026-06-16 T -> 2026-06-17 B1 -> 2026-06-18 B2,True
+setl_hlnB0rAFe81EEt,2026-06-17,Wednesday,T+1,1,2026-06-18,Thursday,2026-06-17 T -> 2026-06-18 B1,True
+setl_pv7znre09sgKRo,2026-06-18,Thursday,T+2,2,2026-06-22,Monday,2026-06-18 T -> 2026-06-19 B1 -> 2026-06-20 skipped -> 2026-06-21 skipped -> 2026-06-22 B2,True
+setl_DPalq0y05L810W,2026-06-19,Friday,T+1,1,2026-06-22,Monday,2026-06-19 T -> 2026-06-20 skipped -> 2026-06-21 skipped -> 2026-06-22 B1,True
+setl_r6fDDdhayzAXy5,2026-06-20,Saturday,T+2,2,2026-06-23,Tuesday,2026-06-20 T -> 2026-06-21 skipped -> 2026-06-22 B1 -> 2026-06-23 B2,True
+setl_FeAdZNmc6Ly7H7,2026-06-21,Sunday,T+1,1,2026-06-22,Monday,2026-06-21 T -> 2026-06-22 B1,True
+setl_V4IBtk1oREzbnT,2026-06-22,Monday,T+2,2,2026-06-24,Wednesday,2026-06-22 T -> 2026-06-23 B1 -> 2026-06-24 B2,True
+setl_f4CUPbHJC3AyZ2,2026-06-23,Tuesday,T+1,1,2026-06-24,Wednesday,2026-06-23 T -> 2026-06-24 B1,True
+setl_CF99Y58tTQ3a5C,2026-06-24,Wednesday,T+2,2,2026-06-26,Friday,2026-06-24 T -> 2026-06-25 B1 -> 2026-06-26 B2,True
+setl_5t2qrdp6srvFVa,2026-06-25,Thursday,T+2,2,2026-06-29,Monday,2026-06-25 T -> 2026-06-26 B1 -> 2026-06-27 skipped -> 2026-06-28 skipped -> 2026-06-29 B2,True
+setl_7fbLC6wmdjufOV,2026-06-26,Friday,T+2,2,2026-06-30,Tuesday,2026-06-26 T -> 2026-06-27 skipped -> 2026-06-28 skipped -> 2026-06-29 B1 -> 2026-06-30 B2,True
+setl_d68qASlFJGHJVK,2026-06-27,Saturday,T+1,1,2026-06-29,Monday,2026-06-27 T -> 2026-06-28 skipped -> 2026-06-29 B1,True
+setl_5l1f2vm6jktiWv,2026-06-28,Sunday,T+2,2,2026-06-30,Tuesday,2026-06-28 T -> 2026-06-29 B1 -> 2026-06-30 B2,True
+setl_dubwLO7omDkawb,2026-06-29,Monday,T+1,1,2026-06-30,Tuesday,2026-06-29 T -> 2026-06-30 B1,True
+setl_jD0kUG1N0JCnsR,2026-06-30,Tuesday,T+2,2,2026-07-02,Thursday,2026-06-30 T -> 2026-07-01 B1 -> 2026-07-02 B2,True
+setl_XeuQK0gigAaoS0,2026-07-01,Wednesday,T+1,1,2026-07-02,Thursday,2026-07-01 T -> 2026-07-02 B1,True
+setl_Zu0XGCmxcQeztF,2026-07-02,Thursday,T+2,2,2026-07-06,Monday,2026-07-02 T -> 2026-07-03 B1 -> 2026-07-04 skipped -> 2026-07-05 skipped -> 2026-07-06 B2,True
+setl_FrTOQ2QHd5PI6o,2026-07-03,Friday,T+1,1,2026-07-06,Monday,2026-07-03 T -> 2026-07-04 skipped -> 2026-07-05 skipped -> 2026-07-06 B1,True
+setl_oIPdU6ZKS6OkmD,2026-07-04,Saturday,T+2,2,2026-07-07,Tuesday,2026-07-04 T -> 2026-07-05 skipped -> 2026-07-06 B1 -> 2026-07-07 B2,True
+setl_NDvZkAT0vGdlEh,2026-07-05,Sunday,T+1,1,2026-07-06,Monday,2026-07-05 T -> 2026-07-06 B1,True
+setl_Huw9gBeSnleXJn,2026-07-06,Monday,T+2,2,2026-07-08,Wednesday,2026-07-06 T -> 2026-07-07 B1 -> 2026-07-08 B2,True
+setl_cfcBmVw6GGZfgl,2026-07-07,Tuesday,T+1,1,2026-07-08,Wednesday,2026-07-07 T -> 2026-07-08 B1,True
+setl_KueUbhY4pGNMt4,2026-07-08,Wednesday,T+2,2,2026-07-10,Friday,2026-07-08 T -> 2026-07-09 B1 -> 2026-07-10 B2,True
+setl_seMFRCCGsi23F8,2026-07-09,Thursday,T+2,2,2026-07-13,Monday,2026-07-09 T -> 2026-07-10 B1 -> 2026-07-11 skipped -> 2026-07-12 skipped -> 2026-07-13 B2,True
+setl_AIZLEK5UBKpFxB,2026-07-10,Friday,T+2,2,2026-07-14,Tuesday,2026-07-10 T -> 2026-07-11 skipped -> 2026-07-12 skipped -> 2026-07-13 B1 -> 2026-07-14 B2,True
+setl_j6FqciI6UEdH7R,2026-07-11,Saturday,T+1,1,2026-07-13,Monday,2026-07-11 T -> 2026-07-12 skipped -> 2026-07-13 B1,True
+setl_MGhmHmSoDFzyZL,2026-07-12,Sunday,T+2,2,2026-07-14,Tuesday,2026-07-12 T -> 2026-07-13 B1 -> 2026-07-14 B2,True
+setl_SRLAXwKHOsT57S,2026-07-13,Monday,T+1,1,2026-07-14,Tuesday,2026-07-13 T -> 2026-07-14 B1,True
+setl_caJJW10fc12xjA,2026-07-14,Tuesday,T+2,2,2026-07-16,Thursday,2026-07-14 T -> 2026-07-15 B1 -> 2026-07-16 B2,True
+setl_g1xMCk6cJLMGJM,2026-07-15,Wednesday,T+1,1,2026-07-16,Thursday,2026-07-15 T -> 2026-07-16 B1,True
+setl_b3z50Ug2GUMFKO,2026-07-16,Thursday,T+2,2,2026-07-20,Monday,2026-07-16 T -> 2026-07-17 B1 -> 2026-07-18 skipped -> 2026-07-19 skipped -> 2026-07-20 B2,True
+setl_53EyiUEtYmvXwL,2026-07-17,Friday,T+1,1,2026-07-20,Monday,2026-07-17 T -> 2026-07-18 skipped -> 2026-07-19 skipped -> 2026-07-20 B1,True
+setl_gFeODHchjgluLH,2026-07-18,Saturday,T+2,2,2026-07-21,Tuesday,2026-07-18 T -> 2026-07-19 skipped -> 2026-07-20 B1 -> 2026-07-21 B2,True
+setl_kScRMmKkPsN4tZ,2026-07-19,Sunday,T+1,1,2026-07-20,Monday,2026-07-19 T -> 2026-07-20 B1,True
+setl_mhEuuveD6ADCOC,2026-07-20,Monday,T+2,2,2026-07-22,Wednesday,2026-07-20 T -> 2026-07-21 B1 -> 2026-07-22 B2,True
+setl_qmLhxWhLrJpNtC,2026-07-21,Tuesday,T+1,1,2026-07-22,Wednesday,2026-07-21 T -> 2026-07-22 B1,True
+setl_XoaOOR3s7fvtBP,2026-07-22,Wednesday,T+2,2,2026-07-24,Friday,2026-07-22 T -> 2026-07-23 B1 -> 2026-07-24 B2,True
+setl_qG7TysJ8jp2OKf,2026-07-23,Thursday,T+2,2,2026-07-27,Monday,2026-07-23 T -> 2026-07-24 B1 -> 2026-07-25 skipped -> 2026-07-26 skipped -> 2026-07-27 B2,True
+setl_ejdcKWvrHoo7c0,2026-07-24,Friday,T+2,2,2026-07-28,Tuesday,2026-07-24 T -> 2026-07-25 skipped -> 2026-07-26 skipped -> 2026-07-27 B1 -> 2026-07-28 B2,True
+setl_zmACAwQWSHq69R,2026-07-25,Saturday,T+1,1,2026-07-27,Monday,2026-07-25 T -> 2026-07-26 skipped -> 2026-07-27 B1,True
+setl_slRVJp4KTej6gS,2026-07-26,Sunday,T+2,2,2026-07-28,Tuesday,2026-07-26 T -> 2026-07-27 B1 -> 2026-07-28 B2,True
+setl_PRU2FmYChZCLoA,2026-07-27,Monday,T+1,1,2026-07-28,Tuesday,2026-07-27 T -> 2026-07-28 B1,True
+setl_dXg4PutvO1hWMS,2026-07-28,Tuesday,T+2,2,2026-07-30,Thursday,2026-07-28 T -> 2026-07-29 B1 -> 2026-07-30 B2,True
+setl_IgFWKRwTcz9IM7,2026-07-29,Wednesday,T+1,1,2026-07-30,Thursday,2026-07-29 T -> 2026-07-30 B1,True
+setl_nkcd5S1PkAAVJV,2026-07-30,Thursday,T+2,2,2026-08-03,Monday,2026-07-30 T -> 2026-07-31 B1 -> 2026-08-01 skipped -> 2026-08-02 skipped -> 2026-08-03 B2,True
+setl_3ekoTpzAdwh622,2026-07-31,Friday,T+1,1,2026-08-03,Monday,2026-07-31 T -> 2026-08-01 skipped -> 2026-08-02 skipped -> 2026-08-03 B1,True
+setl_UfAHgVs02HhtzO,2026-08-01,Saturday,T+2,2,2026-08-04,Tuesday,2026-08-01 T -> 2026-08-02 skipped -> 2026-08-03 B1 -> 2026-08-04 B2,True
+setl_X8PxwjgCEixxdv,2026-08-02,Sunday,T+1,1,2026-08-03,Monday,2026-08-02 T -> 2026-08-03 B1,True
+setl_ZYDI2T27UOatPw,2026-08-03,Monday,T+2,2,2026-08-05,Wednesday,2026-08-03 T -> 2026-08-04 B1 -> 2026-08-05 B2,True
+setl_qaC7p1IPBVcTCv,2026-08-04,Tuesday,T+1,1,2026-08-05,Wednesday,2026-08-04 T -> 2026-08-05 B1,True
+setl_gVBOkWB2r6g54J,2026-08-05,Wednesday,T+2,2,2026-08-07,Friday,2026-08-05 T -> 2026-08-06 B1 -> 2026-08-07 B2,True
+setl_PBwJ9bXNhx0zI3,2026-08-06,Thursday,T+2,2,2026-08-10,Monday,2026-08-06 T -> 2026-08-07 B1 -> 2026-08-08 skipped -> 2026-08-09 skipped -> 2026-08-10 B2,True
+setl_brAOFZubvE8FBi,2026-08-07,Friday,T+2,2,2026-08-11,Tuesday,2026-08-07 T -> 2026-08-08 skipped -> 2026-08-09 skipped -> 2026-08-10 B1 -> 2026-08-11 B2,True
+setl_lqpecjkIRi6XHl,2026-08-08,Saturday,T+1,1,2026-08-10,Monday,2026-08-08 T -> 2026-08-09 skipped -> 2026-08-10 B1,True
+setl_ntLL5DSYK3SNTQ,2026-08-09,Sunday,T+2,2,2026-08-11,Tuesday,2026-08-09 T -> 2026-08-10 B1 -> 2026-08-11 B2,True
+setl_UY2FIELlArQ3Lc,2026-08-10,Monday,T+1,1,2026-08-11,Tuesday,2026-08-10 T -> 2026-08-11 B1,True
+setl_6CGdsOk2sZpa5R,2026-08-11,Tuesday,T+2,2,2026-08-13,Thursday,2026-08-11 T -> 2026-08-12 B1 -> 2026-08-13 B2,True
+setl_6guwf0tUIPvxJe,2026-08-12,Wednesday,T+1,1,2026-08-13,Thursday,2026-08-12 T -> 2026-08-13 B1,True
+setl_VODZ18OGb9MKM4,2026-08-13,Thursday,T+2,2,2026-08-17,Monday,2026-08-13 T -> 2026-08-14 B1 -> 2026-08-15 skipped -> 2026-08-16 skipped -> 2026-08-17 B2,True
+setl_0X4re7lK95Ytyf,2026-08-14,Friday,T+1,1,2026-08-17,Monday,2026-08-14 T -> 2026-08-15 skipped -> 2026-08-16 skipped -> 2026-08-17 B1,True

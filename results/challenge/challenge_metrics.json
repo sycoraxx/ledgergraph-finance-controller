@@ -1,0 +1,144 @@
+{
+  "suite": "known_miss_control_replay",
+  "seed_count": 5,
+  "bank_entries": 440,
+  "mutations": 20,
+  "true_positives": 64,
+  "true_negatives": 376,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": "100.0%",
+  "precision_95_ci": [
+    "94.3%",
+    "100.0%"
+  ],
+  "recall": "100.0%",
+  "recall_95_ci": [
+    "94.3%",
+    "100.0%"
+  ],
+  "specificity": "100.0%",
+  "false_negative_exposure_inr": "0.00",
+  "false_positive_review_value_inr": "0.00",
+  "missed_classes": {},
+  "false_positive_classes": {},
+  "baseline_without_graph": {
+    "true_positives": 54,
+    "true_negatives": 376,
+    "false_positives": 0,
+    "false_negatives": 10,
+    "precision": "100.0%",
+    "recall": "84.4%"
+  },
+  "graph_intelligence_delta": {
+    "additional_true_positives": 10,
+    "false_negatives_removed": 10,
+    "false_positives_added": 0,
+    "recall_change": "84.4% -> 100.0%"
+  },
+  "by_mutation_class": {
+    "amount_mismatch": {
+      "records": 10,
+      "baseline_detected": 10,
+      "graph_detected": 10,
+      "baseline_recall": "100.0%",
+      "graph_recall": "100.0%"
+    },
+    "balance_rollforward_mismatch": {
+      "records": 5,
+      "baseline_detected": 5,
+      "graph_detected": 5,
+      "baseline_recall": "100.0%",
+      "graph_recall": "100.0%"
+    },
+    "collusive_duplicate": {
+      "records": 5,
+      "baseline_detected": 0,
+      "graph_detected": 5,
+      "baseline_recall": "0.0%",
+      "graph_recall": "100.0%"
+    },
+    "counterparty_substitution": {
+      "records": 5,
+      "baseline_detected": 0,
+      "graph_detected": 5,
+      "baseline_recall": "0.0%",
+      "graph_recall": "100.0%"
+    },
+    "duplicate_reference": {
+      "records": 10,
+      "baseline_detected": 10,
+      "graph_detected": 10,
+      "baseline_recall": "100.0%",
+      "graph_recall": "100.0%"
+    },
+    "unattributed_settlement_component": {
+      "records": 19,
+      "baseline_detected": 19,
+      "graph_detected": 19,
+      "baseline_recall": "100.0%",
+      "graph_recall": "100.0%"
+    },
+    "unsupported_transaction": {
+      "records": 10,
+      "baseline_detected": 10,
+      "graph_detected": 10,
+      "baseline_recall": "100.0%",
+      "graph_recall": "100.0%"
+    }
+  },
+  "known_control_gap": "GraphShield closes the two declared identity/motif gaps in this synthetic replay. Its features were designed after analysis of these misses, so this is regression evidence only\u2014not validation on unseen fraud families.",
+  "duration_ms": 15988,
+  "per_seed": [
+    {
+      "seed": 20260831,
+      "bank_entries": 88,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0,
+      "baseline_recall": "85.7%",
+      "baseline_false_negatives": 2
+    },
+    {
+      "seed": 20260832,
+      "bank_entries": 88,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0,
+      "baseline_recall": "84.6%",
+      "baseline_false_negatives": 2
+    },
+    {
+      "seed": 20260833,
+      "bank_entries": 88,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0,
+      "baseline_recall": "81.8%",
+      "baseline_false_negatives": 2
+    },
+    {
+      "seed": 20260834,
+      "bank_entries": 88,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0,
+      "baseline_recall": "83.3%",
+      "baseline_false_negatives": 2
+    },
+    {
+      "seed": 20260835,
+      "bank_entries": 88,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0,
+      "baseline_recall": "85.7%",
+      "baseline_false_negatives": 2
+    }
+  ]
+}

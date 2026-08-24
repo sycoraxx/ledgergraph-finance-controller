@@ -1,0 +1,19 @@
+{
+  "engine": "GraphShield relational open-set detector",
+  "authority": "review signal only; cannot change reconciliation or post money",
+  "threshold": 50,
+  "topology": {
+    "bank_nodes": 87,
+    "cashbook_event_nodes": 8,
+    "reference_nodes": 60,
+    "counterparty_nodes": 8,
+    "approver_nodes": 1,
+    "edges": 111
+  },
+  "operating_paths_scored": 12,
+  "flagged_paths": 2,
+  "signal_counts": {
+    "orphan_reference_node": 2
+  },
+  "method": "Relational nonconformity over counterparty identity, approver support, economic motif repetition, and reference fan-out. No fraud labels or LLM calls."
+}

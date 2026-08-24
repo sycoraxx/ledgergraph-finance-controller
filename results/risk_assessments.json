@@ -1,0 +1,2839 @@
+[
+  {
+    "bank_txn_id": "BNK000000",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "402686.68",
+    "transaction_timestamp_utc": "2026-06-04T16:24:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 402,686.68 at 2026-06-04T16:24:00+00:00; reference 'RZP-GROUP-1N-01'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=2"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000001",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "415382.56",
+    "transaction_timestamp_utc": "2026-06-08T10:35:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 415,382.56 at 2026-06-08T10:35:00+00:00; reference 'RZP-GROUP-1N-02'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=3"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000002",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "301583.13",
+    "transaction_timestamp_utc": "2026-06-08T11:46:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 301,583.13 at 2026-06-08T11:46:00+00:00; reference 'RZP-GROUP-1N-03'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=4"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000003",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "51619.00",
+    "transaction_timestamp_utc": "2026-06-09T14:01:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 51,619.00 at 2026-06-09T14:01:00+00:00; reference 'CB08200001'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=5"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "bank_txn_id": "BNK000003",
+      "score": 20,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [
+        {
+          "code": "reference_fanout",
+          "points": 20,
+          "detail": "reference connects to 2 bank entries"
+        }
+      ],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 2,
+        "signed_amount": "51619.00"
+      },
+      "evidence_path": [
+        "bank:BNK000003",
+        "reference:CB08200001",
+        "cashbook:CBK000001",
+        "counterparty:Northstar Marketplace",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=5",
+        "data/cashbook.csv:row=2"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000004",
+    "is_dubious": true,
+    "direction": "credit",
+    "amount": "51619.00",
+    "transaction_timestamp_utc": "2026-06-09T14:18:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "duplicate_reference",
+    "risk_title": "Duplicate operating credit",
+    "reason": "This bank reference already appeared in an earlier statement row.",
+    "observed_text": "Bank credit of INR 51,619.00 at 2026-06-09T14:18:00+00:00; narration 'IMPS-CB08200001-NORTHSTAR MARKETPLACE'; reference 'CB08200001'.",
+    "expected_text": "Each approved cashbook reference may clear the bank only once.",
+    "severity": "medium",
+    "recommended_action": "Block automatic posting and confirm whether the bank duplicated the transaction.",
+    "citations": [
+      "data/bank_statement.csv:row=6",
+      "data/cashbook.csv:row=2"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "bank_txn_id": "BNK000004",
+      "score": 20,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [
+        {
+          "code": "reference_fanout",
+          "points": 20,
+          "detail": "reference connects to 2 bank entries"
+        }
+      ],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 2,
+        "signed_amount": "51619.00"
+      },
+      "evidence_path": [
+        "bank:BNK000004",
+        "reference:CB08200001",
+        "cashbook:CBK000001",
+        "counterparty:Northstar Marketplace",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=6",
+        "data/cashbook.csv:row=2"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000005",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "562986.46",
+    "transaction_timestamp_utc": "2026-06-10T12:57:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 562,986.46 at 2026-06-10T12:57:00+00:00; reference 'RZP-GROUP-1N-04'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=7"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000006",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "247408.23",
+    "transaction_timestamp_utc": "2026-06-12T13:08:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 247,408.23 at 2026-06-12T13:08:00+00:00; reference 'RZP-GROUP-1N-05'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=8"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000007",
+    "is_dubious": false,
+    "direction": "debit",
+    "amount": "42955.00",
+    "transaction_timestamp_utc": "2026-06-13T14:05:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank debit of INR 42,955.00 at 2026-06-13T14:05:00+00:00; reference 'CB08200005'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=9"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "bank_txn_id": "BNK000007",
+      "score": 20,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [
+        {
+          "code": "reference_fanout",
+          "points": 20,
+          "detail": "reference connects to 2 bank entries"
+        }
+      ],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 2,
+        "signed_amount": "-42955.00"
+      },
+      "evidence_path": [
+        "bank:BNK000007",
+        "reference:CB08200005",
+        "cashbook:CBK000005",
+        "counterparty:Nimbus Logistics",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=9",
+        "data/cashbook.csv:row=6"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000008",
+    "is_dubious": true,
+    "direction": "debit",
+    "amount": "42955.00",
+    "transaction_timestamp_utc": "2026-06-13T14:22:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "duplicate_reference",
+    "risk_title": "Duplicate operating debit",
+    "reason": "This bank reference already appeared in an earlier statement row.",
+    "observed_text": "Bank debit of INR 42,955.00 at 2026-06-13T14:22:00+00:00; narration 'NEFT-CB08200005-NIMBUS LOGISTICS'; reference 'CB08200005'.",
+    "expected_text": "Each approved cashbook reference may clear the bank only once.",
+    "severity": "high",
+    "recommended_action": "Block automatic posting and confirm whether the bank duplicated the transaction.",
+    "citations": [
+      "data/bank_statement.csv:row=10",
+      "data/cashbook.csv:row=6"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "bank_txn_id": "BNK000008",
+      "score": 20,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [
+        {
+          "code": "reference_fanout",
+          "points": 20,
+          "detail": "reference connects to 2 bank entries"
+        }
+      ],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 2,
+        "signed_amount": "-42955.00"
+      },
+      "evidence_path": [
+        "bank:BNK000008",
+        "reference:CB08200005",
+        "cashbook:CBK000005",
+        "counterparty:Nimbus Logistics",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=10",
+        "data/cashbook.csv:row=6"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000009",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "458733.56",
+    "transaction_timestamp_utc": "2026-06-15T14:19:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 458,733.56 at 2026-06-15T14:19:00+00:00; reference 'RZP-GROUP-1N-06'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=11"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000010",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "352434.28",
+    "transaction_timestamp_utc": "2026-06-16T15:30:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 352,434.28 at 2026-06-16T15:30:00+00:00; reference 'RZP-GROUP-1N-07'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=12"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000011",
+    "is_dubious": true,
+    "direction": "credit",
+    "amount": "175798.60",
+    "transaction_timestamp_utc": "2026-06-18T10:01:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "unattributed_settlement_component",
+    "risk_title": "Settlement contains unsupported money",
+    "reason": "The bank amount matches a settlement, but its components do not close: adjustment has no attributable source record.",
+    "observed_text": "Bank credit of INR 175,798.60 at 2026-06-18T10:01:00+00:00; narration 'NEFT-CITIN26061838-'; reference 'RZP-11-setl_8fyCkNhhJEhjAV'.",
+    "expected_text": "Every payment, refund, dispute, fee, tax, and adjustment must have independent source evidence.",
+    "severity": "high",
+    "recommended_action": "Keep the settlement out of the ledger until every component is attributed.",
+    "citations": [
+      "data/bank_statement.csv:row=13",
+      "data/settlement_recon.csv:row=507"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000012",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "399531.72",
+    "transaction_timestamp_utc": "2026-06-18T16:41:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 399,531.72 at 2026-06-18T16:41:00+00:00; reference 'RZP-GROUP-1N-08'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=14"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000013",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "32611.00",
+    "transaction_timestamp_utc": "2026-06-20T14:02:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 32,611.00 at 2026-06-20T14:02:00+00:00; reference 'CB08200002'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=15"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "bank_txn_id": "BNK000013",
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 1,
+        "signed_amount": "32611.00"
+      },
+      "evidence_path": [
+        "bank:BNK000013",
+        "reference:CB08200002",
+        "cashbook:CBK000002",
+        "counterparty:Acme Retail Partner",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=15",
+        "data/cashbook.csv:row=3"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000014",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "471928.42",
+    "transaction_timestamp_utc": "2026-06-22T10:52:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 471,928.42 at 2026-06-22T10:52:00+00:00; reference 'RZP-GROUP-1N-09'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=16"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000015",
+    "is_dubious": true,
+    "direction": "credit",
+    "amount": "267510.20",
+    "transaction_timestamp_utc": "2026-06-22T11:12:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "unattributed_settlement_component",
+    "risk_title": "Settlement contains unsupported money",
+    "reason": "The bank amount matches a settlement, but its components do not close: adjustment has no attributable source record.",
+    "observed_text": "Bank credit of INR 267,510.20 at 2026-06-22T11:12:00+00:00; narration 'NEFT-CITIN260622882-'; reference 'RZP-11-setl_FeAdZNmc6Ly7H7'.",
+    "expected_text": "Every payment, refund, dispute, fee, tax, and adjustment must have independent source evidence.",
+    "severity": "high",
+    "recommended_action": "Keep the settlement out of the ledger until every component is attributed.",
+    "citations": [
+      "data/bank_statement.csv:row=17",
+      "data/settlement_recon.csv:row=687"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000016",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "436324.37",
+    "transaction_timestamp_utc": "2026-06-24T11:03:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 436,324.37 at 2026-06-24T11:03:00+00:00; reference 'RZP-GROUP-1N-10'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=18"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000017",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "499815.20",
+    "transaction_timestamp_utc": "2026-06-26T12:14:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 499,815.20 at 2026-06-26T12:14:00+00:00; reference 'RZP-GROUP-1N-11'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=19"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000018",
+    "is_dubious": false,
+    "direction": "debit",
+    "amount": "19078.00",
+    "transaction_timestamp_utc": "2026-06-28T14:06:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank debit of INR 19,078.00 at 2026-06-28T14:06:00+00:00; reference 'CB08200006'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=20"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "bank_txn_id": "BNK000018",
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 1,
+        "signed_amount": "-19078.00"
+      },
+      "evidence_path": [
+        "bank:BNK000018",
+        "reference:CB08200006",
+        "cashbook:CBK000006",
+        "counterparty:Cobalt Cloud Services",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=20",
+        "data/cashbook.csv:row=7"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000019",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "406516.05",
+    "transaction_timestamp_utc": "2026-06-29T13:25:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 406,516.05 at 2026-06-29T13:25:00+00:00; reference 'RZP-GROUP-1N-12'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=21"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000020",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "3319.73",
+    "transaction_timestamp_utc": "2026-06-30T10:10:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 3,319.73 at 2026-06-30T10:10:00+00:00; reference 'RZP-GROUP-N1-02'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=22"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000021",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "102793.72",
+    "transaction_timestamp_utc": "2026-06-30T14:36:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 102,793.72 at 2026-06-30T14:36:00+00:00; reference 'RZP-GROUP-N1-01'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=23"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000022",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "1227.85",
+    "transaction_timestamp_utc": "2026-06-30T15:48:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 1,227.85 at 2026-06-30T15:48:00+00:00; reference 'RZP-GROUP-N1-01'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=24"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000023",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "1227.85",
+    "transaction_timestamp_utc": "2026-06-30T16:58:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 1,227.85 at 2026-06-30T16:58:00+00:00; reference 'RZP-GROUP-N1-02'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=25"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000024",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "108984.43",
+    "transaction_timestamp_utc": "2026-07-02T11:20:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 108,984.43 at 2026-07-02T11:20:00+00:00; reference 'RZP-GROUP-N1-03'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=26"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000025",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "44514.77",
+    "transaction_timestamp_utc": "2026-07-02T12:32:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 44,514.77 at 2026-07-02T12:32:00+00:00; reference 'RZP-GROUP-N1-03'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=27"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000026",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "44514.77",
+    "transaction_timestamp_utc": "2026-07-02T13:42:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 44,514.77 at 2026-07-02T13:42:00+00:00; reference 'RZP-GROUP-N1-04'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=28"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000027",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "277591.27",
+    "transaction_timestamp_utc": "2026-07-02T14:54:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 277,591.27 at 2026-07-02T14:54:00+00:00; reference 'RZP-GROUP-N1-04'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=29"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000028",
+    "is_dubious": true,
+    "direction": "credit",
+    "amount": "35476.00",
+    "transaction_timestamp_utc": "2026-07-04T16:40:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "unsupported_transaction",
+    "risk_title": "Unsupported operating credit",
+    "reason": "No approved ERP cashbook event carries this bank reference.",
+    "observed_text": "Bank credit of INR 35,476.00 at 2026-07-04T16:40:00+00:00; narration 'IMPS-UNSUPCR2026-UNKNOWN ORIGINATOR'; reference 'UNSUPCR2026'.",
+    "expected_text": "An operating bank transaction must be backed by an approved cashbook event.",
+    "severity": "high",
+    "recommended_action": "Escalate to treasury and verify the counterparty before recording the entry.",
+    "citations": [
+      "data/bank_statement.csv:row=30"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "bank_txn_id": "BNK000028",
+      "score": 100,
+      "threshold": 50,
+      "is_graph_ood": true,
+      "signals": [
+        {
+          "code": "orphan_reference_node",
+          "points": 100,
+          "detail": "bank reference has no linked approved cashbook event"
+        }
+      ],
+      "features": {
+        "counterparty_token_coverage": null,
+        "approver_batch_support": 0,
+        "economic_motif_degree": 0,
+        "bank_reference_degree": 1,
+        "signed_amount": "35476.00"
+      },
+      "evidence_path": [
+        "bank:BNK000028",
+        "reference:UNSUPCR2026"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=30"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls + GraphShield corroboration"
+  },
+  {
+    "bank_txn_id": "BNK000029",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "23082.50",
+    "transaction_timestamp_utc": "2026-07-06T10:26:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 23,082.50 at 2026-07-06T10:26:00+00:00; reference 'RZP-GROUP-N1-06'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=31"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000030",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "59355.01",
+    "transaction_timestamp_utc": "2026-07-06T11:38:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 59,355.01 at 2026-07-06T11:38:00+00:00; reference 'RZP-GROUP-N1-06'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=32"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000031",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "274265.38",
+    "transaction_timestamp_utc": "2026-07-06T12:48:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 274,265.38 at 2026-07-06T12:48:00+00:00; reference 'RZP-GROUP-N1-07'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=33"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000032",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "42290.86",
+    "transaction_timestamp_utc": "2026-07-06T13:00:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 42,290.86 at 2026-07-06T13:00:00+00:00; reference 'RZP-GROUP-N1-07'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=34"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000033",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "42290.86",
+    "transaction_timestamp_utc": "2026-07-06T14:10:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 42,290.86 at 2026-07-06T14:10:00+00:00; reference 'RZP-GROUP-N1-08'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=35"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000034",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "253118.51",
+    "transaction_timestamp_utc": "2026-07-06T15:04:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 253,118.51 at 2026-07-06T15:04:00+00:00; reference 'RZP-GROUP-N1-05'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=36"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000035",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "114341.97",
+    "transaction_timestamp_utc": "2026-07-06T15:22:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 114,341.97 at 2026-07-06T15:22:00+00:00; reference 'RZP-GROUP-N1-08'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=37"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000036",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "23082.50",
+    "transaction_timestamp_utc": "2026-07-06T16:16:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 23,082.50 at 2026-07-06T16:16:00+00:00; reference 'RZP-GROUP-N1-05'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=38"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000037",
+    "is_dubious": true,
+    "direction": "credit",
+    "amount": "193308.88",
+    "transaction_timestamp_utc": "2026-07-07T12:23:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "unattributed_settlement_component",
+    "risk_title": "Settlement contains unsupported money",
+    "reason": "The bank amount matches a settlement, but its components do not close: adjustment has no attributable source record.",
+    "observed_text": "Bank credit of INR 193,308.88 at 2026-07-07T12:23:00+00:00; narration 'NEFT-CITIN26070720538331-RAZORPAY SOFTWARE PRIVATE LIM-'; reference 'RZP-11-setl_oIPdU6ZKS6OkmD'.",
+    "expected_text": "Every payment, refund, dispute, fee, tax, and adjustment must have independent source evidence.",
+    "severity": "high",
+    "recommended_action": "Keep the settlement out of the ledger until every component is attributed.",
+    "citations": [
+      "data/bank_statement.csv:row=39",
+      "data/settlement_recon.csv:row=1166"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000038",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "3576.43",
+    "transaction_timestamp_utc": "2026-07-08T10:44:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 3,576.43 at 2026-07-08T10:44:00+00:00; reference 'RZP-GROUP-N1-09'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=40"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000039",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "3576.43",
+    "transaction_timestamp_utc": "2026-07-08T11:54:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 3,576.43 at 2026-07-08T11:54:00+00:00; reference 'RZP-GROUP-N1-10'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=41"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000040",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "240706.08",
+    "transaction_timestamp_utc": "2026-07-08T12:06:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 240,706.08 at 2026-07-08T12:06:00+00:00; reference 'RZP-GROUP-N1-10'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=42"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000041",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "68982.00",
+    "transaction_timestamp_utc": "2026-07-08T14:03:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 68,982.00 at 2026-07-08T14:03:00+00:00; reference 'CB08200003'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=43"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "bank_txn_id": "BNK000041",
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 1,
+        "signed_amount": "68982.00"
+      },
+      "evidence_path": [
+        "bank:BNK000041",
+        "reference:CB08200003",
+        "cashbook:CBK000003",
+        "counterparty:Bluebird Distribution",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=43",
+        "data/cashbook.csv:row=4"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000042",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "8756.08",
+    "transaction_timestamp_utc": "2026-07-08T16:32:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 8,756.08 at 2026-07-08T16:32:00+00:00; reference 'RZP-GROUP-N1-09'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=44"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000043",
+    "is_dubious": false,
+    "direction": "debit",
+    "amount": "30366.70",
+    "transaction_timestamp_utc": "2026-07-10T13:34:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank debit of INR 30,366.70 at 2026-07-10T13:34:00+00:00; reference 'RZP-11-setl_KueUbhY4pGNMt4'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=45"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000044",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "153021.33",
+    "transaction_timestamp_utc": "2026-07-13T13:16:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 153,021.33 at 2026-07-13T13:16:00+00:00; reference 'RZP-GROUP-N1-11'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=46"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000045",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "39030.32",
+    "transaction_timestamp_utc": "2026-07-13T14:28:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 39,030.32 at 2026-07-13T14:28:00+00:00; reference 'RZP-GROUP-N1-11'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=47"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000046",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "39030.32",
+    "transaction_timestamp_utc": "2026-07-13T15:38:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 39,030.32 at 2026-07-13T15:38:00+00:00; reference 'RZP-GROUP-N1-12'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=48"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000047",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "100363.67",
+    "transaction_timestamp_utc": "2026-07-13T16:50:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 100,363.67 at 2026-07-13T16:50:00+00:00; reference 'RZP-GROUP-N1-12'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=49"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000048",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "377650.95",
+    "transaction_timestamp_utc": "2026-07-16T10:00:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 377,650.95 at 2026-07-16T10:00:00+00:00; reference 'RZP-GROUP-NM-01'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=50"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000049",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "97601.76",
+    "transaction_timestamp_utc": "2026-07-16T11:12:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 97,601.76 at 2026-07-16T11:12:00+00:00; reference 'RZP-GROUP-NM-01'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=51"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000050",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "123382.05",
+    "transaction_timestamp_utc": "2026-07-16T12:22:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 123,382.05 at 2026-07-16T12:22:00+00:00; reference 'RZP-GROUP-NM-02'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=52"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000051",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "97601.76",
+    "transaction_timestamp_utc": "2026-07-16T13:34:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 97,601.76 at 2026-07-16T13:34:00+00:00; reference 'RZP-GROUP-NM-02'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=53"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000052",
+    "is_dubious": false,
+    "direction": "debit",
+    "amount": "64347.00",
+    "transaction_timestamp_utc": "2026-07-17T14:07:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank debit of INR 64,347.00 at 2026-07-17T14:07:00+00:00; reference 'CB08200007'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=54"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "bank_txn_id": "BNK000052",
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 1,
+        "signed_amount": "-64347.00"
+      },
+      "evidence_path": [
+        "bank:BNK000052",
+        "reference:CB08200007",
+        "cashbook:CBK000007",
+        "counterparty:Orchid Media Works",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=54",
+        "data/cashbook.csv:row=8"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000053",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "303580.26",
+    "transaction_timestamp_utc": "2026-07-20T10:18:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 303,580.26 at 2026-07-20T10:18:00+00:00; reference 'RZP-GROUP-NM-04'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=55"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000054",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "205034.18",
+    "transaction_timestamp_utc": "2026-07-20T14:44:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 205,034.18 at 2026-07-20T14:44:00+00:00; reference 'RZP-GROUP-NM-03'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=56"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000055",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "205034.17",
+    "transaction_timestamp_utc": "2026-07-20T15:56:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 205,034.17 at 2026-07-20T15:56:00+00:00; reference 'RZP-GROUP-NM-03'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=57"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000056",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "233206.88",
+    "transaction_timestamp_utc": "2026-07-20T16:06:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 233,206.88 at 2026-07-20T16:06:00+00:00; reference 'RZP-GROUP-NM-04'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=58"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000057",
+    "is_dubious": true,
+    "direction": "debit",
+    "amount": "53399.00",
+    "transaction_timestamp_utc": "2026-07-23T16:40:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "unsupported_transaction",
+    "risk_title": "Unsupported operating debit",
+    "reason": "No approved ERP cashbook event carries this bank reference.",
+    "observed_text": "Bank debit of INR 53,399.00 at 2026-07-23T16:40:00+00:00; narration 'NEFT-UNSUPDR2026-UNKNOWN BENEFICIARY'; reference 'UNSUPDR2026'.",
+    "expected_text": "An operating bank transaction must be backed by an approved cashbook event.",
+    "severity": "critical",
+    "recommended_action": "Escalate to treasury and verify the counterparty before recording the entry.",
+    "citations": [
+      "data/bank_statement.csv:row=59"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "bank_txn_id": "BNK000057",
+      "score": 100,
+      "threshold": 50,
+      "is_graph_ood": true,
+      "signals": [
+        {
+          "code": "orphan_reference_node",
+          "points": 100,
+          "detail": "bank reference has no linked approved cashbook event"
+        }
+      ],
+      "features": {
+        "counterparty_token_coverage": null,
+        "approver_batch_support": 0,
+        "economic_motif_degree": 0,
+        "bank_reference_degree": 1,
+        "signed_amount": "-53399.00"
+      },
+      "evidence_path": [
+        "bank:BNK000057",
+        "reference:UNSUPDR2026"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=59"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls + GraphShield corroboration"
+  },
+  {
+    "bank_txn_id": "BNK000058",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "234934.69",
+    "transaction_timestamp_utc": "2026-07-24T11:28:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 234,934.69 at 2026-07-24T11:28:00+00:00; reference 'RZP-GROUP-NM-05'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=60"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000059",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "150987.63",
+    "transaction_timestamp_utc": "2026-07-24T12:40:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 150,987.63 at 2026-07-24T12:40:00+00:00; reference 'RZP-GROUP-NM-05'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=61"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000060",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "207010.88",
+    "transaction_timestamp_utc": "2026-07-24T13:50:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 207,010.88 at 2026-07-24T13:50:00+00:00; reference 'RZP-GROUP-NM-06'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=62"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000061",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "150987.64",
+    "transaction_timestamp_utc": "2026-07-24T14:02:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 150,987.64 at 2026-07-24T14:02:00+00:00; reference 'RZP-GROUP-NM-06'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=63"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000062",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "6325.29",
+    "transaction_timestamp_utc": "2026-07-28T10:34:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 6,325.29 at 2026-07-28T10:34:00+00:00; reference 'RZP-GROUP-NM-08'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=64"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000063",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "6325.29",
+    "transaction_timestamp_utc": "2026-07-28T11:46:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 6,325.29 at 2026-07-28T11:46:00+00:00; reference 'RZP-GROUP-NM-08'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=65"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000064",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "226434.58",
+    "transaction_timestamp_utc": "2026-07-28T15:12:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 226,434.58 at 2026-07-28T15:12:00+00:00; reference 'RZP-GROUP-NM-07'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=66"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000065",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "228335.42",
+    "transaction_timestamp_utc": "2026-07-28T16:24:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 228,335.42 at 2026-07-28T16:24:00+00:00; reference 'RZP-GROUP-NM-07'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=67"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000066",
+    "is_dubious": true,
+    "direction": "credit",
+    "amount": "26783.00",
+    "transaction_timestamp_utc": "2026-07-29T14:04:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "amount_mismatch",
+    "risk_title": "Operating credit amount differs from approval",
+    "reason": "The bank amount differs from the approved cashbook amount by INR 878.00.",
+    "observed_text": "Bank credit of INR 26,783.00 at 2026-07-29T14:04:00+00:00; narration 'IMPS-CB08200004-SUMMIT COMMERCE'; reference 'CB08200004'.",
+    "expected_text": "Cashbook CBK000004 approves INR 25,905.00 for Summit Commerce (channel remittance).",
+    "severity": "high",
+    "recommended_action": "Hold the difference and reconcile it with the cashbook owner.",
+    "citations": [
+      "data/bank_statement.csv:row=68",
+      "data/cashbook.csv:row=5"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "bank_txn_id": "BNK000066",
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 1,
+        "signed_amount": "26783.00"
+      },
+      "evidence_path": [
+        "bank:BNK000066",
+        "reference:CB08200004",
+        "cashbook:CBK000004",
+        "counterparty:Summit Commerce",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=68",
+        "data/cashbook.csv:row=5"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000067",
+    "is_dubious": false,
+    "direction": "debit",
+    "amount": "5992.97",
+    "transaction_timestamp_utc": "2026-07-30T14:45:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank debit of INR 5,992.97 at 2026-07-30T14:45:00+00:00; reference 'RZP-11-setl_dXg4PutvO1hWMS'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=69"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000068",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "140226.79",
+    "transaction_timestamp_utc": "2026-08-03T12:56:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 140,226.79 at 2026-08-03T12:56:00+00:00; reference 'RZP-GROUP-NM-09'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=70"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000069",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "135822.20",
+    "transaction_timestamp_utc": "2026-08-03T13:08:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 135,822.20 at 2026-08-03T13:08:00+00:00; reference 'RZP-GROUP-NM-09'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=71"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000070",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "218227.01",
+    "transaction_timestamp_utc": "2026-08-03T14:18:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 218,227.01 at 2026-08-03T14:18:00+00:00; reference 'RZP-GROUP-NM-10'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=72"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000071",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "135822.20",
+    "transaction_timestamp_utc": "2026-08-03T15:30:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 135,822.20 at 2026-08-03T15:30:00+00:00; reference 'RZP-GROUP-NM-10'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=73"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000072",
+    "is_dubious": true,
+    "direction": "debit",
+    "amount": "27479.00",
+    "transaction_timestamp_utc": "2026-08-04T14:08:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "amount_mismatch",
+    "risk_title": "Operating debit amount differs from approval",
+    "reason": "The bank amount differs from the approved cashbook amount by INR 921.00.",
+    "observed_text": "Bank debit of INR 27,479.00 at 2026-08-04T14:08:00+00:00; narration 'NEFT-CB08200008-VERTEX OFFICE SUPPLY'; reference 'CB08200008'.",
+    "expected_text": "Cashbook CBK000008 approves INR 26,558.00 for Vertex Office Supply (approved procurement invoice).",
+    "severity": "high",
+    "recommended_action": "Hold the difference and reconcile it with the cashbook owner.",
+    "citations": [
+      "data/bank_statement.csv:row=74",
+      "data/cashbook.csv:row=9"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "needs_review",
+    "graph_ood": {
+      "bank_txn_id": "BNK000072",
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {
+        "counterparty_token_coverage": 1.0,
+        "approver_batch_support": 8,
+        "economic_motif_degree": 1,
+        "bank_reference_degree": 1,
+        "signed_amount": "-27479.00"
+      },
+      "evidence_path": [
+        "bank:BNK000072",
+        "reference:CB08200008",
+        "cashbook:CBK000008",
+        "counterparty:Vertex Office Supply",
+        "approver:synthetic-controller-policy"
+      ],
+      "citations": [
+        "data/bank_statement.csv:row=74",
+        "data/cashbook.csv:row=9"
+      ]
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000073",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "112427.81",
+    "transaction_timestamp_utc": "2026-08-05T10:52:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 112,427.81 at 2026-08-05T10:52:00+00:00; reference 'RZP-GROUP-NM-11'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=75"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000074",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "155780.86",
+    "transaction_timestamp_utc": "2026-08-05T11:02:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 155,780.86 at 2026-08-05T11:02:00+00:00; reference 'RZP-GROUP-NM-12'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=76"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000075",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "112427.81",
+    "transaction_timestamp_utc": "2026-08-05T12:14:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 112,427.81 at 2026-08-05T12:14:00+00:00; reference 'RZP-GROUP-NM-12'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=77"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000076",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "288617.66",
+    "transaction_timestamp_utc": "2026-08-05T16:40:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 288,617.66 at 2026-08-05T16:40:00+00:00; reference 'RZP-GROUP-NM-11'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=78"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000077",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "112098.84",
+    "transaction_timestamp_utc": "2026-08-10T13:24:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 112,098.84 at 2026-08-10T13:24:00+00:00; reference 'RZP-GROUP-NM-13'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=79"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000078",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "190870.99",
+    "transaction_timestamp_utc": "2026-08-10T14:36:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 190,870.99 at 2026-08-10T14:36:00+00:00; reference 'RZP-GROUP-NM-13'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=80"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000079",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "183053.79",
+    "transaction_timestamp_utc": "2026-08-10T15:56:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 183,053.79 at 2026-08-10T15:56:00+00:00; reference 'RZP-11-setl_lqpecjkIRi6XHl'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=81"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000080",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "22426.94",
+    "transaction_timestamp_utc": "2026-08-11T10:18:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 22,426.94 at 2026-08-11T10:18:00+00:00; reference 'RZP-11-setl_ntLL5DSYK3SNTQ'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=82"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000081",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "218419.06",
+    "transaction_timestamp_utc": "2026-08-11T11:29:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 218,419.06 at 2026-08-11T11:29:00+00:00; reference 'RZP-11-setl_UY2FIELlArQ3Lc'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=83"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000082",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "115225.52",
+    "transaction_timestamp_utc": "2026-08-11T16:07:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 115,225.52 at 2026-08-11T16:07:00+00:00; reference 'RZP-11-setl_brAOFZubvE8FBi'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=84"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000083",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "169447.60",
+    "transaction_timestamp_utc": "2026-08-13T12:40:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 169,447.60 at 2026-08-13T12:40:00+00:00; reference 'RZP-11-setl_6CGdsOk2sZpa5R'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=85"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000084",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "236416.62",
+    "transaction_timestamp_utc": "2026-08-13T13:51:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 236,416.62 at 2026-08-13T13:51:00+00:00; reference 'RZP-11-setl_6guwf0tUIPvxJe'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=86"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000085",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "115499.20",
+    "transaction_timestamp_utc": "2026-08-17T14:02:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 115,499.20 at 2026-08-17T14:02:00+00:00; reference 'RZP-11-setl_VODZ18OGb9MKM4'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=87"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  },
+  {
+    "bank_txn_id": "BNK000086",
+    "is_dubious": false,
+    "direction": "credit",
+    "amount": "246110.89",
+    "transaction_timestamp_utc": "2026-08-17T15:13:00+00:00",
+    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "anomaly_type": "none",
+    "risk_title": "Evidence checks passed",
+    "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
+    "observed_text": "Bank credit of INR 246,110.89 at 2026-08-17T15:13:00+00:00; reference 'RZP-11-setl_0X4re7lK95Ytyf'.",
+    "expected_text": "Independent source evidence agrees on direction, amount, date, and reference.",
+    "severity": "none",
+    "recommended_action": "No risk intervention required.",
+    "citations": [
+      "data/bank_statement.csv:row=88"
+    ],
+    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "status": "clear",
+    "graph_ood": {
+      "score": 0,
+      "threshold": 50,
+      "is_graph_ood": false,
+      "signals": [],
+      "features": {},
+      "evidence_path": [],
+      "citations": []
+    },
+    "risk_engine": "deterministic evidence controls"
+  }
+]

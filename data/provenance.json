@@ -1,0 +1,85 @@
+{
+  "dataset_id": "synthetic-finance-controller-20260820",
+  "synthetic": true,
+  "seed": 20260820,
+  "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+  "coverage_start": "2026-06-01",
+  "coverage_end": "2026-08-17",
+  "timezone": "UTC",
+  "ground_truth_usage": "evaluation_only; never read by matching or risk-detection rules",
+  "augmentation_note": "Synthetic bank and ERP cashbook activity includes labeled credit and debit duplicates, amount mismatches, unsupported transactions, and planted 1:1, 1:N, N:1, and N:M settlement reconciliation topologies. Settlement dates follow an explicit synthetic T+1/T+2 Monday-Friday working-day policy; this is test policy evidence, not a universal merchant contract.",
+  "sources": [
+    {
+      "name": "orders.csv",
+      "rows": 2232,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Official-schema-shaped Razorpay export"
+    },
+    {
+      "name": "payments.csv",
+      "rows": 2243,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Official-schema-shaped Razorpay export"
+    },
+    {
+      "name": "refunds.csv",
+      "rows": 95,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Official-schema-shaped Razorpay export"
+    },
+    {
+      "name": "settlement_recon.csv",
+      "rows": 2338,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Official-schema-shaped Razorpay export"
+    },
+    {
+      "name": "settlement_schedule.csv",
+      "rows": 75,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Synthetic T+1/T+2 working-day policy ledger"
+    },
+    {
+      "name": "bank_statement.csv",
+      "rows": 87,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Synthetic bank export"
+    },
+    {
+      "name": "cashbook.csv",
+      "rows": 8,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Synthetic ERP cashbook"
+    },
+    {
+      "name": "ground_truth.json",
+      "rows": 75,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Evaluation truth (controller-blind)"
+    },
+    {
+      "name": "risk_truth.json",
+      "rows": 87,
+      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "coverage_start": "2026-06-01",
+      "coverage_end": "2026-08-17",
+      "source_system": "Evaluation truth (controller-blind)"
+    }
+  ]
+}

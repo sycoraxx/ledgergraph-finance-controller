@@ -1,0 +1,122 @@
+[
+  {
+    "seed": 20260831,
+    "bank_txn_id": "BNK000004",
+    "mutation": "benign_one_day_posting_lag",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260831,
+    "bank_txn_id": "BNK000007",
+    "mutation": "counterparty_substitution",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260831,
+    "bank_txn_id": "BNK000021",
+    "mutation": "balance_tamper",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260831,
+    "bank_txn_id": "BNK900000",
+    "mutation": "collusive_duplicate",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260832,
+    "bank_txn_id": "BNK000004",
+    "mutation": "benign_one_day_posting_lag",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260832,
+    "bank_txn_id": "BNK000007",
+    "mutation": "counterparty_substitution",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260832,
+    "bank_txn_id": "BNK000021",
+    "mutation": "balance_tamper",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260832,
+    "bank_txn_id": "BNK900000",
+    "mutation": "collusive_duplicate",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260833,
+    "bank_txn_id": "BNK000004",
+    "mutation": "benign_one_day_posting_lag",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260833,
+    "bank_txn_id": "BNK000007",
+    "mutation": "counterparty_substitution",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260833,
+    "bank_txn_id": "BNK000021",
+    "mutation": "balance_tamper",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260833,
+    "bank_txn_id": "BNK900000",
+    "mutation": "collusive_duplicate",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260834,
+    "bank_txn_id": "BNK000004",
+    "mutation": "benign_one_day_posting_lag",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260834,
+    "bank_txn_id": "BNK000007",
+    "mutation": "counterparty_substitution",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260834,
+    "bank_txn_id": "BNK000021",
+    "mutation": "balance_tamper",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260834,
+    "bank_txn_id": "BNK900000",
+    "mutation": "collusive_duplicate",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260835,
+    "bank_txn_id": "BNK000004",
+    "mutation": "benign_one_day_posting_lag",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260835,
+    "bank_txn_id": "BNK000007",
+    "mutation": "counterparty_substitution",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260835,
+    "bank_txn_id": "BNK000021",
+    "mutation": "balance_tamper",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260835,
+    "bank_txn_id": "BNK900000",
+    "mutation": "collusive_duplicate",
+    "truth": "dubious"
+  }
+]

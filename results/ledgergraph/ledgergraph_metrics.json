@@ -1,0 +1,90 @@
+{
+  "suite": "LedgerGraph adversarial reconciliation suite",
+  "data_classification": "fully_synthetic",
+  "case_count": 11,
+  "selection_threshold": 65,
+  "threshold_policy": "lowest tested threshold with zero false selections on the four-case calibration partition",
+  "calibration_case_count": 4,
+  "held_out_case_count": 7,
+  "held_out_ledgergraph": {
+    "system": "ledgergraph_global",
+    "expected_hypotheses": 7,
+    "selected_hypotheses": 7,
+    "correct_hypotheses": 7,
+    "false_selections": 0,
+    "hypothesis_recall": "100.0%",
+    "selection_precision": "100.0%",
+    "cases_exactly_correct": 7,
+    "case_count": 7
+  },
+  "comparison": [
+    {
+      "system": "exact_reference_baseline",
+      "expected_hypotheses": 9,
+      "selected_hypotheses": 3,
+      "correct_hypotheses": 3,
+      "false_selections": 0,
+      "hypothesis_recall": "33.3%",
+      "selection_precision": "100.0%",
+      "cases_exactly_correct": 5,
+      "case_count": 11
+    },
+    {
+      "system": "rowwise_l0_l1",
+      "expected_hypotheses": 9,
+      "selected_hypotheses": 6,
+      "correct_hypotheses": 5,
+      "false_selections": 1,
+      "hypothesis_recall": "55.6%",
+      "selection_precision": "83.3%",
+      "cases_exactly_correct": 6,
+      "case_count": 11
+    },
+    {
+      "system": "ledgergraph_global",
+      "expected_hypotheses": 9,
+      "selected_hypotheses": 9,
+      "correct_hypotheses": 9,
+      "false_selections": 0,
+      "hypothesis_recall": "100.0%",
+      "selection_precision": "100.0%",
+      "cases_exactly_correct": 11,
+      "case_count": 11
+    }
+  ],
+  "risk_coverage": [
+    {
+      "threshold": 55,
+      "coverage_of_expected": "100.0%",
+      "selection_precision": "66.7%",
+      "false_selections": 1,
+      "selected_hypotheses": 3
+    },
+    {
+      "threshold": 65,
+      "coverage_of_expected": "100.0%",
+      "selection_precision": "100.0%",
+      "false_selections": 0,
+      "selected_hypotheses": 2
+    },
+    {
+      "threshold": 70,
+      "coverage_of_expected": "100.0%",
+      "selection_precision": "100.0%",
+      "false_selections": 0,
+      "selected_hypotheses": 2
+    },
+    {
+      "threshold": 90,
+      "coverage_of_expected": "100.0%",
+      "selection_precision": "100.0%",
+      "false_selections": 0,
+      "selected_hypotheses": 2
+    }
+  ],
+  "grouped_topology_cases": 3,
+  "grouped_topology_cases_correct": 3,
+  "proof_certificate_count": 9,
+  "money_residual_failures": 0,
+  "scope_boundary": "Measures reconciliation hypotheses and abstention; it is not a production fraud benchmark."
+}

@@ -1,0 +1,587 @@
+[
+  {
+    "case_id": "exact_reference",
+    "partition": "calibration",
+    "claim": "Full UTR and signed amount agree.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-EXACT"
+        ],
+        [
+          "S-EXACT"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-EXACT"
+          ],
+          [
+            "S-EXACT"
+          ]
+        ]
+      ]
+    },
+    "rowwise_l0_l1": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-EXACT"
+          ],
+          [
+            "S-EXACT"
+          ]
+        ]
+      ]
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-EXACT"
+          ],
+          [
+            "S-EXACT"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "global_collision",
+    "partition": "held_out",
+    "claim": "A strong edge disambiguates a same-amount batch globally; row order must not decide.",
+    "expected": 2,
+    "truth": [
+      [
+        [
+          "B-KNOWN"
+        ],
+        [
+          "S-KNOWN"
+        ]
+      ],
+      [
+        [
+          "B-UNKNOWN"
+        ],
+        [
+          "S-RESIDUAL"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 7,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": false,
+      "selected": [
+        [
+          [
+            "B-KNOWN"
+          ],
+          [
+            "S-KNOWN"
+          ]
+        ]
+      ]
+    },
+    "rowwise_l0_l1": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": false,
+      "selected": [
+        [
+          [
+            "B-KNOWN"
+          ],
+          [
+            "S-KNOWN"
+          ]
+        ]
+      ]
+    },
+    "ledgergraph_global": {
+      "predicted": 2,
+      "correct": 2,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-KNOWN"
+          ],
+          [
+            "S-KNOWN"
+          ]
+        ],
+        [
+          [
+            "B-UNKNOWN"
+          ],
+          [
+            "S-RESIDUAL"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "reference_typo",
+    "partition": "calibration",
+    "claim": "A one-character UTR mutation may propose a candidate but exact money remains mandatory.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-TYPO"
+        ],
+        [
+          "S-TYPO"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-TYPO"
+          ],
+          [
+            "S-TYPO"
+          ]
+        ]
+      ]
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-TYPO"
+          ],
+          [
+            "S-TYPO"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "posting_window",
+    "partition": "held_out",
+    "claim": "A two-day posting delay is supported without changing the amount invariant.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-DELAY"
+        ],
+        [
+          "S-DELAY"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-DELAY"
+          ],
+          [
+            "S-DELAY"
+          ]
+        ]
+      ]
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-DELAY"
+          ],
+          [
+            "S-DELAY"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "many_to_one",
+    "partition": "held_out",
+    "claim": "Two gateway settlements arrive as one aggregated bank credit.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-MERGED"
+        ],
+        [
+          "S-40",
+          "S-60"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-MERGED"
+          ],
+          [
+            "S-40",
+            "S-60"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "one_to_many",
+    "partition": "held_out",
+    "claim": "One gateway settlement arrives as two partial bank credits.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-SPLIT-40",
+          "B-SPLIT-60"
+        ],
+        [
+          "S-SPLIT"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-SPLIT-40",
+            "B-SPLIT-60"
+          ],
+          [
+            "S-SPLIT"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "many_to_many",
+    "partition": "held_out",
+    "claim": "Two bank postings jointly settle two gateway batches; only the atomic group conserves money.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-NM-45",
+          "B-NM-75"
+        ],
+        [
+          "S-NM-50",
+          "S-NM-70"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 5,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": false,
+      "selected": []
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-NM-45",
+            "B-NM-75"
+          ],
+          [
+            "S-NM-50",
+            "S-NM-70"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "signed_debit",
+    "partition": "held_out",
+    "claim": "Debit direction is conserved, not silently compared as an unsigned magnitude.",
+    "expected": 1,
+    "truth": [
+      [
+        [
+          "B-DEBIT"
+        ],
+        [
+          "S-DEBIT"
+        ]
+      ]
+    ],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [],
+    "exact_reference_baseline": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-DEBIT"
+          ],
+          [
+            "S-DEBIT"
+          ]
+        ]
+      ]
+    },
+    "rowwise_l0_l1": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-DEBIT"
+          ],
+          [
+            "S-DEBIT"
+          ]
+        ]
+      ]
+    },
+    "ledgergraph_global": {
+      "predicted": 1,
+      "correct": 1,
+      "false": 0,
+      "exact": true,
+      "selected": [
+        [
+          [
+            "B-DEBIT"
+          ],
+          [
+            "S-DEBIT"
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    "case_id": "amount_only_abstention",
+    "partition": "calibration",
+    "claim": "A unique amount without date or reference corroboration is insufficient.",
+    "expected": 0,
+    "truth": [],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [
+      "B-AMOUNT"
+    ],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 1,
+      "correct": 0,
+      "false": 1,
+      "exact": false,
+      "selected": [
+        [
+          [
+            "B-AMOUNT"
+          ],
+          [
+            "S-AMOUNT"
+          ]
+        ]
+      ]
+    },
+    "ledgergraph_global": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    }
+  },
+  {
+    "case_id": "tied_optimum",
+    "partition": "calibration",
+    "claim": "Two indistinguishable candidates produce an explicit abstention.",
+    "expected": 0,
+    "truth": [],
+    "ledgergraph_candidate_count": 2,
+    "ledgergraph_abstained_banks": [
+      "B-TIE"
+    ],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    },
+    "ledgergraph_global": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    }
+  },
+  {
+    "case_id": "fuzzy_money_conflict",
+    "partition": "held_out",
+    "claim": "A close UTR cannot override a \u20b910 money residual.",
+    "expected": 0,
+    "truth": [],
+    "ledgergraph_candidate_count": 1,
+    "ledgergraph_abstained_banks": [
+      "B-CONFLICT"
+    ],
+    "exact_reference_baseline": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    },
+    "rowwise_l0_l1": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    },
+    "ledgergraph_global": {
+      "predicted": 0,
+      "correct": 0,
+      "false": 0,
+      "exact": true,
+      "selected": []
+    }
+  }
+]

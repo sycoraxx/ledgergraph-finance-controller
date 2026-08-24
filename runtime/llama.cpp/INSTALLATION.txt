@@ -1,0 +1,3 @@
+llama.cpp release: b10582
+model: unsloth/Qwen3.5-4B-GGUF/Qwen3.5-4B-Q4_K_M.gguf
+model sha256: 00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4

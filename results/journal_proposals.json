@@ -1,0 +1,2307 @@
+[
+  {
+    "proposal_id": "jrn_d080d893843c82ec",
+    "bank_txn_id": "BNK000043",
+    "bank_txn_ids": [
+      "BNK000043"
+    ],
+    "settlement_id": "setl_KueUbhY4pGNMt4",
+    "settlement_ids": [
+      "setl_KueUbhY4pGNMt4"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "0",
+        "credit": "30366.70"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "52.29",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "9.41",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "10308.00",
+        "credit": "0"
+      },
+      {
+        "account": "Chargeback Losses",
+        "debit": "23688.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "3691.00"
+      }
+    ],
+    "total_debit": "34057.70",
+    "total_credit": "34057.70",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "needs_review",
+      "human_approval_required": true,
+      "blockers": [
+        "non-positive bank credit requires manual treatment"
+      ]
+    }
+  },
+  {
+    "proposal_id": "jrn_45a1183985887ac3",
+    "bank_txn_id": "BNK000067",
+    "bank_txn_ids": [
+      "BNK000067"
+    ],
+    "settlement_id": "setl_dXg4PutvO1hWMS",
+    "settlement_ids": [
+      "setl_dXg4PutvO1hWMS"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "0",
+        "credit": "5992.97"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "205.27",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "36.95",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "15014.25",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "9263.50"
+      }
+    ],
+    "total_debit": "15256.47",
+    "total_credit": "15256.47",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "needs_review",
+      "human_approval_required": true,
+      "blockers": [
+        "non-positive bank credit requires manual treatment"
+      ]
+    }
+  },
+  {
+    "proposal_id": "jrn_b2c354f1417dc44c",
+    "bank_txn_id": "BNK000083",
+    "bank_txn_ids": [
+      "BNK000083"
+    ],
+    "settlement_id": "setl_6CGdsOk2sZpa5R",
+    "settlement_ids": [
+      "setl_6CGdsOk2sZpa5R"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "169447.60",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "3549.80",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "638.97",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "6814.13",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "180450.50"
+      }
+    ],
+    "total_debit": "180450.50",
+    "total_credit": "180450.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_33658e91df32d9cc",
+    "bank_txn_id": "BNK000084",
+    "bank_txn_ids": [
+      "BNK000084"
+    ],
+    "settlement_id": "setl_6guwf0tUIPvxJe",
+    "settlement_ids": [
+      "setl_6guwf0tUIPvxJe"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "236416.62",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "4749.03",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "854.85",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "242020.50"
+      }
+    ],
+    "total_debit": "242020.50",
+    "total_credit": "242020.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_f4005afba09cb5c7",
+    "bank_txn_id": "BNK000086",
+    "bank_txn_ids": [
+      "BNK000086"
+    ],
+    "settlement_id": "setl_0X4re7lK95Ytyf",
+    "settlement_ids": [
+      "setl_0X4re7lK95Ytyf"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "246110.89",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "4843.74",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "871.87",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "251826.50"
+      }
+    ],
+    "total_debit": "251826.50",
+    "total_credit": "251826.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_9e734eec23d0d9d2",
+    "bank_txn_id": "BNK000053",
+    "bank_txn_ids": [
+      "BNK000053",
+      "BNK000056"
+    ],
+    "settlement_id": "setl_53EyiUEtYmvXwL",
+    "settlement_ids": [
+      "setl_53EyiUEtYmvXwL",
+      "setl_kScRMmKkPsN4tZ"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "536787.14",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "10605.39",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1908.97",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "19839.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "569141.00"
+      }
+    ],
+    "total_debit": "569141.00",
+    "total_credit": "569141.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_1b0a2b5881d54de7",
+    "bank_txn_id": "BNK000054",
+    "bank_txn_ids": [
+      "BNK000054",
+      "BNK000055"
+    ],
+    "settlement_id": "setl_g1xMCk6cJLMGJM",
+    "settlement_ids": [
+      "setl_g1xMCk6cJLMGJM",
+      "setl_b3z50Ug2GUMFKO"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "410068.35",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "8062.93",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1451.34",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "6462.38",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "426045.00"
+      }
+    ],
+    "total_debit": "426045.00",
+    "total_credit": "426045.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_2ae7707881db31e9",
+    "bank_txn_id": "BNK000060",
+    "bank_txn_ids": [
+      "BNK000060",
+      "BNK000061"
+    ],
+    "settlement_id": "setl_qmLhxWhLrJpNtC",
+    "settlement_ids": [
+      "setl_qmLhxWhLrJpNtC",
+      "setl_XoaOOR3s7fvtBP"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "357998.52",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7430.76",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1337.59",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "8271.13",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "375038.00"
+      }
+    ],
+    "total_debit": "375038.00",
+    "total_credit": "375038.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_bfb49dbbd666f7b8",
+    "bank_txn_id": "BNK000062",
+    "bank_txn_ids": [
+      "BNK000062",
+      "BNK000063"
+    ],
+    "settlement_id": "setl_ejdcKWvrHoo7c0",
+    "settlement_ids": [
+      "setl_ejdcKWvrHoo7c0",
+      "setl_slRVJp4KTej6gS"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "12650.58",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "298.76",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "53.78",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "1931.88",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "14935.00"
+      }
+    ],
+    "total_debit": "14935.00",
+    "total_credit": "14935.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "deterministic checks passed; posting remains outside demo scope"
+    }
+  },
+  {
+    "proposal_id": "jrn_f5ec67bdac948dc9",
+    "bank_txn_id": "BNK000077",
+    "bank_txn_ids": [
+      "BNK000077",
+      "BNK000078"
+    ],
+    "settlement_id": "setl_gVBOkWB2r6g54J",
+    "settlement_ids": [
+      "setl_gVBOkWB2r6g54J",
+      "setl_PBwJ9bXNhx0zI3"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "302969.83",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "6518.37",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1173.30",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "26092.50",
+        "credit": "0"
+      },
+      {
+        "account": "Chargeback Losses",
+        "debit": "407.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "337161.50"
+      }
+    ],
+    "total_debit": "337161.50",
+    "total_credit": "337161.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_2698c492b72d18dc",
+    "bank_txn_id": "BNK000050",
+    "bank_txn_ids": [
+      "BNK000050",
+      "BNK000051"
+    ],
+    "settlement_id": "setl_SRLAXwKHOsT57S",
+    "settlement_ids": [
+      "setl_SRLAXwKHOsT57S",
+      "setl_caJJW10fc12xjA"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "220983.81",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "5034.05",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "906.14",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "4547.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "231471.50"
+      }
+    ],
+    "total_debit": "231471.50",
+    "total_credit": "231471.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_d7e7e6dc96d1bd8b",
+    "bank_txn_id": "BNK000070",
+    "bank_txn_ids": [
+      "BNK000070",
+      "BNK000071"
+    ],
+    "settlement_id": "setl_nkcd5S1PkAAVJV",
+    "settlement_ids": [
+      "setl_nkcd5S1PkAAVJV",
+      "setl_3ekoTpzAdwh622"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "354049.21",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7169.71",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1290.58",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "10670.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "373179.50"
+      }
+    ],
+    "total_debit": "373179.50",
+    "total_credit": "373179.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_3dd3ab987095229e",
+    "bank_txn_id": "BNK000074",
+    "bank_txn_ids": [
+      "BNK000074",
+      "BNK000075"
+    ],
+    "settlement_id": "setl_ZYDI2T27UOatPw",
+    "settlement_ids": [
+      "setl_ZYDI2T27UOatPw",
+      "setl_qaC7p1IPBVcTCv"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "268208.67",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "5473.59",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "985.24",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "6297.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "280964.50"
+      }
+    ],
+    "total_debit": "280964.50",
+    "total_credit": "280964.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_e83dfa54e5845965",
+    "bank_txn_id": "BNK000058",
+    "bank_txn_ids": [
+      "BNK000058",
+      "BNK000059"
+    ],
+    "settlement_id": "setl_gFeODHchjgluLH",
+    "settlement_ids": [
+      "setl_gFeODHchjgluLH",
+      "setl_mhEuuveD6ADCOC"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "385922.32",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7686.87",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1383.68",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "8579.63",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "403572.50"
+      }
+    ],
+    "total_debit": "403572.50",
+    "total_credit": "403572.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_6756eb94fdd415d6",
+    "bank_txn_id": "BNK000064",
+    "bank_txn_ids": [
+      "BNK000064",
+      "BNK000065"
+    ],
+    "settlement_id": "setl_qG7TysJ8jp2OKf",
+    "settlement_ids": [
+      "setl_qG7TysJ8jp2OKf",
+      "setl_zmACAwQWSHq69R"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "454770.00",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "9112.51",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1640.24",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "12828.25",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "478351.00"
+      }
+    ],
+    "total_debit": "478351.00",
+    "total_credit": "478351.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_e5667ef28c150bad",
+    "bank_txn_id": "BNK000048",
+    "bank_txn_ids": [
+      "BNK000048",
+      "BNK000049"
+    ],
+    "settlement_id": "setl_AIZLEK5UBKpFxB",
+    "settlement_ids": [
+      "setl_AIZLEK5UBKpFxB",
+      "setl_MGhmHmSoDFzyZL"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "475252.71",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "9254.09",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1665.70",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "486172.50"
+      }
+    ],
+    "total_debit": "486172.50",
+    "total_credit": "486172.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_30dd0853d496f652",
+    "bank_txn_id": "BNK000073",
+    "bank_txn_ids": [
+      "BNK000073",
+      "BNK000076"
+    ],
+    "settlement_id": "setl_UfAHgVs02HhtzO",
+    "settlement_ids": [
+      "setl_UfAHgVs02HhtzO",
+      "setl_X8PxwjgCEixxdv"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "401045.47",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7866.35",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1415.93",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "2803.75",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "413131.50"
+      }
+    ],
+    "total_debit": "413131.50",
+    "total_credit": "413131.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_b1f4bcd01bf9b0da",
+    "bank_txn_id": "BNK000068",
+    "bank_txn_ids": [
+      "BNK000068",
+      "BNK000069"
+    ],
+    "settlement_id": "setl_PRU2FmYChZCLoA",
+    "settlement_ids": [
+      "setl_PRU2FmYChZCLoA",
+      "setl_IgFWKRwTcz9IM7"
+    ],
+    "topology": "N:M",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "276048.99",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "5399.58",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "971.93",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "693.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "283114.00"
+      }
+    ],
+    "total_debit": "283114.00",
+    "total_credit": "283114.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_866a5c2bf67b4102",
+    "bank_txn_id": "BNK000000",
+    "bank_txn_ids": [
+      "BNK000000"
+    ],
+    "settlement_id": "setl_2ybSd4d7inlUpZ",
+    "settlement_ids": [
+      "setl_2ybSd4d7inlUpZ",
+      "setl_gG78kZpIihQKJA"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "402686.68",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7438.81",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1339.01",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "4090.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "415555.00"
+      }
+    ],
+    "total_debit": "415555.00",
+    "total_credit": "415555.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_d262167187abc39e",
+    "bank_txn_id": "BNK000001",
+    "bank_txn_ids": [
+      "BNK000001"
+    ],
+    "settlement_id": "setl_5g70VduXp32PWu",
+    "settlement_ids": [
+      "setl_5g70VduXp32PWu",
+      "setl_NoLryaazIk7Una"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "415382.56",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7813.51",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1406.43",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "5770.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "430373.00"
+      }
+    ],
+    "total_debit": "430373.00",
+    "total_credit": "430373.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_38a3f0a9c6a8b75c",
+    "bank_txn_id": "BNK000002",
+    "bank_txn_ids": [
+      "BNK000002"
+    ],
+    "settlement_id": "setl_SvLhOsF67sYjC8",
+    "settlement_ids": [
+      "setl_SvLhOsF67sYjC8",
+      "setl_yKlQPY9aOctIsT"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "301583.13",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "6008.77",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1081.60",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "2587.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "311261.00"
+      }
+    ],
+    "total_debit": "311261.00",
+    "total_credit": "311261.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_47fbe5963b0b9926",
+    "bank_txn_id": "BNK000005",
+    "bank_txn_ids": [
+      "BNK000005"
+    ],
+    "settlement_id": "setl_eY8Iar1EG6FfsC",
+    "settlement_ids": [
+      "setl_eY8Iar1EG6FfsC",
+      "setl_GZzsTxZYNNlnv9"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "562986.46",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "11369.63",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "2046.53",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "7835.38",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "584238.00"
+      }
+    ],
+    "total_debit": "584238.00",
+    "total_credit": "584238.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_784601df40ecab02",
+    "bank_txn_id": "BNK000006",
+    "bank_txn_ids": [
+      "BNK000006"
+    ],
+    "settlement_id": "setl_AfvzLGXEflJBNc",
+    "settlement_ids": [
+      "setl_AfvzLGXEflJBNc",
+      "setl_OP5TkGL3e7wdAi"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "247408.23",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "5316.76",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "957.01",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "2847.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "256529.00"
+      }
+    ],
+    "total_debit": "256529.00",
+    "total_credit": "256529.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_5124535ab504a35e",
+    "bank_txn_id": "BNK000009",
+    "bank_txn_ids": [
+      "BNK000009"
+    ],
+    "settlement_id": "setl_uXcZN6esCTFSCg",
+    "settlement_ids": [
+      "setl_uXcZN6esCTFSCg",
+      "setl_oQwyQ0L0q0qDds"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "458733.56",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "9536.77",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1716.67",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "34438.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "504425.50"
+      }
+    ],
+    "total_debit": "504425.50",
+    "total_credit": "504425.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_4ae6ee3f9cb08d2e",
+    "bank_txn_id": "BNK000010",
+    "bank_txn_ids": [
+      "BNK000010"
+    ],
+    "settlement_id": "setl_KSklJTfm2dg9pe",
+    "settlement_ids": [
+      "setl_KSklJTfm2dg9pe",
+      "setl_LGp7r8z6FNmFNz"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "352434.28",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7184.10",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1293.12",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "7692.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "368603.50"
+      }
+    ],
+    "total_debit": "368603.50",
+    "total_credit": "368603.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_46bb030acdfb8038",
+    "bank_txn_id": "BNK000012",
+    "bank_txn_ids": [
+      "BNK000012"
+    ],
+    "settlement_id": "setl_oXgs4X2opWeFaH",
+    "settlement_ids": [
+      "setl_oXgs4X2opWeFaH",
+      "setl_hlnB0rAFe81EEt"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "399531.72",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "7915.07",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1424.71",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "408871.50"
+      }
+    ],
+    "total_debit": "408871.50",
+    "total_credit": "408871.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_73f9d4085059343a",
+    "bank_txn_id": "BNK000014",
+    "bank_txn_ids": [
+      "BNK000014"
+    ],
+    "settlement_id": "setl_pv7znre09sgKRo",
+    "settlement_ids": [
+      "setl_pv7znre09sgKRo",
+      "setl_DPalq0y05L810W"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "471928.42",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "9380.12",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1688.46",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "8566.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "491563.00"
+      }
+    ],
+    "total_debit": "491563.00",
+    "total_credit": "491563.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_fdcee1d47de01db0",
+    "bank_txn_id": "BNK000016",
+    "bank_txn_ids": [
+      "BNK000016"
+    ],
+    "settlement_id": "setl_r6fDDdhayzAXy5",
+    "settlement_ids": [
+      "setl_r6fDDdhayzAXy5",
+      "setl_V4IBtk1oREzbnT"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "436324.37",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "8864.40",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1595.60",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "19030.63",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "465815.00"
+      }
+    ],
+    "total_debit": "465815.00",
+    "total_credit": "465815.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_eeaa003d1464e6f7",
+    "bank_txn_id": "BNK000017",
+    "bank_txn_ids": [
+      "BNK000017"
+    ],
+    "settlement_id": "setl_f4CUPbHJC3AyZ2",
+    "settlement_ids": [
+      "setl_f4CUPbHJC3AyZ2",
+      "setl_CF99Y58tTQ3a5C"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "499815.20",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "9057.71",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1630.46",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "273.63",
+        "credit": "0"
+      },
+      {
+        "account": "Chargeback Losses",
+        "debit": "2700.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "513477.00"
+      }
+    ],
+    "total_debit": "513477.00",
+    "total_credit": "513477.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_a943a19567ddcb9d",
+    "bank_txn_id": "BNK000019",
+    "bank_txn_ids": [
+      "BNK000019"
+    ],
+    "settlement_id": "setl_5t2qrdp6srvFVa",
+    "settlement_ids": [
+      "setl_5t2qrdp6srvFVa",
+      "setl_d68qASlFJGHJVK"
+    ],
+    "topology": "1:N",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "406516.05",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "8195.73",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1475.22",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "33053.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "449240.00"
+      }
+    ],
+    "total_debit": "449240.00",
+    "total_credit": "449240.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_10a6d8916c9e31a7",
+    "bank_txn_id": "BNK000020",
+    "bank_txn_ids": [
+      "BNK000020",
+      "BNK000023"
+    ],
+    "settlement_id": "setl_5l1f2vm6jktiWv",
+    "settlement_ids": [
+      "setl_5l1f2vm6jktiWv"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "4547.58",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "93.15",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "16.77",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "4657.50"
+      }
+    ],
+    "total_debit": "4657.50",
+    "total_credit": "4657.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "deterministic checks passed; posting remains outside demo scope"
+    }
+  },
+  {
+    "proposal_id": "jrn_da65ddace8f4815d",
+    "bank_txn_id": "BNK000021",
+    "bank_txn_ids": [
+      "BNK000021",
+      "BNK000022"
+    ],
+    "settlement_id": "setl_7fbLC6wmdjufOV",
+    "settlement_ids": [
+      "setl_7fbLC6wmdjufOV"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "104021.57",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "2161.81",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "389.12",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "8939.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "115511.50"
+      }
+    ],
+    "total_debit": "115511.50",
+    "total_credit": "115511.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_d5fcc7cf5cbbf7d4",
+    "bank_txn_id": "BNK000026",
+    "bank_txn_ids": [
+      "BNK000026",
+      "BNK000027"
+    ],
+    "settlement_id": "setl_jD0kUG1N0JCnsR",
+    "settlement_ids": [
+      "setl_jD0kUG1N0JCnsR"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "322106.04",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "6228.99",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1121.22",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "8200.75",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "337657.00"
+      }
+    ],
+    "total_debit": "337657.00",
+    "total_credit": "337657.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_7c7d9b8d12362d5e",
+    "bank_txn_id": "BNK000029",
+    "bank_txn_ids": [
+      "BNK000029",
+      "BNK000030"
+    ],
+    "settlement_id": "setl_Zu0XGCmxcQeztF",
+    "settlement_ids": [
+      "setl_Zu0XGCmxcQeztF"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "82437.51",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "2235.56",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "402.43",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "31682.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "116758.00"
+      }
+    ],
+    "total_debit": "116758.00",
+    "total_credit": "116758.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "deterministic checks passed; posting remains outside demo scope"
+    }
+  },
+  {
+    "proposal_id": "jrn_6daa2b7f67ad8392",
+    "bank_txn_id": "BNK000031",
+    "bank_txn_ids": [
+      "BNK000031",
+      "BNK000032"
+    ],
+    "settlement_id": "setl_FrTOQ2QHd5PI6o",
+    "settlement_ids": [
+      "setl_FrTOQ2QHd5PI6o"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "316556.24",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "6287.11",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "1131.65",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "323975.00"
+      }
+    ],
+    "total_debit": "323975.00",
+    "total_credit": "323975.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_e119d6df53160830",
+    "bank_txn_id": "BNK000033",
+    "bank_txn_ids": [
+      "BNK000033",
+      "BNK000035"
+    ],
+    "settlement_id": "setl_NDvZkAT0vGdlEh",
+    "settlement_ids": [
+      "setl_NDvZkAT0vGdlEh"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "156632.83",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "3121.77",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "561.90",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "160316.50"
+      }
+    ],
+    "total_debit": "160316.50",
+    "total_credit": "160316.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_73c00471a289286f",
+    "bank_txn_id": "BNK000038",
+    "bank_txn_ids": [
+      "BNK000038",
+      "BNK000042"
+    ],
+    "settlement_id": "setl_Huw9gBeSnleXJn",
+    "settlement_ids": [
+      "setl_Huw9gBeSnleXJn"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "12332.51",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "338.13",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "60.86",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "3975.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "16706.50"
+      }
+    ],
+    "total_debit": "16706.50",
+    "total_credit": "16706.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "deterministic checks passed; posting remains outside demo scope"
+    }
+  },
+  {
+    "proposal_id": "jrn_4b5a7563fbe43745",
+    "bank_txn_id": "BNK000039",
+    "bank_txn_ids": [
+      "BNK000039",
+      "BNK000040"
+    ],
+    "settlement_id": "setl_cfcBmVw6GGZfgl",
+    "settlement_ids": [
+      "setl_cfcBmVw6GGZfgl"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "244282.51",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "5115.25",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "920.74",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "250318.50"
+      }
+    ],
+    "total_debit": "250318.50",
+    "total_credit": "250318.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_a709ed03281dcf7d",
+    "bank_txn_id": "BNK000044",
+    "bank_txn_ids": [
+      "BNK000044",
+      "BNK000045"
+    ],
+    "settlement_id": "setl_seMFRCCGsi23F8",
+    "settlement_ids": [
+      "setl_seMFRCCGsi23F8"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "192051.65",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "3997.75",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "719.60",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "11857.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "208626.00"
+      }
+    ],
+    "total_debit": "208626.00",
+    "total_credit": "208626.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_9c5866566fd5dbfa",
+    "bank_txn_id": "BNK000046",
+    "bank_txn_ids": [
+      "BNK000046",
+      "BNK000047"
+    ],
+    "settlement_id": "setl_j6FqciI6UEdH7R",
+    "settlement_ids": [
+      "setl_j6FqciI6UEdH7R"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "139393.99",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "2802.54",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "504.47",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "142701.00"
+      }
+    ],
+    "total_debit": "142701.00",
+    "total_credit": "142701.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_e5a932bca7190448",
+    "bank_txn_id": "BNK000024",
+    "bank_txn_ids": [
+      "BNK000024",
+      "BNK000025"
+    ],
+    "settlement_id": "setl_dubwLO7omDkawb",
+    "settlement_ids": [
+      "setl_dubwLO7omDkawb"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "153499.20",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "2903.23",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "522.57",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "156925.00"
+      }
+    ],
+    "total_debit": "156925.00",
+    "total_credit": "156925.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_ada3b5ed3aaf13e1",
+    "bank_txn_id": "BNK000080",
+    "bank_txn_ids": [
+      "BNK000080"
+    ],
+    "settlement_id": "setl_ntLL5DSYK3SNTQ",
+    "settlement_ids": [
+      "setl_ntLL5DSYK3SNTQ"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "22426.94",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "459.38",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "82.68",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "22969.00"
+      }
+    ],
+    "total_debit": "22969.00",
+    "total_credit": "22969.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "deterministic checks passed; posting remains outside demo scope"
+    }
+  },
+  {
+    "proposal_id": "jrn_0926f85090ec4899",
+    "bank_txn_id": "BNK000082",
+    "bank_txn_ids": [
+      "BNK000082"
+    ],
+    "settlement_id": "setl_brAOFZubvE8FBi",
+    "settlement_ids": [
+      "setl_brAOFZubvE8FBi"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "115225.52",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "2347.44",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "422.54",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "349.00",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "118344.50"
+      }
+    ],
+    "total_debit": "118344.50",
+    "total_credit": "118344.50",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_61eefecfd3e118bc",
+    "bank_txn_id": "BNK000034",
+    "bank_txn_ids": [
+      "BNK000034",
+      "BNK000036"
+    ],
+    "settlement_id": "setl_XeuQK0gigAaoS0",
+    "settlement_ids": [
+      "setl_XeuQK0gigAaoS0"
+    ],
+    "topology": "N:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "276201.01",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "5243.22",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "943.77",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "282388.00"
+      }
+    ],
+    "total_debit": "282388.00",
+    "total_credit": "282388.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_c41fa1f625287d9d",
+    "bank_txn_id": "BNK000079",
+    "bank_txn_ids": [
+      "BNK000079"
+    ],
+    "settlement_id": "setl_lqpecjkIRi6XHl",
+    "settlement_ids": [
+      "setl_lqpecjkIRi6XHl"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "183053.79",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "3961.63",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "713.08",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "21967.50",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "209696.00"
+      }
+    ],
+    "total_debit": "209696.00",
+    "total_credit": "209696.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_92cc0607fa45344e",
+    "bank_txn_id": "BNK000081",
+    "bank_txn_ids": [
+      "BNK000081"
+    ],
+    "settlement_id": "setl_UY2FIELlArQ3Lc",
+    "settlement_ids": [
+      "setl_UY2FIELlArQ3Lc"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "218419.06",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "4267.76",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "768.18",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "223455.00"
+      }
+    ],
+    "total_debit": "223455.00",
+    "total_credit": "223455.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  },
+  {
+    "proposal_id": "jrn_55455d2c4de4fe10",
+    "bank_txn_id": "BNK000085",
+    "bank_txn_ids": [
+      "BNK000085"
+    ],
+    "settlement_id": "setl_VODZ18OGb9MKM4",
+    "settlement_ids": [
+      "setl_VODZ18OGb9MKM4"
+    ],
+    "topology": "1:1",
+    "entries": [
+      {
+        "account": "Bank",
+        "debit": "115499.20",
+        "credit": "0"
+      },
+      {
+        "account": "Payment Processing Fees",
+        "debit": "2250.56",
+        "credit": "0"
+      },
+      {
+        "account": "Input GST",
+        "debit": "405.11",
+        "credit": "0"
+      },
+      {
+        "account": "Refunds and Returns",
+        "debit": "4812.13",
+        "credit": "0"
+      },
+      {
+        "account": "Razorpay Sales Clearing",
+        "debit": "0",
+        "credit": "122967.00"
+      }
+    ],
+    "total_debit": "122967.00",
+    "total_credit": "122967.00",
+    "balanced": true,
+    "posting_status": "not_posted",
+    "approval": {
+      "status": "awaiting_human_approval",
+      "human_approval_required": true,
+      "blockers": [],
+      "reason": "amount is at or above INR 100000.00"
+    }
+  }
+]

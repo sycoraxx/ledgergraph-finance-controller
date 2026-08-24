@@ -1,0 +1,4088 @@
+[
+  {
+    "certificate_id": "LGC-00001",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000037=>setl_oIPdU6ZKS6OkmD",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000037"
+    ],
+    "settlements": [
+      "setl_oIPdU6ZKS6OkmD"
+    ],
+    "evidence_score": 175,
+    "confidence": 1.0,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "full_utr_exact",
+        "points": 100,
+        "detail": "full UTR appears in narration"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "193308.88",
+      "settlement_net": "193308.88",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000029+BNK000037=>setl_FrTOQ2QHd5PI6o+setl_oIPdU6ZKS6OkmD",
+        "evidence_score": 36,
+        "residual": "-293473.74",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000037=>setl_FrTOQ2QHd5PI6o+setl_oIPdU6ZKS6OkmD",
+        "evidence_score": 35,
+        "residual": "-316556.24",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000029+BNK000037=>setl_oIPdU6ZKS6OkmD",
+        "evidence_score": 35,
+        "residual": "23082.50",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00002",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000043=>setl_KueUbhY4pGNMt4",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000043"
+    ],
+    "settlements": [
+      "setl_KueUbhY4pGNMt4"
+    ],
+    "evidence_score": 175,
+    "confidence": 1.0,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "full_utr_exact",
+        "points": 100,
+        "detail": "full UTR appears in narration"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "-30366.70",
+      "settlement_net": "-30366.70",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000038+BNK000043=>setl_Huw9gBeSnleXJn+setl_KueUbhY4pGNMt4",
+        "evidence_score": 45,
+        "residual": "-8756.08",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000043=>setl_Huw9gBeSnleXJn+setl_KueUbhY4pGNMt4",
+        "evidence_score": 35,
+        "residual": "-12332.51",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000043=>setl_KueUbhY4pGNMt4",
+        "evidence_score": 35,
+        "residual": "3576.43",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00003",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000067=>setl_dXg4PutvO1hWMS",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000067"
+    ],
+    "settlements": [
+      "setl_dXg4PutvO1hWMS"
+    ],
+    "evidence_score": 175,
+    "confidence": 1.0,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "full_utr_exact",
+        "points": 100,
+        "detail": "full UTR appears in narration"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "-5992.97",
+      "settlement_net": "-5992.97",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000067=>setl_IgFWKRwTcz9IM7+setl_dXg4PutvO1hWMS",
+        "evidence_score": 36,
+        "residual": "-117656.36",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000067=>setl_IgFWKRwTcz9IM7+setl_dXg4PutvO1hWMS",
+        "evidence_score": 36,
+        "residual": "-123981.65",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000067+BNK000068=>setl_IgFWKRwTcz9IM7",
+        "evidence_score": 36,
+        "residual": "10252.17",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000062+BNK000067=>setl_dXg4PutvO1hWMS",
+        "evidence_score": 35,
+        "residual": "6325.29",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000067=>setl_IgFWKRwTcz9IM7",
+        "evidence_score": 35,
+        "residual": "-129974.62",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00004",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000083=>setl_6CGdsOk2sZpa5R",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000083"
+    ],
+    "settlements": [
+      "setl_6CGdsOk2sZpa5R"
+    ],
+    "evidence_score": 175,
+    "confidence": 1.0,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "full_utr_exact",
+        "points": 100,
+        "detail": "full UTR appears in narration"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "169447.60",
+      "settlement_net": "169447.60",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000083+BNK000084=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
+        "evidence_score": 97,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000083=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
+        "evidence_score": 36,
+        "residual": "-236416.62",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000084=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
+        "evidence_score": 36,
+        "residual": "-169447.60",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000083+BNK000084=>setl_6CGdsOk2sZpa5R",
+        "evidence_score": 36,
+        "residual": "236416.62",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000083+BNK000084=>setl_6guwf0tUIPvxJe",
+        "evidence_score": 36,
+        "residual": "169447.60",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00005",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000084=>setl_6guwf0tUIPvxJe",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000084"
+    ],
+    "settlements": [
+      "setl_6guwf0tUIPvxJe"
+    ],
+    "evidence_score": 175,
+    "confidence": 1.0,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "full_utr_exact",
+        "points": 100,
+        "detail": "full UTR appears in narration"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "236416.62",
+      "settlement_net": "236416.62",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000083+BNK000084=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
+        "evidence_score": 97,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000083=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
+        "evidence_score": 36,
+        "residual": "-236416.62",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000084=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
+        "evidence_score": 36,
+        "residual": "-169447.60",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000083+BNK000084=>setl_6CGdsOk2sZpa5R",
+        "evidence_score": 36,
+        "residual": "236416.62",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000083+BNK000084=>setl_6guwf0tUIPvxJe",
+        "evidence_score": 36,
+        "residual": "169447.60",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00006",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000086=>setl_0X4re7lK95Ytyf",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000086"
+    ],
+    "settlements": [
+      "setl_0X4re7lK95Ytyf"
+    ],
+    "evidence_score": 175,
+    "confidence": 1.0,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "full_utr_exact",
+        "points": 100,
+        "detail": "full UTR appears in narration"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "246110.89",
+      "settlement_net": "246110.89",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000085+BNK000086=>setl_0X4re7lK95Ytyf+setl_VODZ18OGb9MKM4",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000086=>setl_0X4re7lK95Ytyf+setl_VODZ18OGb9MKM4",
+        "evidence_score": 36,
+        "residual": "-115499.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000085+BNK000086=>setl_0X4re7lK95Ytyf",
+        "evidence_score": 35,
+        "residual": "115499.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000086=>setl_VODZ18OGb9MKM4",
+        "evidence_score": 35,
+        "residual": "130611.69",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00007",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000053+BNK000056=>setl_53EyiUEtYmvXwL+setl_kScRMmKkPsN4tZ",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000053",
+      "BNK000056"
+    ],
+    "settlements": [
+      "setl_53EyiUEtYmvXwL",
+      "setl_kScRMmKkPsN4tZ"
+    ],
+    "evidence_score": 117,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "536787.14",
+      "settlement_net": "536787.14",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000053=>setl_53EyiUEtYmvXwL",
+        "evidence_score": 120,
+        "residual": "72685.02",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000053=>setl_kScRMmKkPsN4tZ",
+        "evidence_score": 120,
+        "residual": "-2311.64",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000056=>setl_53EyiUEtYmvXwL",
+        "evidence_score": 120,
+        "residual": "2311.64",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000056=>setl_kScRMmKkPsN4tZ",
+        "evidence_score": 120,
+        "residual": "-72685.02",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000053+BNK000055=>setl_b3z50Ug2GUMFKO+setl_kScRMmKkPsN4tZ",
+        "evidence_score": 99,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00008",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000054+BNK000055=>setl_b3z50Ug2GUMFKO+setl_g1xMCk6cJLMGJM",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000054",
+      "BNK000055"
+    ],
+    "settlements": [
+      "setl_g1xMCk6cJLMGJM",
+      "setl_b3z50Ug2GUMFKO"
+    ],
+    "evidence_score": 117,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "410068.35",
+      "settlement_net": "410068.35",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000054=>setl_b3z50Ug2GUMFKO",
+        "evidence_score": 120,
+        "residual": "2311.65",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000055=>setl_b3z50Ug2GUMFKO",
+        "evidence_score": 120,
+        "residual": "2311.64",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000054=>setl_g1xMCk6cJLMGJM",
+        "evidence_score": 105,
+        "residual": "-2311.64",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000055=>setl_g1xMCk6cJLMGJM",
+        "evidence_score": 105,
+        "residual": "-2311.65",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000053+BNK000055=>setl_b3z50Ug2GUMFKO+setl_kScRMmKkPsN4tZ",
+        "evidence_score": 99,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00009",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000060+BNK000061=>setl_XoaOOR3s7fvtBP+setl_qmLhxWhLrJpNtC",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000060",
+      "BNK000061"
+    ],
+    "settlements": [
+      "setl_qmLhxWhLrJpNtC",
+      "setl_XoaOOR3s7fvtBP"
+    ],
+    "evidence_score": 117,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "357998.52",
+      "settlement_net": "357998.52",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000060=>setl_XoaOOR3s7fvtBP",
+        "evidence_score": 120,
+        "residual": "52900.50",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000061=>setl_XoaOOR3s7fvtBP",
+        "evidence_score": 120,
+        "residual": "-3122.74",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000060=>setl_qmLhxWhLrJpNtC",
+        "evidence_score": 114,
+        "residual": "3122.74",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000061=>setl_qmLhxWhLrJpNtC",
+        "evidence_score": 114,
+        "residual": "-52900.50",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000059+BNK000061=>setl_XoaOOR3s7fvtBP+setl_mhEuuveD6ADCOC",
+        "evidence_score": 98,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00010",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000063=>setl_ejdcKWvrHoo7c0+setl_slRVJp4KTej6gS",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000062",
+      "BNK000063"
+    ],
+    "settlements": [
+      "setl_ejdcKWvrHoo7c0",
+      "setl_slRVJp4KTej6gS"
+    ],
+    "evidence_score": 117,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "12650.58",
+      "settlement_net": "12650.58",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000062=>setl_ejdcKWvrHoo7c0",
+        "evidence_score": 120,
+        "residual": "5070.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000062=>setl_slRVJp4KTej6gS",
+        "evidence_score": 120,
+        "residual": "-5070.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000063=>setl_ejdcKWvrHoo7c0",
+        "evidence_score": 120,
+        "residual": "5070.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000063=>setl_slRVJp4KTej6gS",
+        "evidence_score": 120,
+        "residual": "-5070.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000064=>setl_ejdcKWvrHoo7c0+setl_qG7TysJ8jp2OKf",
+        "evidence_score": 95,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00011",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000077+BNK000078=>setl_PBwJ9bXNhx0zI3+setl_gVBOkWB2r6g54J",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000077",
+      "BNK000078"
+    ],
+    "settlements": [
+      "setl_gVBOkWB2r6g54J",
+      "setl_PBwJ9bXNhx0zI3"
+    ],
+    "evidence_score": 117,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "302969.83",
+      "settlement_net": "302969.83",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000077=>setl_PBwJ9bXNhx0zI3",
+        "evidence_score": 120,
+        "residual": "-40346.34",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000078=>setl_PBwJ9bXNhx0zI3",
+        "evidence_score": 120,
+        "residual": "38425.81",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000077=>setl_gVBOkWB2r6g54J",
+        "evidence_score": 105,
+        "residual": "-38425.81",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000078=>setl_gVBOkWB2r6g54J",
+        "evidence_score": 105,
+        "residual": "40346.34",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000038+BNK000077=>setl_PBwJ9bXNhx0zI3+setl_gVBOkWB2r6g54J",
+        "evidence_score": 45,
+        "residual": "-187294.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00012",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000050+BNK000051=>setl_SRLAXwKHOsT57S+setl_caJJW10fc12xjA",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000050",
+      "BNK000051"
+    ],
+    "settlements": [
+      "setl_SRLAXwKHOsT57S",
+      "setl_caJJW10fc12xjA"
+    ],
+    "evidence_score": 115,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "220983.81",
+      "settlement_net": "220983.81",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000050=>setl_caJJW10fc12xjA",
+        "evidence_score": 120,
+        "residual": "112931.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000051=>setl_caJJW10fc12xjA",
+        "evidence_score": 120,
+        "residual": "87150.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000050=>setl_SRLAXwKHOsT57S",
+        "evidence_score": 114,
+        "residual": "-87150.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000051=>setl_SRLAXwKHOsT57S",
+        "evidence_score": 114,
+        "residual": "-112931.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000049+BNK000051=>setl_MGhmHmSoDFzyZL+setl_caJJW10fc12xjA",
+        "evidence_score": 98,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00013",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000070+BNK000071=>setl_3ekoTpzAdwh622+setl_nkcd5S1PkAAVJV",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000070",
+      "BNK000071"
+    ],
+    "settlements": [
+      "setl_nkcd5S1PkAAVJV",
+      "setl_3ekoTpzAdwh622"
+    ],
+    "evidence_score": 115,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "354049.21",
+      "settlement_net": "354049.21",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000070=>setl_3ekoTpzAdwh622",
+        "evidence_score": 120,
+        "residual": "70564.26",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000070=>setl_nkcd5S1PkAAVJV",
+        "evidence_score": 120,
+        "residual": "11840.55",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000071=>setl_3ekoTpzAdwh622",
+        "evidence_score": 120,
+        "residual": "-11840.55",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000071=>setl_nkcd5S1PkAAVJV",
+        "evidence_score": 120,
+        "residual": "-70564.26",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000068+BNK000070=>setl_PRU2FmYChZCLoA+setl_nkcd5S1PkAAVJV",
+        "evidence_score": 97,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00014",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000074+BNK000075=>setl_ZYDI2T27UOatPw+setl_qaC7p1IPBVcTCv",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000074",
+      "BNK000075"
+    ],
+    "settlements": [
+      "setl_ZYDI2T27UOatPw",
+      "setl_qaC7p1IPBVcTCv"
+    ],
+    "evidence_score": 115,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "268208.67",
+      "settlement_net": "268208.67",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000074=>setl_ZYDI2T27UOatPw",
+        "evidence_score": 120,
+        "residual": "-111816.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000074=>setl_qaC7p1IPBVcTCv",
+        "evidence_score": 120,
+        "residual": "155169.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000075=>setl_ZYDI2T27UOatPw",
+        "evidence_score": 120,
+        "residual": "-155169.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000075=>setl_qaC7p1IPBVcTCv",
+        "evidence_score": 120,
+        "residual": "111816.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000075=>setl_UfAHgVs02HhtzO+setl_qaC7p1IPBVcTCv",
+        "evidence_score": 97,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00015",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000058+BNK000059=>setl_gFeODHchjgluLH+setl_mhEuuveD6ADCOC",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000058",
+      "BNK000059"
+    ],
+    "settlements": [
+      "setl_gFeODHchjgluLH",
+      "setl_mhEuuveD6ADCOC"
+    ],
+    "evidence_score": 112,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_posting_window",
+        "points": 10,
+        "detail": "group falls inside the two-day posting window"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "385922.32",
+      "settlement_net": "385922.32",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000058=>setl_mhEuuveD6ADCOC",
+        "evidence_score": 114,
+        "residual": "87069.80",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000059=>setl_mhEuuveD6ADCOC",
+        "evidence_score": 114,
+        "residual": "3122.74",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000058=>setl_gFeODHchjgluLH",
+        "evidence_score": 105,
+        "residual": "-3122.74",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000059=>setl_gFeODHchjgluLH",
+        "evidence_score": 105,
+        "residual": "-87069.80",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000059+BNK000061=>setl_XoaOOR3s7fvtBP+setl_mhEuuveD6ADCOC",
+        "evidence_score": 98,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00016",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000064+BNK000065=>setl_qG7TysJ8jp2OKf+setl_zmACAwQWSHq69R",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000064",
+      "BNK000065"
+    ],
+    "settlements": [
+      "setl_qG7TysJ8jp2OKf",
+      "setl_zmACAwQWSHq69R"
+    ],
+    "evidence_score": 112,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_posting_window",
+        "points": 10,
+        "detail": "group falls inside the two-day posting window"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "454770.00",
+      "settlement_net": "454770.00",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000064=>setl_qG7TysJ8jp2OKf",
+        "evidence_score": 114,
+        "residual": "-5070.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000064=>setl_zmACAwQWSHq69R",
+        "evidence_score": 114,
+        "residual": "3169.70",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000065=>setl_qG7TysJ8jp2OKf",
+        "evidence_score": 114,
+        "residual": "-3169.70",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000065=>setl_zmACAwQWSHq69R",
+        "evidence_score": 114,
+        "residual": "5070.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000064=>setl_ejdcKWvrHoo7c0+setl_qG7TysJ8jp2OKf",
+        "evidence_score": 95,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00017",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000048+BNK000049=>setl_AIZLEK5UBKpFxB+setl_MGhmHmSoDFzyZL",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000048",
+      "BNK000049"
+    ],
+    "settlements": [
+      "setl_AIZLEK5UBKpFxB",
+      "setl_MGhmHmSoDFzyZL"
+    ],
+    "evidence_score": 110,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "group_posting_window",
+        "points": 10,
+        "detail": "group falls inside the two-day posting window"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "475252.71",
+      "settlement_net": "475252.71",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000048=>setl_AIZLEK5UBKpFxB",
+        "evidence_score": 114,
+        "residual": "87150.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000048=>setl_MGhmHmSoDFzyZL",
+        "evidence_score": 114,
+        "residual": "192898.41",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000049=>setl_AIZLEK5UBKpFxB",
+        "evidence_score": 114,
+        "residual": "-192898.41",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000049=>setl_MGhmHmSoDFzyZL",
+        "evidence_score": 114,
+        "residual": "-87150.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000049+BNK000051=>setl_MGhmHmSoDFzyZL+setl_caJJW10fc12xjA",
+        "evidence_score": 98,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00018",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000076=>setl_UfAHgVs02HhtzO+setl_X8PxwjgCEixxdv",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000073",
+      "BNK000076"
+    ],
+    "settlements": [
+      "setl_UfAHgVs02HhtzO",
+      "setl_X8PxwjgCEixxdv"
+    ],
+    "evidence_score": 110,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "group_posting_window",
+        "points": 10,
+        "detail": "group falls inside the two-day posting window"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "401045.47",
+      "settlement_net": "401045.47",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000073=>setl_UfAHgVs02HhtzO",
+        "evidence_score": 114,
+        "residual": "-111816.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000073=>setl_X8PxwjgCEixxdv",
+        "evidence_score": 114,
+        "residual": "-64373.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000076=>setl_UfAHgVs02HhtzO",
+        "evidence_score": 114,
+        "residual": "64373.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000076=>setl_X8PxwjgCEixxdv",
+        "evidence_score": 114,
+        "residual": "111816.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000075=>setl_UfAHgVs02HhtzO+setl_qaC7p1IPBVcTCv",
+        "evidence_score": 97,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00019",
+    "decision": "globally_selected",
+    "candidate_id": "many_banks_to_many_settlements:BNK000068+BNK000069=>setl_IgFWKRwTcz9IM7+setl_PRU2FmYChZCLoA",
+    "kind": "many_banks_to_many_settlements",
+    "topology": "N:M",
+    "bank_entries": [
+      "BNK000068",
+      "BNK000069"
+    ],
+    "settlements": [
+      "setl_PRU2FmYChZCLoA",
+      "setl_IgFWKRwTcz9IM7"
+    ],
+    "evidence_score": 100,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many banks to many settlements hypothesis"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 40,
+        "detail": "4 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "276048.99",
+      "settlement_net": "276048.99",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000068=>setl_IgFWKRwTcz9IM7",
+        "evidence_score": 105,
+        "residual": "16245.14",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000069=>setl_IgFWKRwTcz9IM7",
+        "evidence_score": 105,
+        "residual": "11840.55",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000068=>setl_PRU2FmYChZCLoA",
+        "evidence_score": 100,
+        "residual": "-11840.55",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000069=>setl_PRU2FmYChZCLoA",
+        "evidence_score": 100,
+        "residual": "-16245.14",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000068+BNK000070=>setl_PRU2FmYChZCLoA+setl_nkcd5S1PkAAVJV",
+        "evidence_score": 97,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00020",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000000=>setl_2ybSd4d7inlUpZ+setl_gG78kZpIihQKJA",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000000"
+    ],
+    "settlements": [
+      "setl_2ybSd4d7inlUpZ",
+      "setl_gG78kZpIihQKJA"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "402686.68",
+      "settlement_net": "402686.68",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000000=>setl_gG78kZpIihQKJA",
+        "evidence_score": 120,
+        "residual": "205426.09",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000000=>setl_2ybSd4d7inlUpZ",
+        "evidence_score": 114,
+        "residual": "197260.59",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000000+BNK000001=>setl_2ybSd4d7inlUpZ+setl_gG78kZpIihQKJA",
+        "evidence_score": 46,
+        "residual": "415382.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000000+BNK000001=>setl_5g70VduXp32PWu+setl_NoLryaazIk7Una",
+        "evidence_score": 46,
+        "residual": "402686.68",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000000=>setl_2ybSd4d7inlUpZ+setl_5g70VduXp32PWu",
+        "evidence_score": 36,
+        "residual": "-40373.55",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00021",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000001=>setl_5g70VduXp32PWu+setl_NoLryaazIk7Una",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000001"
+    ],
+    "settlements": [
+      "setl_5g70VduXp32PWu",
+      "setl_NoLryaazIk7Una"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "415382.56",
+      "settlement_net": "415382.56",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000001=>setl_NoLryaazIk7Una",
+        "evidence_score": 120,
+        "residual": "237634.14",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000001=>setl_5g70VduXp32PWu",
+        "evidence_score": 105,
+        "residual": "177748.42",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000001+BNK000002=>setl_SvLhOsF67sYjC8+setl_yKlQPY9aOctIsT",
+        "evidence_score": 47,
+        "residual": "415382.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000000+BNK000001=>setl_2ybSd4d7inlUpZ+setl_gG78kZpIihQKJA",
+        "evidence_score": 46,
+        "residual": "415382.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000000+BNK000001=>setl_5g70VduXp32PWu+setl_NoLryaazIk7Una",
+        "evidence_score": 46,
+        "residual": "402686.68",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00022",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000002=>setl_SvLhOsF67sYjC8+setl_yKlQPY9aOctIsT",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000002"
+    ],
+    "settlements": [
+      "setl_SvLhOsF67sYjC8",
+      "setl_yKlQPY9aOctIsT"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "301583.13",
+      "settlement_net": "301583.13",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000002=>setl_SvLhOsF67sYjC8",
+        "evidence_score": 120,
+        "residual": "299122.49",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000002=>setl_yKlQPY9aOctIsT",
+        "evidence_score": 120,
+        "residual": "2460.64",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000001+BNK000002=>setl_SvLhOsF67sYjC8+setl_yKlQPY9aOctIsT",
+        "evidence_score": 47,
+        "residual": "415382.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000001=>setl_5g70VduXp32PWu+setl_SvLhOsF67sYjC8",
+        "evidence_score": 36,
+        "residual": "175287.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000002=>setl_NoLryaazIk7Una+setl_SvLhOsF67sYjC8",
+        "evidence_score": 36,
+        "residual": "121374.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00023",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000005=>setl_GZzsTxZYNNlnv9+setl_eY8Iar1EG6FfsC",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000005"
+    ],
+    "settlements": [
+      "setl_eY8Iar1EG6FfsC",
+      "setl_GZzsTxZYNNlnv9"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "562986.46",
+      "settlement_net": "562986.46",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000005=>setl_GZzsTxZYNNlnv9",
+        "evidence_score": 120,
+        "residual": "293965.25",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000005=>setl_eY8Iar1EG6FfsC",
+        "evidence_score": 114,
+        "residual": "269021.21",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000005+BNK000006=>setl_AfvzLGXEflJBNc+setl_OP5TkGL3e7wdAi",
+        "evidence_score": 46,
+        "residual": "562986.46",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000001+BNK000005=>setl_GZzsTxZYNNlnv9+setl_eY8Iar1EG6FfsC",
+        "evidence_score": 45,
+        "residual": "415382.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000005=>setl_AfvzLGXEflJBNc+setl_eY8Iar1EG6FfsC",
+        "evidence_score": 36,
+        "residual": "27811.43",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00024",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000006=>setl_AfvzLGXEflJBNc+setl_OP5TkGL3e7wdAi",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000006"
+    ],
+    "settlements": [
+      "setl_AfvzLGXEflJBNc",
+      "setl_OP5TkGL3e7wdAi"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "247408.23",
+      "settlement_net": "247408.23",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000006=>setl_OP5TkGL3e7wdAi",
+        "evidence_score": 120,
+        "residual": "241209.78",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000006=>setl_AfvzLGXEflJBNc",
+        "evidence_score": 114,
+        "residual": "6198.45",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000005+BNK000006=>setl_AfvzLGXEflJBNc+setl_OP5TkGL3e7wdAi",
+        "evidence_score": 46,
+        "residual": "562986.46",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000005=>setl_AfvzLGXEflJBNc+setl_eY8Iar1EG6FfsC",
+        "evidence_score": 36,
+        "residual": "27811.43",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000005+BNK000006=>setl_AfvzLGXEflJBNc",
+        "evidence_score": 36,
+        "residual": "569184.91",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00025",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000009=>setl_oQwyQ0L0q0qDds+setl_uXcZN6esCTFSCg",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000009"
+    ],
+    "settlements": [
+      "setl_uXcZN6esCTFSCg",
+      "setl_oQwyQ0L0q0qDds"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "458733.56",
+      "settlement_net": "458733.56",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000009=>setl_oQwyQ0L0q0qDds",
+        "evidence_score": 120,
+        "residual": "212239.47",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000009=>setl_uXcZN6esCTFSCg",
+        "evidence_score": 120,
+        "residual": "246494.09",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000009+BNK000010=>setl_KSklJTfm2dg9pe+setl_LGp7r8z6FNmFNz",
+        "evidence_score": 45,
+        "residual": "458733.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000009+BNK000010=>setl_oQwyQ0L0q0qDds+setl_uXcZN6esCTFSCg",
+        "evidence_score": 45,
+        "residual": "352434.28",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000009=>setl_KSklJTfm2dg9pe+setl_uXcZN6esCTFSCg",
+        "evidence_score": 35,
+        "residual": "64853.02",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00026",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000010=>setl_KSklJTfm2dg9pe+setl_LGp7r8z6FNmFNz",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000010"
+    ],
+    "settlements": [
+      "setl_KSklJTfm2dg9pe",
+      "setl_LGp7r8z6FNmFNz"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "352434.28",
+      "settlement_net": "352434.28",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000010=>setl_KSklJTfm2dg9pe",
+        "evidence_score": 120,
+        "residual": "170793.21",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000010=>setl_LGp7r8z6FNmFNz",
+        "evidence_score": 120,
+        "residual": "181641.07",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000010+BNK000012=>setl_hlnB0rAFe81EEt+setl_oXgs4X2opWeFaH",
+        "evidence_score": 46,
+        "residual": "352434.28",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000009+BNK000010=>setl_KSklJTfm2dg9pe+setl_LGp7r8z6FNmFNz",
+        "evidence_score": 45,
+        "residual": "458733.56",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000009+BNK000010=>setl_oQwyQ0L0q0qDds+setl_uXcZN6esCTFSCg",
+        "evidence_score": 45,
+        "residual": "352434.28",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00027",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000012=>setl_hlnB0rAFe81EEt+setl_oXgs4X2opWeFaH",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000012"
+    ],
+    "settlements": [
+      "setl_oXgs4X2opWeFaH",
+      "setl_hlnB0rAFe81EEt"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "399531.72",
+      "settlement_net": "399531.72",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000012=>setl_hlnB0rAFe81EEt",
+        "evidence_score": 120,
+        "residual": "129796.13",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000012=>setl_oXgs4X2opWeFaH",
+        "evidence_score": 114,
+        "residual": "269735.59",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000010+BNK000012=>setl_hlnB0rAFe81EEt+setl_oXgs4X2opWeFaH",
+        "evidence_score": 46,
+        "residual": "352434.28",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000010=>setl_KSklJTfm2dg9pe+setl_oXgs4X2opWeFaH",
+        "evidence_score": 36,
+        "residual": "40997.08",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000012=>setl_8fyCkNhhJEhjAV+setl_oXgs4X2opWeFaH",
+        "evidence_score": 36,
+        "residual": "93936.99",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00028",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000014=>setl_DPalq0y05L810W+setl_pv7znre09sgKRo",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000014"
+    ],
+    "settlements": [
+      "setl_pv7znre09sgKRo",
+      "setl_DPalq0y05L810W"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "471928.42",
+      "settlement_net": "471928.42",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000014=>setl_DPalq0y05L810W",
+        "evidence_score": 120,
+        "residual": "216414.95",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000014=>setl_pv7znre09sgKRo",
+        "evidence_score": 120,
+        "residual": "255513.47",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000014+BNK000015=>setl_DPalq0y05L810W+setl_pv7znre09sgKRo",
+        "evidence_score": 47,
+        "residual": "267510.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000014+BNK000016=>setl_V4IBtk1oREzbnT+setl_r6fDDdhayzAXy5",
+        "evidence_score": 45,
+        "residual": "471928.42",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000014=>setl_FeAdZNmc6Ly7H7+setl_pv7znre09sgKRo",
+        "evidence_score": 36,
+        "residual": "-11996.73",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00029",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000016=>setl_V4IBtk1oREzbnT+setl_r6fDDdhayzAXy5",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000016"
+    ],
+    "settlements": [
+      "setl_r6fDDdhayzAXy5",
+      "setl_V4IBtk1oREzbnT"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "436324.37",
+      "settlement_net": "436324.37",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000016=>setl_V4IBtk1oREzbnT",
+        "evidence_score": 120,
+        "residual": "147403.62",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000016=>setl_r6fDDdhayzAXy5",
+        "evidence_score": 114,
+        "residual": "288920.75",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000016+BNK000017=>setl_CF99Y58tTQ3a5C+setl_f4CUPbHJC3AyZ2",
+        "evidence_score": 46,
+        "residual": "436324.37",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000014+BNK000016=>setl_V4IBtk1oREzbnT+setl_r6fDDdhayzAXy5",
+        "evidence_score": 45,
+        "residual": "471928.42",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000016=>setl_f4CUPbHJC3AyZ2+setl_r6fDDdhayzAXy5",
+        "evidence_score": 36,
+        "residual": "40434.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00030",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000017=>setl_CF99Y58tTQ3a5C+setl_f4CUPbHJC3AyZ2",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000017"
+    ],
+    "settlements": [
+      "setl_f4CUPbHJC3AyZ2",
+      "setl_CF99Y58tTQ3a5C"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "499815.20",
+      "settlement_net": "499815.20",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000017=>setl_CF99Y58tTQ3a5C",
+        "evidence_score": 120,
+        "residual": "248486.63",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000017=>setl_f4CUPbHJC3AyZ2",
+        "evidence_score": 114,
+        "residual": "251328.57",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000016+BNK000017=>setl_CF99Y58tTQ3a5C+setl_f4CUPbHJC3AyZ2",
+        "evidence_score": 46,
+        "residual": "436324.37",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000016=>setl_f4CUPbHJC3AyZ2+setl_r6fDDdhayzAXy5",
+        "evidence_score": 36,
+        "residual": "40434.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000016+BNK000017=>setl_f4CUPbHJC3AyZ2",
+        "evidence_score": 36,
+        "residual": "687652.94",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00031",
+    "decision": "globally_selected",
+    "candidate_id": "many_settlements_to_one_bank:BNK000019=>setl_5t2qrdp6srvFVa+setl_d68qASlFJGHJVK",
+    "kind": "many_settlements_to_one_bank",
+    "topology": "1:N",
+    "bank_entries": [
+      "BNK000019"
+    ],
+    "settlements": [
+      "setl_5t2qrdp6srvFVa",
+      "setl_d68qASlFJGHJVK"
+    ],
+    "evidence_score": 97,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded many settlements to one bank hypothesis"
+      },
+      {
+        "feature": "unique_group_sum",
+        "points": 2,
+        "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "406516.05",
+      "settlement_net": "406516.05",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000019=>setl_5t2qrdp6srvFVa",
+        "evidence_score": 120,
+        "residual": "221537.50",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000019=>setl_d68qASlFJGHJVK",
+        "evidence_score": 120,
+        "residual": "184978.55",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000019+BNK000020=>setl_5t2qrdp6srvFVa+setl_d68qASlFJGHJVK",
+        "evidence_score": 45,
+        "residual": "3319.73",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000019=>setl_5l1f2vm6jktiWv+setl_5t2qrdp6srvFVa",
+        "evidence_score": 35,
+        "residual": "216989.92",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000019+BNK000020=>setl_5t2qrdp6srvFVa",
+        "evidence_score": 35,
+        "residual": "224857.23",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00032",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000020+BNK000023=>setl_5l1f2vm6jktiWv",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000020",
+      "BNK000023"
+    ],
+    "settlements": [
+      "setl_5l1f2vm6jktiWv"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "4547.58",
+      "settlement_net": "4547.58",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000020=>setl_5l1f2vm6jktiWv",
+        "evidence_score": 120,
+        "residual": "-1227.85",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000023=>setl_5l1f2vm6jktiWv",
+        "evidence_score": 120,
+        "residual": "-3319.73",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000020+BNK000022=>setl_5l1f2vm6jktiWv",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000021+BNK000023=>setl_7fbLC6wmdjufOV",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000020+BNK000021=>setl_5l1f2vm6jktiWv+setl_7fbLC6wmdjufOV",
+        "evidence_score": 47,
+        "residual": "-2455.70",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00033",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000021+BNK000022=>setl_7fbLC6wmdjufOV",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000021",
+      "BNK000022"
+    ],
+    "settlements": [
+      "setl_7fbLC6wmdjufOV"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "104021.57",
+      "settlement_net": "104021.57",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000021=>setl_7fbLC6wmdjufOV",
+        "evidence_score": 120,
+        "residual": "-1227.85",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000022=>setl_7fbLC6wmdjufOV",
+        "evidence_score": 120,
+        "residual": "-102793.72",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000020+BNK000022=>setl_5l1f2vm6jktiWv",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000021+BNK000023=>setl_7fbLC6wmdjufOV",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000020+BNK000021=>setl_5l1f2vm6jktiWv+setl_7fbLC6wmdjufOV",
+        "evidence_score": 47,
+        "residual": "-2455.70",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00034",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000026+BNK000027=>setl_jD0kUG1N0JCnsR",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000026",
+      "BNK000027"
+    ],
+    "settlements": [
+      "setl_jD0kUG1N0JCnsR"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "322106.04",
+      "settlement_net": "322106.04",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000026=>setl_jD0kUG1N0JCnsR",
+        "evidence_score": 120,
+        "residual": "-277591.27",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000027=>setl_jD0kUG1N0JCnsR",
+        "evidence_score": 120,
+        "residual": "-44514.77",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000025+BNK000027=>setl_jD0kUG1N0JCnsR",
+        "evidence_score": 85,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000024+BNK000026=>setl_dubwLO7omDkawb",
+        "evidence_score": 80,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000024+BNK000026=>setl_XeuQK0gigAaoS0+setl_jD0kUG1N0JCnsR",
+        "evidence_score": 36,
+        "residual": "-444807.85",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00035",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000029+BNK000030=>setl_Zu0XGCmxcQeztF",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000029",
+      "BNK000030"
+    ],
+    "settlements": [
+      "setl_Zu0XGCmxcQeztF"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "82437.51",
+      "settlement_net": "82437.51",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000029=>setl_Zu0XGCmxcQeztF",
+        "evidence_score": 120,
+        "residual": "-59355.01",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000030=>setl_Zu0XGCmxcQeztF",
+        "evidence_score": 120,
+        "residual": "-23082.50",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000030+BNK000036=>setl_Zu0XGCmxcQeztF",
+        "evidence_score": 85,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000029+BNK000034=>setl_XeuQK0gigAaoS0",
+        "evidence_score": 70,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000029+BNK000030=>setl_FrTOQ2QHd5PI6o+setl_Zu0XGCmxcQeztF",
+        "evidence_score": 47,
+        "residual": "-316556.24",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00036",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000031+BNK000032=>setl_FrTOQ2QHd5PI6o",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000031",
+      "BNK000032"
+    ],
+    "settlements": [
+      "setl_FrTOQ2QHd5PI6o"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "316556.24",
+      "settlement_net": "316556.24",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000031=>setl_FrTOQ2QHd5PI6o",
+        "evidence_score": 120,
+        "residual": "-42290.86",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000032=>setl_FrTOQ2QHd5PI6o",
+        "evidence_score": 120,
+        "residual": "-274265.38",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000031+BNK000033=>setl_FrTOQ2QHd5PI6o",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000032+BNK000035=>setl_NDvZkAT0vGdlEh",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000029+BNK000030=>setl_FrTOQ2QHd5PI6o+setl_Zu0XGCmxcQeztF",
+        "evidence_score": 47,
+        "residual": "-316556.24",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00037",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000033+BNK000035=>setl_NDvZkAT0vGdlEh",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000033",
+      "BNK000035"
+    ],
+    "settlements": [
+      "setl_NDvZkAT0vGdlEh"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "156632.83",
+      "settlement_net": "156632.83",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000033=>setl_NDvZkAT0vGdlEh",
+        "evidence_score": 120,
+        "residual": "-114341.97",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000035=>setl_NDvZkAT0vGdlEh",
+        "evidence_score": 120,
+        "residual": "-42290.86",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000031+BNK000033=>setl_FrTOQ2QHd5PI6o",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000032+BNK000035=>setl_NDvZkAT0vGdlEh",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000029+BNK000031=>setl_FrTOQ2QHd5PI6o+setl_NDvZkAT0vGdlEh",
+        "evidence_score": 38,
+        "residual": "-175841.19",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00038",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000042=>setl_Huw9gBeSnleXJn",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000038",
+      "BNK000042"
+    ],
+    "settlements": [
+      "setl_Huw9gBeSnleXJn"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "12332.51",
+      "settlement_net": "12332.51",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000038=>setl_Huw9gBeSnleXJn",
+        "evidence_score": 120,
+        "residual": "-8756.08",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000042=>setl_Huw9gBeSnleXJn",
+        "evidence_score": 120,
+        "residual": "-3576.43",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000040=>setl_cfcBmVw6GGZfgl",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000039+BNK000042=>setl_Huw9gBeSnleXJn",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000038+BNK000039=>setl_Huw9gBeSnleXJn+setl_cfcBmVw6GGZfgl",
+        "evidence_score": 47,
+        "residual": "-249462.16",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00039",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000039+BNK000040=>setl_cfcBmVw6GGZfgl",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000039",
+      "BNK000040"
+    ],
+    "settlements": [
+      "setl_cfcBmVw6GGZfgl"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "244282.51",
+      "settlement_net": "244282.51",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000039=>setl_cfcBmVw6GGZfgl",
+        "evidence_score": 120,
+        "residual": "-240706.08",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000040=>setl_cfcBmVw6GGZfgl",
+        "evidence_score": 120,
+        "residual": "-3576.43",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000040=>setl_cfcBmVw6GGZfgl",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000039+BNK000042=>setl_Huw9gBeSnleXJn",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000038+BNK000039=>setl_Huw9gBeSnleXJn+setl_cfcBmVw6GGZfgl",
+        "evidence_score": 47,
+        "residual": "-249462.16",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00040",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000044+BNK000045=>setl_seMFRCCGsi23F8",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000044",
+      "BNK000045"
+    ],
+    "settlements": [
+      "setl_seMFRCCGsi23F8"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "192051.65",
+      "settlement_net": "192051.65",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000044=>setl_seMFRCCGsi23F8",
+        "evidence_score": 120,
+        "residual": "-39030.32",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000045=>setl_seMFRCCGsi23F8",
+        "evidence_score": 120,
+        "residual": "-153021.33",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000044+BNK000046=>setl_seMFRCCGsi23F8",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000045+BNK000047=>setl_j6FqciI6UEdH7R",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000044+BNK000045=>setl_j6FqciI6UEdH7R+setl_seMFRCCGsi23F8",
+        "evidence_score": 47,
+        "residual": "-139393.99",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00041",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000046+BNK000047=>setl_j6FqciI6UEdH7R",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000046",
+      "BNK000047"
+    ],
+    "settlements": [
+      "setl_j6FqciI6UEdH7R"
+    ],
+    "evidence_score": 95,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_date_exact",
+        "points": 15,
+        "detail": "at least one bank/settlement date agrees exactly"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "139393.99",
+      "settlement_net": "139393.99",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000046=>setl_j6FqciI6UEdH7R",
+        "evidence_score": 120,
+        "residual": "-100363.67",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000047=>setl_j6FqciI6UEdH7R",
+        "evidence_score": 120,
+        "residual": "-39030.32",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000044+BNK000046=>setl_seMFRCCGsi23F8",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000045+BNK000047=>setl_j6FqciI6UEdH7R",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000044+BNK000045=>setl_j6FqciI6UEdH7R+setl_seMFRCCGsi23F8",
+        "evidence_score": 47,
+        "residual": "-139393.99",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00042",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000024+BNK000025=>setl_dubwLO7omDkawb",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000024",
+      "BNK000025"
+    ],
+    "settlements": [
+      "setl_dubwLO7omDkawb"
+    ],
+    "evidence_score": 90,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_posting_window",
+        "points": 10,
+        "detail": "group falls inside the two-day posting window"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "153499.20",
+      "settlement_net": "153499.20",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000024=>setl_dubwLO7omDkawb",
+        "evidence_score": 114,
+        "residual": "-44514.77",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000025=>setl_dubwLO7omDkawb",
+        "evidence_score": 114,
+        "residual": "-108984.43",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000025+BNK000027=>setl_jD0kUG1N0JCnsR",
+        "evidence_score": 85,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000024+BNK000026=>setl_dubwLO7omDkawb",
+        "evidence_score": 80,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000020+BNK000024=>setl_XeuQK0gigAaoS0+setl_dubwLO7omDkawb",
+        "evidence_score": 36,
+        "residual": "-317396.05",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00043",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000011=>setl_8fyCkNhhJEhjAV",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000011"
+    ],
+    "settlements": [
+      "setl_8fyCkNhhJEhjAV"
+    ],
+    "evidence_score": 90,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "utr_prefix_exact",
+        "points": 15,
+        "detail": "exact 11-character UTR prefix appears"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "175798.60",
+      "settlement_net": "175798.60",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000012=>setl_8fyCkNhhJEhjAV+setl_oXgs4X2opWeFaH",
+        "evidence_score": 36,
+        "residual": "93936.99",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000011+BNK000012=>setl_hlnB0rAFe81EEt",
+        "evidence_score": 36,
+        "residual": "305594.73",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000011=>setl_hlnB0rAFe81EEt",
+        "evidence_score": 35,
+        "residual": "-93936.99",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000012=>setl_8fyCkNhhJEhjAV",
+        "evidence_score": 35,
+        "residual": "223733.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00044",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000015=>setl_FeAdZNmc6Ly7H7",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000015"
+    ],
+    "settlements": [
+      "setl_FeAdZNmc6Ly7H7"
+    ],
+    "evidence_score": 90,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "utr_prefix_exact",
+        "points": 15,
+        "detail": "exact 11-character UTR prefix appears"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "267510.20",
+      "settlement_net": "267510.20",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000014+BNK000015=>setl_DPalq0y05L810W+setl_pv7znre09sgKRo",
+        "evidence_score": 47,
+        "residual": "267510.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000014=>setl_FeAdZNmc6Ly7H7+setl_pv7znre09sgKRo",
+        "evidence_score": 36,
+        "residual": "-11996.73",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000014+BNK000015=>setl_DPalq0y05L810W",
+        "evidence_score": 36,
+        "residual": "483925.15",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000014+BNK000015=>setl_pv7znre09sgKRo",
+        "evidence_score": 36,
+        "residual": "523023.67",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000014=>setl_FeAdZNmc6Ly7H7",
+        "evidence_score": 35,
+        "residual": "204418.22",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00045",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000080=>setl_ntLL5DSYK3SNTQ",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000080"
+    ],
+    "settlements": [
+      "setl_ntLL5DSYK3SNTQ"
+    ],
+    "evidence_score": 90,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "utr_prefix_exact",
+        "points": 15,
+        "detail": "exact 11-character UTR prefix appears"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "22426.94",
+      "settlement_net": "22426.94",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000080=>setl_UY2FIELlArQ3Lc",
+        "evidence_score": 35,
+        "residual": "-195992.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000080=>setl_brAOFZubvE8FBi",
+        "evidence_score": 35,
+        "residual": "-92798.58",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000082=>setl_ntLL5DSYK3SNTQ",
+        "evidence_score": 35,
+        "residual": "92798.58",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00046",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000082=>setl_brAOFZubvE8FBi",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000082"
+    ],
+    "settlements": [
+      "setl_brAOFZubvE8FBi"
+    ],
+    "evidence_score": 90,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "utr_prefix_exact",
+        "points": 15,
+        "detail": "exact 11-character UTR prefix appears"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "115225.52",
+      "settlement_net": "115225.52",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000080=>setl_brAOFZubvE8FBi",
+        "evidence_score": 35,
+        "residual": "-92798.58",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000082=>setl_UY2FIELlArQ3Lc",
+        "evidence_score": 35,
+        "residual": "-103193.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000082=>setl_ntLL5DSYK3SNTQ",
+        "evidence_score": 35,
+        "residual": "92798.58",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00047",
+    "decision": "globally_selected",
+    "candidate_id": "one_settlement_to_many_banks:BNK000034+BNK000036=>setl_XeuQK0gigAaoS0",
+    "kind": "one_settlement_to_many_banks",
+    "topology": "N:1",
+    "bank_entries": [
+      "BNK000034",
+      "BNK000036"
+    ],
+    "settlements": [
+      "setl_XeuQK0gigAaoS0"
+    ],
+    "evidence_score": 80,
+    "confidence": 0.95,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_group_amount_exact",
+        "points": 50,
+        "detail": "grouped signed amounts conserve money exactly"
+      },
+      {
+        "feature": "bounded_group_structure",
+        "points": 10,
+        "detail": "bounded one settlement to many banks hypothesis"
+      },
+      {
+        "feature": "group_reference_support",
+        "points": 20,
+        "detail": "2 strong and 0 weak grouped reference link(s) found"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "276201.01",
+      "settlement_net": "276201.01",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000034=>setl_XeuQK0gigAaoS0",
+        "evidence_score": 105,
+        "residual": "-23082.50",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000036=>setl_XeuQK0gigAaoS0",
+        "evidence_score": 105,
+        "residual": "-253118.51",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000030+BNK000036=>setl_Zu0XGCmxcQeztF",
+        "evidence_score": 85,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000029+BNK000034=>setl_XeuQK0gigAaoS0",
+        "evidence_score": 70,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000020+BNK000024=>setl_XeuQK0gigAaoS0+setl_dubwLO7omDkawb",
+        "evidence_score": 36,
+        "residual": "-317396.05",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00048",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000079=>setl_lqpecjkIRi6XHl",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000079"
+    ],
+    "settlements": [
+      "setl_lqpecjkIRi6XHl"
+    ],
+    "evidence_score": 75,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "183053.79",
+      "settlement_net": "183053.79",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000077=>setl_gVBOkWB2r6g54J+setl_lqpecjkIRi6XHl",
+        "evidence_score": 36,
+        "residual": "-221479.60",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000078=>setl_gVBOkWB2r6g54J+setl_lqpecjkIRi6XHl",
+        "evidence_score": 36,
+        "residual": "-142707.45",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000077+BNK000079=>setl_PBwJ9bXNhx0zI3",
+        "evidence_score": 35,
+        "residual": "142707.45",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000077=>setl_lqpecjkIRi6XHl",
+        "evidence_score": 35,
+        "residual": "-70954.95",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000078=>setl_lqpecjkIRi6XHl",
+        "evidence_score": 35,
+        "residual": "7817.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00049",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000081=>setl_UY2FIELlArQ3Lc",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000081"
+    ],
+    "settlements": [
+      "setl_UY2FIELlArQ3Lc"
+    ],
+    "evidence_score": 75,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "218419.06",
+      "settlement_net": "218419.06",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "one_to_one:BNK000080=>setl_UY2FIELlArQ3Lc",
+        "evidence_score": 35,
+        "residual": "-195992.12",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000082=>setl_UY2FIELlArQ3Lc",
+        "evidence_score": 35,
+        "residual": "-103193.54",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  },
+  {
+    "certificate_id": "LGC-00050",
+    "decision": "globally_selected",
+    "candidate_id": "one_to_one:BNK000085=>setl_VODZ18OGb9MKM4",
+    "kind": "one_to_one",
+    "topology": "1:1",
+    "bank_entries": [
+      "BNK000085"
+    ],
+    "settlements": [
+      "setl_VODZ18OGb9MKM4"
+    ],
+    "evidence_score": 75,
+    "confidence": 0.97,
+    "confidence_interpretation": "deterministic policy band, not an empirical probability",
+    "score_breakdown": [
+      {
+        "feature": "signed_amount_exact",
+        "points": 50,
+        "detail": "signed bank amount equals settlement net"
+      },
+      {
+        "feature": "globally_unique_amount",
+        "points": 5,
+        "detail": "only one settlement has this signed net"
+      },
+      {
+        "feature": "settlement_date_exact",
+        "points": 20,
+        "detail": "bank and settlement dates agree"
+      }
+    ],
+    "money_conservation": {
+      "bank_total": "115499.20",
+      "settlement_net": "115499.20",
+      "residual": "0.00"
+    },
+    "constraints_satisfied": [
+      "signed_money_conservation",
+      "global_one_use",
+      "bounded_group_size",
+      "selection_threshold"
+    ],
+    "rejected_alternatives": [
+      {
+        "candidate_id": "many_banks_to_many_settlements:BNK000085+BNK000086=>setl_0X4re7lK95Ytyf+setl_VODZ18OGb9MKM4",
+        "evidence_score": 86,
+        "residual": "0.00",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "many_settlements_to_one_bank:BNK000086=>setl_0X4re7lK95Ytyf+setl_VODZ18OGb9MKM4",
+        "evidence_score": 36,
+        "residual": "-115499.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_settlement_to_many_banks:BNK000085+BNK000086=>setl_0X4re7lK95Ytyf",
+        "evidence_score": 35,
+        "residual": "115499.20",
+        "reason": "lower global objective or conflicting one-use constraint"
+      },
+      {
+        "candidate_id": "one_to_one:BNK000086=>setl_VODZ18OGb9MKM4",
+        "evidence_score": 35,
+        "residual": "130611.69",
+        "reason": "lower global objective or conflicting one-use constraint"
+      }
+    ]
+  }
+]

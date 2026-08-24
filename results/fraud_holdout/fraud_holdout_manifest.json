@@ -1,0 +1,302 @@
+[
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91101",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91102",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91103",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91104",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91105",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91106",
+    "mutation": "coordinated_vendor_master_takeover",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91107",
+    "mutation": "out_of_hours_approval",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91108",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91109",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260911,
+    "bank_txn_id": "BNKFH91110",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91201",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91202",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91203",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91204",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91205",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91206",
+    "mutation": "coordinated_vendor_master_takeover",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91207",
+    "mutation": "out_of_hours_approval",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91208",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91209",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260912,
+    "bank_txn_id": "BNKFH91210",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91301",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91302",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91303",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91304",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91305",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91306",
+    "mutation": "coordinated_vendor_master_takeover",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91307",
+    "mutation": "out_of_hours_approval",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91308",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91309",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260913,
+    "bank_txn_id": "BNKFH91310",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91401",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91402",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91403",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91404",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91405",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91406",
+    "mutation": "coordinated_vendor_master_takeover",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91407",
+    "mutation": "out_of_hours_approval",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91408",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91409",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260914,
+    "bank_txn_id": "BNKFH91410",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91501",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91502",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91503",
+    "mutation": "approver_velocity_burst",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91504",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91505",
+    "mutation": "structured_split_payment",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91506",
+    "mutation": "coordinated_vendor_master_takeover",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91507",
+    "mutation": "out_of_hours_approval",
+    "truth": "dubious"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91508",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91509",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  },
+  {
+    "seed": 20260915,
+    "bank_txn_id": "BNKFH91510",
+    "mutation": "benign_uncommon_operating_path",
+    "truth": "clean"
+  }
+]

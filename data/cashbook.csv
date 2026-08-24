@@ -1,0 +1,9 @@
+event_id,event_timestamp_utc,value_date,direction,amount,counterparty,reference,purpose,approved_by
+CBK000001,2026-06-09T09:01:00+00:00,09/06/2026,credit,51619.00,Northstar Marketplace,CB08200001,channel remittance,synthetic-controller-policy
+CBK000002,2026-06-20T09:02:00+00:00,20/06/2026,credit,32611.00,Acme Retail Partner,CB08200002,partner incentive,synthetic-controller-policy
+CBK000003,2026-07-08T09:03:00+00:00,08/07/2026,credit,68982.00,Bluebird Distribution,CB08200003,trade receivable,synthetic-controller-policy
+CBK000004,2026-07-29T09:04:00+00:00,29/07/2026,credit,25905.00,Summit Commerce,CB08200004,channel remittance,synthetic-controller-policy
+CBK000005,2026-06-13T09:05:00+00:00,13/06/2026,debit,42955.00,Nimbus Logistics,CB08200005,approved freight invoice,synthetic-controller-policy
+CBK000006,2026-06-28T09:06:00+00:00,28/06/2026,debit,19078.00,Cobalt Cloud Services,CB08200006,approved infrastructure invoice,synthetic-controller-policy
+CBK000007,2026-07-17T09:07:00+00:00,17/07/2026,debit,64347.00,Orchid Media Works,CB08200007,approved campaign invoice,synthetic-controller-policy
+CBK000008,2026-08-04T09:08:00+00:00,04/08/2026,debit,26558.00,Vertex Office Supply,CB08200008,approved procurement invoice,synthetic-controller-policy

@@ -1,0 +1,67 @@
+{
+  "suite": "post_freeze_synthetic_fraud_holdout",
+  "partition_status": "never used to modify the frozen detector",
+  "detector_version": "graphshield-v1-before-fresh-holdout",
+  "detector_sha256": "59526f93d4ab45e37f3c61f44d8f239945f8ce4413e8814dffbcd4ab95bedbe1",
+  "seed_count": 5,
+  "holdout_records": 50,
+  "holdout_positive_records": 35,
+  "holdout_negative_records": 15,
+  "true_positives": 0,
+  "true_negatives": 15,
+  "false_positives": 0,
+  "false_negatives": 35,
+  "precision": "n/a",
+  "recall": "0.0%",
+  "recall_95_ci": [
+    "0.0%",
+    "9.9%"
+  ],
+  "specificity": "100.0%",
+  "baseline_without_graph": {
+    "true_positives": 0,
+    "false_positives": 0,
+    "false_negatives": 35,
+    "true_negatives": 15
+  },
+  "missed_classes": {
+    "approver_velocity_burst": 15,
+    "structured_split_payment": 10,
+    "coordinated_vendor_master_takeover": 5,
+    "out_of_hours_approval": 5
+  },
+  "by_mutation_class": {
+    "approver_velocity_burst": {
+      "records": 15,
+      "dubious_records": 15,
+      "detected": 0,
+      "recall": "0.0%"
+    },
+    "benign_uncommon_operating_path": {
+      "records": 15,
+      "dubious_records": 0,
+      "detected": 0,
+      "recall": "n/a"
+    },
+    "coordinated_vendor_master_takeover": {
+      "records": 5,
+      "dubious_records": 5,
+      "detected": 0,
+      "recall": "0.0%"
+    },
+    "out_of_hours_approval": {
+      "records": 5,
+      "dubious_records": 5,
+      "detected": 0,
+      "recall": "0.0%"
+    },
+    "structured_split_payment": {
+      "records": 10,
+      "dubious_records": 10,
+      "detected": 0,
+      "recall": "0.0%"
+    }
+  },
+  "methodological_limit": "This post-freeze partition tests new synthetic temporal, aggregate, and control-plane families without changing GraphShield. It is stronger than the known-miss replay but still does not estimate production fraud recall.",
+  "duration_ms": 15837
+}

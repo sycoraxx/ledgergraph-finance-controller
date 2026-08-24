@@ -1,0 +1,65 @@
+{
+  "records": 87,
+  "dubious_records": 9,
+  "clean_records": 78,
+  "true_positives": 9,
+  "true_negatives": 78,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": "100.0%",
+  "recall": "100.0%",
+  "specificity": "100.0%",
+  "f1": "100.0%",
+  "exact_anomaly_class_accuracy": "100.0%",
+  "false_negative_exposure_inr": "0.00",
+  "false_positive_review_value_inr": "0.00",
+  "safety_gate_passed": true,
+  "by_direction": {
+    "credit": {
+      "records": 79,
+      "dubious_records": 6,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0
+    },
+    "debit": {
+      "records": 8,
+      "dubious_records": 3,
+      "precision": "100.0%",
+      "recall": "100.0%",
+      "false_positives": 0,
+      "false_negatives": 0
+    }
+  },
+  "by_class": {
+    "amount_mismatch": {
+      "records": 2,
+      "detected": 2,
+      "exact_class": 2,
+      "recall": "100.0%",
+      "class_accuracy": "100.0%"
+    },
+    "duplicate_reference": {
+      "records": 2,
+      "detected": 2,
+      "exact_class": 2,
+      "recall": "100.0%",
+      "class_accuracy": "100.0%"
+    },
+    "unattributed_settlement_component": {
+      "records": 3,
+      "detected": 3,
+      "exact_class": 3,
+      "recall": "100.0%",
+      "class_accuracy": "100.0%"
+    },
+    "unsupported_transaction": {
+      "records": 2,
+      "detected": 2,
+      "exact_class": 2,
+      "recall": "100.0%",
+      "class_accuracy": "100.0%"
+    }
+  }
+}

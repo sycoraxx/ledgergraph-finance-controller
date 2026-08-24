@@ -1,0 +1,11 @@
+transaction_entity,entity_id,amount,currency,fee (exclusive tax),tax,debit,credit,payment_method,card_type,issuer_name,entity_created_at,payment_captured_at,payment_notes,refund_notes,arn,entity_description,order_id,order_receipt,order_notes,dispute_id,dispute_created_at,dispute_reason,settlement_id,settled_at,settlement_utr,settled_by
+payment,pay_JpAZJjN9O1lKuG,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,44658.44689814815,44658.44689814815,[],,,,,,,,,,setl_Jq0XZksg0i2Fat,44719.56524305556,sample utr,Razorpay
+payment,pay_Jn8gBr9XN9URnp,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,29/06/2022 07:34:39,29/06/2022 07:34:39,[],,,,,,,,,,setl_Jq0XZksg0i2Fat,44719.56524305556,sample utr,Razorpay
+payment,pay_JsSXj8YPcJERdV,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,44902.760775462964,44902.760775462964,[],,,,,,,,,,setl_JtAs2E7Uf55JMV,14/07/2022 13:37:15,sample utr,Razorpay
+payment,pay_JsPiT6UEff2zgY,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,44902.64555555556,44902.64555555556,[],,,,,,,,,,setl_JtAs2E7Uf55JMV,14/07/2022 13:37:15,sample utr,Razorpay
+refund,rfnd_Jt7Bq2djxtuWo5,1.0,INR,0.0,0.0,1.0,0.0,bank_transfer,,,14/07/2022 10:01:14,44902.77543981482,[],[],2.19510147152E11,,,,,,,,setl_JtAs2E7Uf55JMV,14/07/2022 13:37:15,sample utr,Razorpay
+payment,pay_JsSu2WouXWEBGu,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,44902.77543981482,44902.77543981482,[],,,,,,,,,,setl_JtAs2E7Uf55JMV,14/07/2022 13:37:15,sample utr,Razorpay
+payment,pay_JsSONS1IvBsDLc,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,44902.75462962963,44902.75462962963,[],,,,,,,,,,setl_JtAs2E7Uf55JMV,14/07/2022 13:37:15,sample utr,Razorpay
+payment,pay_JsPkcf0UQOw7R7,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,44902.64697916667,44902.64697916667,[],,,,,,,,,,setl_JtAs2E7Uf55JMV,14/07/2022 13:37:15,sample utr,Razorpay
+payment,pay_JuqB0ZJZXNbI4F,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,18/07/2022 18:40:39,18/07/2022 18:40:40,[],,,,,,,,,,setl_JvXyfCc3YcAT6V,20/07/2022 13:31:29,sample utr,Razorpay
+payment,pay_JtbnJeL0Lur3ml,1.0,INR,0.01,0.0,0.0,0.99,bank_transfer,,,15/07/2022 15:57:31,15/07/2022 15:57:31,[],,,,,,,,,,setl_JvXyfCc3YcAT6V,20/07/2022 13:31:29,sample utr,Razorpay

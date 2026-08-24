@@ -1,0 +1,6 @@
+id,amount,currency,payment_id,notes,receipt,created_at,contact,email,arn
+rfnd_Jo5Hz8HbHBMgn0,5.00,INR,pay_Jo5HyeO7jbRw5G,"{""refund_reason"":""Virtual Account is closed""}",,01/07/2022 16:54:39,+919900990099,gaurav.kumar@example.com,218216000839
+rfnd_JplUSNx05CaGK7,1.00,INR,pay_JplURqgXFx9fjl,"{""refund_reason"":""Virtual Account is closed""}",,05/07/2022 22:50:35,+919900990099,gaurav.kumar@example.com,218622226304
+rfnd_JqOMwo9UnAmkwU,1.00,INR,pay_JqOMwEJAMxIjFr,"{""refund_reason"":""Virtual Account is closed""}",,07/07/2022 12:52:32,+919900990099,gaurav.kumar@example.com,218812178666
+rfnd_Js8jLZzKDnJNNp,1.00,INR,pay_Js8jKwPcFpPRM1,"{""refund_reason"":""Virtual Account is closed""}",,11/07/2022 22:52:38,+919900990099,gaurav.kumar@example.com,219222422051
+rfnd_Jt7Bq2djxtuWo5,1.00,INR,pay_JsSu2WouXWEBGu,[],,14/07/2022 10:01:14,+919900990099,gaurav.kumar@example.com,219510147152

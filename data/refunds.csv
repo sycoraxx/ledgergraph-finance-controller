@@ -1,0 +1,96 @@
+id,amount,currency,payment_id,notes,receipt,created_at,contact,email,arn
+rfnd_OGDVBZdP8MfMqP,3070.00,INR,pay_3W1247zh6zVGYg,"{""refund_reason"": ""duplicate_order""}",,17/06/2026 00:00:00,,,541918364501
+rfnd_DrxFR8Nbnxyk7g,11473.00,INR,pay_NwjIXnSDsQ7XUY,"{""refund_reason"": ""quality_issue""}",,2026-15-06 07:13:29,,,231716077297
+rfnd_L8kRK3qci33JoQ,3356.88,INR,pay_srWo8eDujNulZo,"{""refund_reason"": ""quality_issue""}",,2026-06-09 14:26:58,,,347330679661
+rfnd_hIcV1jTCDmOcKC,4745.00,INR,pay_i42uYIWZaksAc9,"{""refund_reason"": ""quality_issue""}",,2026-06-07 21:39:27,,,863520309134
+rfnd_fYw8dGkACN26Cd,4478.50,INR,pay_gXA2udPh4w9hta,"{""refund_reason"": ""quality_issue""}",,2026-06-09 04:52:56,,,131921484607
+rfnd_rl4SqY17nTpD88,2847.00,INR,pay_ooyjaUwNIwc4C9,"{""refund_reason"": ""customer_request""}",,11/06/2026 11:05:25,,,314812650234
+rfnd_bBCIWu1nsL25Np,8173.00,INR,pay_uOuAwDKoTSFfYV,"{""refund_reason"": ""item_out_of_stock""}",,2026-06-20 18:18:54,,,360178850607
+rfnd_piBA9ioqd1630c,4434.00,INR,pay_fxXvRH4msoxrhk,"{""refund_reason"": ""quality_issue""}",,13/06/2026 01:31:23,,,408074546221
+rfnd_eHVlLB5o7NBNCt,973.13,INR,pay_DPaACwjR55nbAt,"{""refund_reason"": ""customer_request""}",,23/06/2026 08:44:52,,,420147843249
+rfnd_WQGtvT4qX5wyiV,1082.50,INR,pay_vkdfIJQMLRevc9,"{""refund_reason"": ""duplicate_order""}",,2026-06-16 15:57:21,,,684024618167
+rfnd_Fbq3PtCkJtW0t9,273.63,INR,pay_K5eSGQCaAPkFYK,"{""refund_reason"": ""customer_request""}",,2026-26-06 22:10:50,,,289204886810
+rfnd_GoDAD9LSrs5DuN,18531.50,INR,pay_B1L27bdN9Jc2N2,"{""refund_reason"": ""item_out_of_stock""}",,2026-06-14 05:23:19,,,269866624660
+rfnd_6vrlETc6pSNC1o,882.50,INR,pay_dyTxGpBjaAyO7s,"{""refund_reason"": ""item_out_of_stock""}",,17/06/2026 12:36:48,,,814749420862
+rfnd_ZfvQMGiFoHU0ve,438.00,INR,pay_72aGc6FZJVnz5Y,"{""refund_reason"": ""item_out_of_stock""}",,2026-06-16 19:49:17,,,629578334194
+rfnd_stgNaVQgcaK7e3,393.00,INR,pay_EntFbrO7piyLUT,"{""refund_reason"": ""customer_request""}",,46195.08525462963,,,343693706073
+rfnd_OrexNCb0MTscTJ,526.50,INR,pay_zx9CP1YLz4gkH7,"{""refund_reason"": ""duplicate_order""}",,2026-06-18 09:15:15,,,872140453319
+rfnd_Xkho9mfo0wJYPI,11751.50,INR,pay_omOou6q3WFtwsp,"{""refund_reason"": ""quality_issue""}",,28/06/2026 16:28:44,,,750484046207
+rfnd_zoPUojVQy7IgXk,4893.00,INR,pay_qKNX7jmvdrBTsg,"{""refund_reason"": ""customer_request""}",,30/06/2026 23:41:13,,,988992743465
+rfnd_41g2LgfGKu3Dv7,758.50,INR,pay_hVNqlldOaPnl2h,"{""refund_reason"": ""duplicate_order""}",,2026-24-06 06:54:42,,,381430705623
+rfnd_40MaeKfY1aV7Eo,452.00,INR,pay_i27qBRAcvXTzFd,"{""refund_reason"": ""quality_issue""}",,01/07/2026 13:07:11,,,813108349015
+rfnd_98DImHN0DhqWU4,17299.00,INR,pay_nhm4ZGios8xnga,"{""refund_reason"": ""quality_issue""}",,24/06/2026 20:20:40,,,513495526108
+rfnd_MEePqpmFWOkezM,19027.50,INR,pay_0lficFginhIPxH,"{""refund_reason"": ""customer_request""}",,2026-06-27 03:33:09,,,746417547552
+rfnd_7P7qiOhoetucdO,4046.00,INR,pay_aq3Vw2T1MXt42Q,"{""refund_reason"": ""customer_request""}",,30/06/2026 10:46:38,,,309614245277
+rfnd_7YUzGw8sVRdGvF,2220.50,INR,pay_v0lAJCSRCTqiuV,"{""refund_reason"": ""customer_request""}",,46206.749386574076,,,959321693818
+rfnd_sn1aXBgGZsXjf5,1665.00,INR,pay_e3msS0I3l94FA5,"{""refund_reason"": ""quality_issue""}",,46205.00875,,,279996434909
+rfnd_0ibouX9SXczw4a,5165.00,INR,pay_lCm6bhY5v929kg,"{""refund_reason"": ""duplicate_order""}",,2026-07-09 07:25:05,,,580740101237
+rfnd_yAuMzxLocvZG3A,354.50,INR,pay_CU813hiPNK7MOI,"{""refund_reason"": ""customer_request""}",,2026-07-01 14:38:34,,,913094796094
+rfnd_V2RekCHAsw6EEZ,5143.00,INR,pay_VDZLaW0gqEQz1A,"{""refund_reason"": ""quality_issue""}",,2026-07-09 21:51:03,,,702504584489
+rfnd_wfxBvqhaOFYZJk,2274.00,INR,pay_bvOsUIp5Iuq2NB,"{""refund_reason"": ""quality_issue""}",,28/06/2026 04:04:32,,,162308098131
+rfnd_Odydeys1p1eBGN,5729.25,INR,pay_QIys2Fa2j5vEFR,"{""refund_reason"": ""quality_issue""}",,2026-07-01 11:17:01,,,419459885385
+rfnd_Ah05M3qqwiLA3n,2557.50,INR,pay_20fmo5CoHTQGhZ,"{""refund_reason"": ""duplicate_order""}",,2026-07-12 18:30:30,,,394552078061
+rfnd_9VXBmxmeOKBv8q,3975.00,INR,pay_N6rpTbGxN74aSJ,"{""refund_reason"": ""item_out_of_stock""}",,2026-07-08 01:43:59,,,504302905236
+rfnd_MnYJyqglkDHH5N,7068.50,INR,pay_xXnp1E4FLCZ2vm,"{""refund_reason"": ""duplicate_order""}",,05/07/2026 08:56:28,,,804850092942
+rfnd_34EIYVWkgX22T9,8993.50,INR,pay_fx3UF5biyjrpeh,"{""refund_reason"": ""item_out_of_stock""}",,2026-07-03 15:09:57,,,172620237573
+rfnd_gCxa3Q9ea7LmGX,13400.00,INR,pay_GhczHXkS5nE8PO,"{""refund_reason"": ""quality_issue""}",,46208.93224537037,,,802313857000
+rfnd_xBjdxPH2ulT1Jx,1621.50,INR,pay_YV7qctZHZyQBCw,"{""refund_reason"": ""customer_request""}",,2026-07-07 05:35:55,,,526788575377
+rfnd_SHqpfxKimB2teU,9299.50,INR,pay_KfYzGzfm5HfwCy,"{""refund_reason"": ""quality_issue""}",,13/07/2026 12:48:24,,,741127534064
+rfnd_k6tYE4ZDnv6gjm,296.00,INR,pay_JAaMnFL6kV0cC9,"{""refund_reason"": ""customer_request""}",,46218.792974537035,,,622391759747
+rfnd_g5NuhR9ij9SJbP,2344.00,INR,pay_4I6KDxjLEaRssd,"{""refund_reason"": ""quality_issue""}",,2026-07-07 02:14:22,,,521343133574
+rfnd_Fes5TLkslBXcwL,4522.00,INR,pay_Hpkpy6RXbUaZl2,"{""refund_reason"": ""customer_request""}",,2026-07-17 09:27:51,,,987715162325
+rfnd_tlGbOrbaPgM92S,3323.50,INR,pay_4Bp2KGeNlagmCo,"{""refund_reason"": ""customer_request""}",,2026-07-15 16:40:20,,,438233659611
+rfnd_jE7mnK72jdJeNY,1421.00,INR,pay_VhatK27O2DAYNJ,"{""refund_reason"": ""duplicate_order""}",,2026-07-19 23:53:49,,,976288727783
+rfnd_YbpKJdyc2P7LUD,4304.13,INR,pay_XLNX1QmoDkd12E,"{""refund_reason"": ""duplicate_order""}",,23/07/2026 06:06:18,,,704253459950
+rfnd_HWiNdetmdhbSWw,928.00,INR,pay_RexDpKKp51nvOk,"{""refund_reason"": ""duplicate_order""}",,15/07/2026 13:19:47,,,354022584596
+rfnd_Frf9iWVEYPDdJO,382.00,INR,pay_R7ljjy32zFRHBc,"{""refund_reason"": ""item_out_of_stock""}",,46220.85574074074,,,104266980466
+rfnd_2mrUoyDXB3gRGt,398.50,INR,pay_yksh00tKwN4rTk,"{""refund_reason"": ""customer_request""}",,29/07/2026 03:45:45,,,125617020836
+rfnd_18wS2Hnuq9ojYw,704.13,INR,pay_D1mXLeziWnPzex,"{""refund_reason"": ""item_out_of_stock""}",,46231.45710648148,,,331833211849
+rfnd_i7LpOW138xZ6F1,624.50,INR,pay_raU44IlLPB9mbU,"{""refund_reason"": ""customer_request""}",,2026-07-30 17:11:43,,,827997313523
+rfnd_Vb1BhAS2bWN1Oc,548.63,INR,pay_mAVBW5EOGfL6qp,"{""refund_reason"": ""item_out_of_stock""}",,21/07/2026 00:24:12,,,269651587373
+rfnd_RXgd2jRrnnVlDZ,109.50,INR,pay_lHHKl8PSk7riDP,"{""refund_reason"": ""customer_request""}",,2026-07-23 07:37:41,,,643903278170
+rfnd_a2g81HcUsu9qub,5545.00,INR,pay_UyOhVpdoSXAacp,"{""refund_reason"": ""quality_issue""}",,2026-07-22 14:50:10,,,831047661294
+rfnd_DPzpd4q54ibJHN,1227.75,INR,pay_6XOlmf8JxHv3F8,"{""refund_reason"": ""quality_issue""}",,2026-07-28 21:03:39,,,371772333200
+rfnd_kpj8F2cxdCn6E6,137.38,INR,pay_vEG17IBjLFlaVQ,"{""refund_reason"": ""customer_request""}",,46223.17787037037,,,299435785092
+rfnd_P05V3NQiXzqVgI,3292.50,INR,pay_NX0tIgvsfK2s5P,"{""refund_reason"": ""customer_request""}",,2026-07-31 11:29:37,,,766763036191
+rfnd_qE78mtpi5ep3Ti,724.00,INR,pay_J1MQ3kZhwCrhIM,"{""refund_reason"": ""duplicate_order""}",,2026-07-30 18:42:06,,,260201089748
+rfnd_B0CC6SdbL1MbMW,4954.00,INR,pay_uD1Nc8T21FZtQ0,"{""refund_reason"": ""quality_issue""}",,46234.0802662037,,,985668988089
+rfnd_tNUT2xmgz40Bt9,2462.25,INR,pay_5jb4JYG9owFEEb,"{""refund_reason"": ""customer_request""}",,2026-08-04 08:08:04,,,760508888489
+rfnd_wR21QbNrvYy76X,2486.00,INR,pay_0Qgej18779zhJQ,"{""refund_reason"": ""duplicate_order""}",,46225.639965277776,,,798280496256
+rfnd_ziLKf8pGCM6Pgu,109.00,INR,pay_wcwwxAdOBgNRWp,"{""refund_reason"": ""duplicate_order""}",,2026-02-08 22:34:02,,,906072739787
+rfnd_DKDT6HlALkEyMO,8108.50,INR,pay_Bk6vH6OakRh5tO,"{""refund_reason"": ""item_out_of_stock""}",,2026-07-26 05:47:31,,,473850540783
+rfnd_j0i31EdK47JWsG,4538.00,INR,pay_VHcZ3LMkRB42z6,"{""refund_reason"": ""quality_issue""}",,2026-07-27 12:00:00,,,347138553527
+rfnd_CcCk1nVuaCNyi3,2018.75,INR,pay_txwGVXEcdEw2es,"{""refund_reason"": ""duplicate_order""}",,46232.801030092596,,,906558364651
+rfnd_Rj0ARknsxsUD4C,181.75,INR,pay_rVbZOF1JxXM5iW,"{""refund_reason"": ""customer_request""}",,46230.102060185185,,,506654022260
+rfnd_hJxt3IhbqwLjkK,421.50,INR,pay_3XqRIvVhXFZO3J,"{""refund_reason"": ""item_out_of_stock""}",,2026-07-31 09:39:27,,,287060403022
+rfnd_Ve2pHwXBg7k4ze,11248.50,INR,pay_jHiAGMVeL7t0hp,"{""refund_reason"": ""quality_issue""}",,30/07/2026 16:52:56,,,731515703414
+rfnd_vxO9UoWKwS92lL,341.50,INR,pay_4dtlt14zz6hhBR,"{""refund_reason"": ""item_out_of_stock""}",,2026-08-04 23:05:25,,,519402345816
+rfnd_cHAO7Jr1uWx0Xw,4444.00,INR,pay_NrSskGPfhFZPVM,"{""refund_reason"": ""duplicate_order""}",,2026-08-08 06:18:54,,,178831247134
+rfnd_nkaxCkktOndQHX,1571.00,INR,pay_oDSY4BiqyNEfzs,"{""refund_reason"": ""customer_request""}",,31/07/2026 13:31:23,,,797016230102
+rfnd_X3NI96bS6WXD80,3072.50,INR,pay_but26H5WjtrK3U,"{""refund_reason"": ""duplicate_order""}",,07/08/2026 20:44:52,,,759778186075
+rfnd_ENPzOUoHfCqQBe,322.00,INR,pay_V9olqVHVJ6vcDo,"{""refund_reason"": ""item_out_of_stock""}",,2026-08-03 03:57:21,,,296981601520
+rfnd_Is4asvyJ20KXFh,17829.00,INR,pay_R9i9UrWhZeY0Mc,"{""refund_reason"": ""duplicate_order""}",,2026-08-08 10:10:50,,,865918397069
+rfnd_XgSqYOrsgmc6rR,726.00,INR,pay_ukXxusKkf7UYj5,"{""refund_reason"": ""customer_request""}",,2026-08-05 17:23:19,,,295933782286
+rfnd_vp6Fo5Ajaqs8Dd,923.63,INR,pay_S70dMYcQPF18YO,"{""refund_reason"": ""item_out_of_stock""}",,2026-19-08 00:36:48,,,612956356745
+rfnd_6xyLrKdbpPNczI,747.00,INR,pay_s1qIrQQ4dutwdl,"{""refund_reason"": ""item_out_of_stock""}",,2026-08-10 07:49:17,,,454983562327
+rfnd_1VrqQFZfatBNoS,4113.75,INR,pay_kwiawsYDAaNBMM,"{""refund_reason"": ""item_out_of_stock""}",,2026-08-12 14:02:46,,,983800607304
+rfnd_UgrhblORYAeJhf,1110.00,INR,pay_ecTy2kMAALNGYy,"{""refund_reason"": ""quality_issue""}",,2026-08-20 21:15:15,,,511830890912
+rfnd_Rrq8gy9VJhdyiT,5740.00,INR,pay_HLiXIoSR1oSPyN,"{""refund_reason"": ""item_out_of_stock""}",,22/08/2026 04:28:44,,,670519899280
+rfnd_NCvZLc9QyNRWUj,6733.50,INR,pay_tiV104jqq7Xy5f,"{""refund_reason"": ""quality_issue""}",,46253.48695601852,,,942953208897
+rfnd_ksQunOj8XKeAUt,1127.63,INR,pay_h1sD9RGWvEEDt3,"{""refund_reason"": ""duplicate_order""}",,13/08/2026 18:54:42,,,120118841284
+rfnd_uNIDP23uK96IT5,1572.75,INR,pay_3mC56FqBg98TqD,"{""refund_reason"": ""customer_request""}",,2026-08-12 01:07:11,,,267987199193
+rfnd_8ATM5bFwtEiUJ6,11884.00,INR,pay_y25EZWx5Q1ssVe,"{""refund_reason"": ""customer_request""}",,2026-08-25 08:20:40,,,234010195503
+rfnd_6Rpl3zZLhjj6mX,5095.00,INR,pay_9z4B4jaUMva2C0,"{""refund_reason"": ""item_out_of_stock""}",,2026-08-20 15:33:09,,,344456812452
+rfnd_THJZq52vQFtvUI,3848.63,INR,pay_rBvT7WouL4aymQ,"{""refund_reason"": ""customer_request""}",,46250.94905092593,,,755654875061
+rfnd_6H4eUN13E0e9dj,963.50,INR,pay_J2YU9dbuEu1yKu,"{""refund_reason"": ""duplicate_order""}",,16/08/2026 05:59:07,,,285076871638
+rfnd_7Q8qEQ92DXjPJq,4090.50,INR,pay_nBMgekLzoQWQNb,"{""refund_reason"": ""duplicate_order""}",,46175.50875,,,860762573816
+rfnd_hi3MmK9uHnKxbm,1025.50,INR,pay_8MeKT3RYTxEaN8,"{""refund_reason"": ""duplicate_order""}",,04/06/2026 19:25:05,,,727361246787
+rfnd_qKtrzjghKf1iVD,2587.50,INR,pay_LVpKWdb0fmv8Qr,"{""refund_reason"": ""duplicate_order""}",,08/06/2026 02:38:34,,,778211427872
+rfnd_xp3FjV3a8ifnal,6171.50,INR,pay_ay5xN2aKvmr1Lo,"{""refund_reason"": ""duplicate_order""}",,2026-06-16 09:51:03,,,462854384934
+rfnd_GjjrVzt7E16tkg,19839.50,INR,pay_zPdgUPBQSi9qvc,"{""refund_reason"": ""duplicate_order""}",,2026-07-20 16:04:32,,,465426649161
+rfnd_5BuYV8W3Ae93Yg,3857.50,INR,pay_Uyt0rTxVMCbmkV,"{""refund_reason"": ""duplicate_order""}",,2026-07-24 23:17:01,,,106964506790
+rfnd_P56sAdAVOSYpWs,693.50,INR,pay_kM4aeYLTKMTpNM,"{""refund_reason"": ""duplicate_order""}",,2026-07-30 06:30:30,,,996858122515
+rfnd_GGfxq828yOgnOw,4924.00,INR,pay_paZ5Tfa5LCXNEO,"{""refund_reason"": ""duplicate_order""}",,2026-08-05 13:43:59,,,506220516012
+rfnd_m99my14jlOBroM,647.00,INR,pay_lEdTVvfwfmPOAS,"{""refund_reason"": ""duplicate_order""}",,05/08/2026 20:56:28,,,322913618163
+rfnd_tmC9vAIEzRMmXu,349.00,INR,pay_3fBgMi4YWH0N91,"{""refund_reason"": ""duplicate_order""}",,2026-08-11 03:09:57,,,710556398430
+rfnd_cYqW8DxQxNMl6M,21967.50,INR,pay_VEXC8gHj2ZZ6lY,"{""refund_reason"": ""duplicate_order""}",,2026-08-10 10:22:26,,,147397272009
