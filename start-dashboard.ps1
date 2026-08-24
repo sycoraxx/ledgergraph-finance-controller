@@ -42,28 +42,41 @@ if (-not (Test-Path -LiteralPath (Join-Path $projectRoot 'web\node_modules'))) {
     throw 'Frontend dependencies are missing. Run scripts\setup_windows.ps1 first.'
 }
 
-$modelJob = Start-Job -ScriptBlock {
-    param($serverPath, $weightsPath, $workingDirectory)
-    Set-Location -LiteralPath $workingDirectory
-    & $serverPath --model $weightsPath --ctx-size 4096 --parallel 1 --device CUDA0 --split-mode none --gpu-layers all --fit off --host 127.0.0.1 --port 8001 --alias qwen3.5-4b-q4_k_m --jinja --reasoning off
-} -ArgumentList $llamaServer, $modelPath, $projectRoot
-
+$modelJob = $null
+$apiJob = $null
 try {
     $modelReady = $false
-    Write-Host 'Loading project-local Qwen 3.5 4B on the GPU...' -ForegroundColor DarkGray
-    for ($attempt = 0; $attempt -lt 240; $attempt++) {
-        if ($modelJob.State -in @('Completed', 'Failed', 'Stopped')) {
-            $modelFailure = Receive-Job -Job $modelJob | Out-String
-            throw "The local Qwen server stopped during startup.`n$modelFailure"
-        }
-        try {
-            $modelHealth = Invoke-RestMethod -Uri 'http://127.0.0.1:8001/health' -TimeoutSec 1
-            if ($modelHealth.status -in @('ok', 'no slot available')) {
-                $modelReady = $true
-                break
+    try {
+        $modelHealth = Invoke-RestMethod -Uri 'http://127.0.0.1:8001/health' -TimeoutSec 1
+        $modelCatalog = Invoke-RestMethod -Uri 'http://127.0.0.1:8001/v1/models' -TimeoutSec 2
+        $modelReady = (
+            $modelHealth.status -in @('ok', 'no slot available') -and
+            $modelCatalog.data.id -contains 'qwen3.5-4b-q4_k_m'
+        )
+    } catch {}
+    if ($modelReady) {
+        Write-Host 'Reusing the healthy project-local Qwen server on port 8001.' -ForegroundColor DarkGray
+    } else {
+        $modelJob = Start-Job -ScriptBlock {
+            param($serverPath, $weightsPath, $workingDirectory)
+            Set-Location -LiteralPath $workingDirectory
+            & $serverPath --model $weightsPath --ctx-size 4096 --parallel 1 --device CUDA0 --split-mode none --gpu-layers all --fit off --host 127.0.0.1 --port 8001 --alias qwen3.5-4b-q4_k_m --jinja --reasoning off
+        } -ArgumentList $llamaServer, $modelPath, $projectRoot
+        Write-Host 'Loading project-local Qwen 3.5 4B on the GPU...' -ForegroundColor DarkGray
+        for ($attempt = 0; $attempt -lt 240; $attempt++) {
+            if ($modelJob.State -in @('Completed', 'Failed', 'Stopped')) {
+                $modelFailure = Receive-Job -Job $modelJob | Out-String
+                throw "The local Qwen server stopped during startup.`n$modelFailure"
             }
-        } catch {
-            Start-Sleep -Milliseconds 500
+            try {
+                $modelHealth = Invoke-RestMethod -Uri 'http://127.0.0.1:8001/health' -TimeoutSec 1
+                if ($modelHealth.status -in @('ok', 'no slot available')) {
+                    $modelReady = $true
+                    break
+                }
+            } catch {
+                Start-Sleep -Milliseconds 500
+            }
         }
     }
     if (-not $modelReady) {
@@ -73,28 +86,35 @@ try {
     $env:FINCTRL_MODEL_URL = 'http://127.0.0.1:8001/v1'
     $env:FINCTRL_MODEL = 'qwen3.5-4b-q4_k_m'
 
-    $apiJob = Start-Job -ScriptBlock {
-    param($pythonPath, $workingDirectory)
-    Set-Location -LiteralPath $workingDirectory
-    $env:FINCTRL_MODEL_URL = 'http://127.0.0.1:8001/v1'
-    $env:FINCTRL_MODEL = 'qwen3.5-4b-q4_k_m'
-    & $pythonPath -m uvicorn dashboard.api:app --host 127.0.0.1 --port 8000
-} -ArgumentList $pythonExecutable, $projectRoot
-
     $apiReady = $false
-    for ($attempt = 0; $attempt -lt 24; $attempt++) {
-        if ($apiJob.State -in @('Completed', 'Failed', 'Stopped')) {
-            $apiFailure = Receive-Job -Job $apiJob | Out-String
-            throw "The dashboard API stopped during startup.`n$apiFailure"
-        }
-        try {
-            $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/health' -TimeoutSec 1
-            if ($health.status -eq 'ok') {
-                $apiReady = $true
-                break
+    try {
+        $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/health' -TimeoutSec 1
+        $apiReady = $health.status -eq 'ok' -and $health.orchestrator -eq 'langgraph'
+    } catch {}
+    if ($apiReady) {
+        Write-Host 'Reusing the healthy dashboard API on port 8000.' -ForegroundColor DarkGray
+    } else {
+        $apiJob = Start-Job -ScriptBlock {
+            param($pythonPath, $workingDirectory)
+            Set-Location -LiteralPath $workingDirectory
+            $env:FINCTRL_MODEL_URL = 'http://127.0.0.1:8001/v1'
+            $env:FINCTRL_MODEL = 'qwen3.5-4b-q4_k_m'
+            & $pythonPath -m uvicorn dashboard.api:app --host 127.0.0.1 --port 8000
+        } -ArgumentList $pythonExecutable, $projectRoot
+        for ($attempt = 0; $attempt -lt 24; $attempt++) {
+            if ($apiJob.State -in @('Completed', 'Failed', 'Stopped')) {
+                $apiFailure = Receive-Job -Job $apiJob | Out-String
+                throw "The dashboard API stopped during startup.`n$apiFailure"
             }
-        } catch {
-            Start-Sleep -Milliseconds 250
+            try {
+                $health = Invoke-RestMethod -Uri 'http://127.0.0.1:8000/api/health' -TimeoutSec 1
+                if ($health.status -eq 'ok') {
+                    $apiReady = $true
+                    break
+                }
+            } catch {
+                Start-Sleep -Milliseconds 250
+            }
         }
     }
     if (-not $apiReady) {

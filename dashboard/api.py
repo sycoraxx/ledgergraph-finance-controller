@@ -13,6 +13,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
+from agent.model_gateway import LocalQwenClient
 from agent.qa import answer_question
 from agent.scenario_catalog import scenario_catalog, scenario_context
 from agent.workflow import REQUIRED_SOURCES, WorkflowRuntime, file_sha256, row_count
@@ -132,7 +133,7 @@ def pipeline_stages(latest: dict[str, Any]) -> list[dict[str, Any]]:
     current = order.index(reached) if reached in order else len(order) - 1
     labels = [
         ("Sources", "3 simulated systems"),
-        ("Reconcile", "LedgerGraph global solve"),
+        ("Reconcile", "Find one complete, conflict-free answer"),
         ("Verify", "Metrics + honest misses"),
         ("Approve", "Human-only sandbox gate"),
     ]
@@ -148,6 +149,7 @@ def pipeline_stages(latest: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def dashboard_overview() -> dict[str, Any]:
+    model_runtime = LocalQwenClient().health_status()
     predictions = load_json(RESULTS / "preds_agent.json", [])
     journals = load_json(RESULTS / "journal_proposals.json", [])
     truth = load_json(DATA / "ground_truth.json", [])
@@ -350,6 +352,9 @@ def dashboard_overview() -> dict[str, Any]:
             "orchestrator": "LangGraph",
             "money_engine": "Deterministic Python",
             "language_model": "Qwen 3.5 4B Q4_K_M · HF GGUF",
+            "model_available": model_runtime["available"],
+            "model_status": model_runtime["status"],
+            "model_endpoint": model_runtime["endpoint"],
             "ledger": "Local sandbox SQLite",
             "mode": "local",
         },
@@ -477,12 +482,16 @@ def dashboard_overview() -> dict[str, Any]:
 
 
 @app.get("/api/health")
-def health() -> dict[str, str]:
+def health() -> dict[str, Any]:
+    model_runtime = LocalQwenClient().health_status()
     return {
         "status": "ok",
         "orchestrator": "langgraph",
         "model_backend": "huggingface-gguf/llama.cpp",
-        "model_device": "CUDA0",
+        "model_device": "CUDA0" if model_runtime["available"] else "not_running",
+        "model_available": model_runtime["available"],
+        "model_status": model_runtime["status"],
+        "model_endpoint": model_runtime["endpoint"],
         "mode": "local",
     }
 
@@ -534,8 +543,12 @@ def decide(proposal_id: str, request: DecisionRequest) -> dict[str, Any]:
 
 @app.post("/api/qa")
 def ask(request: QuestionRequest) -> dict[str, Any]:
+    answer = answer_question(request.question, RESULTS, use_model=request.use_model)
+    used_fallback = answer.startswith("[Deterministic fallback:")
     return {
         "question": request.question,
-        "answer": answer_question(request.question, RESULTS, use_model=request.use_model),
-        "mode": "qwen_grounded" if request.use_model else "deterministic_evidence",
+        "answer": answer,
+        "mode": "qwen_grounded" if request.use_model and not used_fallback else "deterministic_evidence",
+        "model_requested": request.use_model,
+        "model_available": LocalQwenClient().health_status()["available"],
     }

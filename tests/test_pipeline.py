@@ -4,6 +4,7 @@ import csv
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from datetime import date
 from urllib.parse import urlparse
 from decimal import Decimal
@@ -17,6 +18,7 @@ from agent.ledger import (
 )
 from agent.l1_search import parse_date_candidates, reconcile_search
 from agent.ledger_graph import build_candidate_graph, solve_candidate_graph
+from agent.model_gateway import LocalQwenClient
 from agent.subset_sum import build_subset_sum_index
 from agent.qa import answer_question, deterministic_route, validate_call
 from agent.risk import scan_bank_risk
@@ -436,6 +438,28 @@ class FinanceControllerTests(unittest.TestCase):
             "name": "get_bank_transaction",
             "arguments": {"bank_txn_id": "BNK000004", "amount": 10},
         })[0])
+
+    def test_local_qwen_health_reports_observed_runtime_state(self):
+        class FakeResponse:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_args):
+                return False
+
+            def read(self):
+                return b'{"status":"ok"}'
+
+        client = LocalQwenClient(base_url="http://127.0.0.1:8001/v1")
+        with patch.object(client.opener, "open", return_value=FakeResponse()):
+            status = client.health_status()
+        self.assertTrue(status["available"])
+        self.assertEqual("ok", status["status"])
+        self.assertEqual("http://127.0.0.1:8001", status["endpoint"])
+        with patch.object(client.opener, "open", side_effect=OSError("offline")):
+            status = client.health_status()
+        self.assertFalse(status["available"])
+        self.assertEqual("unavailable", status["status"])
 
     def test_q_and_a_fallback_is_concise_and_grounded(self):
         exception = next(

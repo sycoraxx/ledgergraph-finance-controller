@@ -17,6 +17,7 @@ body{font-family:"Segoe UI Variable Text","Segoe UI",Inter,ui-sans-serif,system-
 .metricGrid span{font-size:12px}.metricGrid small{font-size:11px}.kicker{font-size:10px}.panel h2{font-size:20px}.proofTag{font-size:9px}.textButton{font-size:11px}
 .tierLabel strong{font-size:10px}.tierLabel span{font-size:11px}.tierRow>strong{font-size:10px}.tierLegend span{font-size:10px}.tierLegend p{font-size:9px}
 .reviewList strong{font-size:11px}.reviewList small{font-size:10px}.reviewList b{font-size:11px}.modelToggle{font-size:11px}
+.modelToggle.modelReady{color:var(--mint)}.modelToggle.modelOffline{color:var(--amber)}
 .askForm input{font-size:12px}.askForm button{font-size:12px}.answer{font-size:12px}.answerMark{font-size:11px}.suggestions button{font-size:10px}
 .sourceList strong{font-size:11px}.sourceList small{font-size:9px}.fileIcon{font-size:8px}.empty{font-size:11px}
 .pageHead>div>p:last-child{font-size:14px}.summaryChip span{font-size:10px}.tableIntro strong{font-size:12px}.tableIntro span{font-size:10px}

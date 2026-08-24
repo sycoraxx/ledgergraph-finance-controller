@@ -64,7 +64,7 @@ The launcher starts and monitors three local services:
 
 | Service | Address | Purpose |
 |---|---|---|
-| Dashboard | <http://localhost:3000> | Judge-facing control room |
+| Dashboard | <http://localhost:3000> | Finance review workspace |
 | Controller API | <http://127.0.0.1:8000> | LangGraph workflow and evidence API |
 | Local Qwen server | <http://127.0.0.1:8001> | Read-only local explanation layer |
 
@@ -163,7 +163,7 @@ corepack pnpm run build
 
 Expected frozen high-level outputs:
 
-- 28 Python tests pass
+- 29 Python tests pass
 - 87 bank entries checked
 - 47 balanced journal proposals, none automatically posted
 - LedgerGraph 11/11 adversarial cases exact with zero false selections
@@ -199,13 +199,14 @@ Use the provided command wrapper:
 3. Check that the model server starts with `--device CUDA0 --gpu-layers all`.
 4. Close other GPU-heavy applications if 4 GB VRAM is exhausted.
 
-The dashboard API health response reports the configured device. The
+The dashboard API probes the observed llama.cpp `/health` endpoint and reports
+`model_available`; it does not infer availability from configuration. The
 deterministic controller remains usable even if the Qwen service is disabled.
 
 ### Port already in use
 
-The demo expects ports 3000, 8000, and 8001. Stop the previous demo instance or
-the process using the conflicting port before starting a new launcher.
+The demo expects ports 3000, 8000, and 8001. The launcher reuses an existing
+healthy Qwen server or dashboard API; it refuses unrelated conflicting services.
 
 ### Model checksum mismatch
 

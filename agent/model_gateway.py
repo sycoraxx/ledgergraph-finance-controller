@@ -25,6 +25,27 @@ class LocalQwenClient:
         # server into a long hang instead of a fast, safe fallback.
         self.opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
 
+    def health_status(self, timeout: float = 0.75) -> dict[str, Any]:
+        """Return observed llama.cpp availability, never a configured claim."""
+        server_url = self.base_url[:-3] if self.base_url.endswith("/v1") else self.base_url
+        request = urllib.request.Request(server_url + "/health", method="GET")
+        try:
+            with self.opener.open(request, timeout=timeout) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            status = str(payload.get("status", "unknown"))
+            return {
+                "available": status in {"ok", "no slot available"},
+                "status": status,
+                "endpoint": server_url,
+            }
+        except (OSError, urllib.error.URLError, json.JSONDecodeError) as exc:
+            return {
+                "available": False,
+                "status": "unavailable",
+                "endpoint": server_url,
+                "detail": str(exc),
+            }
+
     def _complete(self, payload: dict[str, Any]) -> dict[str, Any]:
         body = json.dumps({"model": self.model, **payload}).encode("utf-8")
         request = urllib.request.Request(
