@@ -11,15 +11,19 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date
 from decimal import Decimal
-from itertools import combinations
+from time import perf_counter
 from typing import Any, Iterable
 
+from ortools.sat.python import cp_model
+
 from .l1_search import parse_date_candidates
+from .subset_sum import SubsetSumIndex, build_subset_sum_index, reachable_totals_by_size
 
 
 DEFAULT_SELECTION_THRESHOLD = 65
-MAX_BRANCHES_PER_COMPONENT = 250_000
 MAX_GROUP_HYPOTHESES_PER_TOTAL = 64
+MAX_DP_STATES = 250_000
+DEFAULT_CP_SAT_TIME_LIMIT_SECONDS = 5.0
 
 
 def normalize_reference(value: str | None) -> str:
@@ -248,54 +252,29 @@ def group_candidate(
     }
 
 
-def exact_combinations_by_total(
-    items: list[tuple[str, Decimal]],
-    target: Decimal,
-    max_group_size: int,
-) -> list[tuple[str, ...]]:
-    output: list[tuple[str, ...]] = []
-    for size in range(2, max_group_size + 1):
-        for combination in combinations(items, size):
-            if sum((amount for _, amount in combination), Decimal("0")) == target:
-                output.append(tuple(identifier for identifier, _ in combination))
-    return output
-
-
-def grouped_combinations_by_total(
-    items: list[tuple[str, Decimal]],
-    max_group_size: int,
-) -> dict[Decimal, list[tuple[str, ...]]]:
-    """Index bounded groups by signed total without an N² cross-product."""
-    output: dict[Decimal, list[tuple[str, ...]]] = defaultdict(list)
-    for size in range(2, max_group_size + 1):
-        for combination in combinations(items, size):
-            total = sum((amount for _, amount in combination), Decimal("0"))
-            bucket = output[total]
-            if len(bucket) < MAX_GROUP_HYPOTHESES_PER_TOTAL:
-                bucket.append(tuple(identifier for identifier, _ in combination))
-    return output
-
-
 def has_money_conserving_proper_subgroup(
     bank_ids: tuple[str, ...],
     settlement_ids: tuple[str, ...],
     bank_by_id: dict[str, dict[str, str]],
     settlements: dict[str, dict[str, Any]],
 ) -> bool:
-    """Reject a many-to-many wrapper that merely bundles smaller matches."""
+    """Reject an N:M wrapper that merely bundles a smaller exact match.
+
+    Reachable totals are computed once per cardinality with boolean dynamic
+    programming.  The previous implementation repeatedly enumerated the same
+    subsets for every pair of cardinalities.
+    """
+    bank_totals = reachable_totals_by_size([
+        signed_bank_amount(bank_by_id[identifier]) for identifier in bank_ids
+    ])
+    settlement_totals = reachable_totals_by_size([
+        Decimal(settlements[identifier]["net"]) for identifier in settlement_ids
+    ])
     for bank_size in range(1, len(bank_ids) + 1):
         for settlement_size in range(1, len(settlement_ids) + 1):
             if bank_size == len(bank_ids) and settlement_size == len(settlement_ids):
                 continue
-            bank_totals = {
-                sum((signed_bank_amount(bank_by_id[identifier]) for identifier in group), Decimal("0"))
-                for group in combinations(bank_ids, bank_size)
-            }
-            settlement_totals = {
-                sum((Decimal(settlements[identifier]["net"]) for identifier in group), Decimal("0"))
-                for group in combinations(settlement_ids, settlement_size)
-            }
-            if bank_totals & settlement_totals:
+            if bank_totals[bank_size] & settlement_totals[settlement_size]:
                 return True
     return False
 
@@ -310,6 +289,12 @@ def build_candidate_graph(
     for settlement in settlements.values():
         settlement_amount_frequency[Decimal(settlement["net"])] += 1
     candidates = []
+    unsafe_nodes: set[str] = set()
+    generation_issues: list[dict[str, Any]] = []
+    subset_sum_audit: dict[str, Any] = {
+        "algorithm": "bounded_dynamic_programming_subset_sum",
+        "status": "not_required",
+    }
     for bank in bank_rows:
         for settlement_id, settlement in settlements.items():
             candidate = single_candidate(
@@ -323,31 +308,147 @@ def build_candidate_graph(
         settlement_amounts = [(identifier, Decimal(item["net"])) for identifier, item in settlements.items()]
         bank_amounts = [(row["bank_txn_id"], signed_bank_amount(row)) for row in bank_rows]
         bank_by_id = {row["bank_txn_id"]: row for row in bank_rows}
+        settlement_index = build_subset_sum_index(
+            settlement_amounts,
+            max_group_size,
+            max_solutions_per_state=MAX_GROUP_HYPOTHESES_PER_TOTAL,
+            max_solutions_per_total=MAX_GROUP_HYPOTHESES_PER_TOTAL,
+            max_states=MAX_DP_STATES,
+        )
+        bank_index = build_subset_sum_index(
+            bank_amounts,
+            max_group_size,
+            max_solutions_per_state=MAX_GROUP_HYPOTHESES_PER_TOTAL,
+            max_solutions_per_total=MAX_GROUP_HYPOTHESES_PER_TOTAL,
+            max_states=MAX_DP_STATES,
+        )
+        subset_sum_audit = {
+            "algorithm": "bounded_dynamic_programming_subset_sum",
+            "status": "complete",
+            "bank_index": bank_index.audit_summary(),
+            "settlement_index": settlement_index.audit_summary(),
+        }
+
+        def mark_incomplete_target(
+            *,
+            side: str,
+            total: Decimal,
+            anchor_node: str | None,
+            index: SubsetSumIndex,
+            opposite_prefix: str,
+        ) -> None:
+            nonlocal subset_sum_audit
+            if anchor_node:
+                unsafe_nodes.add(anchor_node)
+            unsafe_nodes.update(
+                f"{opposite_prefix}:{identifier}"
+                for identifier in index.participants_by_total.get(total, set())
+            )
+            issue = {
+                "code": "candidate_generation_truncated",
+                "side": side,
+                "signed_total": str(total),
+                "anchor_node": anchor_node,
+                "reason": (
+                    "dynamic-programming state budget exhausted"
+                    if index.globally_truncated
+                    else "more exact subsets exist than the configured witness cap"
+                ),
+            }
+            if issue not in generation_issues:
+                generation_issues.append(issue)
+            subset_sum_audit["status"] = "truncated_fail_closed"
+
+        if bank_index.globally_truncated or settlement_index.globally_truncated:
+            unsafe_nodes.update(f"B:{row['bank_txn_id']}" for row in bank_rows)
+            unsafe_nodes.update(f"S:{identifier}" for identifier in settlements)
+            generation_issues.append({
+                "code": "candidate_generation_state_budget_exhausted",
+                "side": "both" if bank_index.globally_truncated and settlement_index.globally_truncated else (
+                    "bank" if bank_index.globally_truncated else "settlement"
+                ),
+                "reason": "the DP state cap was reached; the complete graph cannot be proven",
+            })
+            subset_sum_audit["status"] = "truncated_fail_closed"
+
         for bank in bank_rows:
-            matches = exact_combinations_by_total(settlement_amounts, signed_bank_amount(bank), max_group_size)
+            target = signed_bank_amount(bank)
+            matches = settlement_index.matches(target)
+            complete = settlement_index.complete_for(target)
+            if not complete:
+                mark_incomplete_target(
+                    side="settlement_subsets_for_bank",
+                    total=target,
+                    anchor_node=f"B:{bank['bank_txn_id']}",
+                    index=settlement_index,
+                    opposite_prefix="S",
+                )
             for settlement_ids in matches:
-                candidates.append(group_candidate(
+                candidate = group_candidate(
                     "many_settlements_to_one_bank",
                     [bank],
                     [(identifier, settlements[identifier]) for identifier in settlement_ids],
-                    unique_combination=len(matches) == 1,
-                ))
+                    unique_combination=complete and len(matches) == 1,
+                )
+                candidate["candidate_generation_complete"] = complete
+                if not complete:
+                    candidate["eligible"] = False
+                    candidate["blockers"].append("candidate_generation_truncated")
+                candidates.append(candidate)
         for settlement_id, settlement in settlements.items():
-            matches = exact_combinations_by_total(bank_amounts, Decimal(settlement["net"]), max_group_size)
+            target = Decimal(settlement["net"])
+            matches = bank_index.matches(target)
+            complete = bank_index.complete_for(target)
+            if not complete:
+                mark_incomplete_target(
+                    side="bank_subsets_for_settlement",
+                    total=target,
+                    anchor_node=f"S:{settlement_id}",
+                    index=bank_index,
+                    opposite_prefix="B",
+                )
             for bank_ids in matches:
-                candidates.append(group_candidate(
+                candidate = group_candidate(
                     "one_settlement_to_many_banks",
                     [bank_by_id[identifier] for identifier in bank_ids],
                     [(settlement_id, settlement)],
-                    unique_combination=len(matches) == 1,
-                ))
+                    unique_combination=complete and len(matches) == 1,
+                )
+                candidate["candidate_generation_complete"] = complete
+                if not complete:
+                    candidate["eligible"] = False
+                    candidate["blockers"].append("candidate_generation_truncated")
+                candidates.append(candidate)
 
-        bank_groups = grouped_combinations_by_total(bank_amounts, max_group_size)
-        settlement_groups = grouped_combinations_by_total(settlement_amounts, max_group_size)
+        bank_groups = bank_index.groups_by_total
+        settlement_groups = settlement_index.groups_by_total
         for total in sorted(set(bank_groups) & set(settlement_groups)):
             bank_matches = bank_groups[total]
             settlement_matches = settlement_groups[total]
             pair_count = len(bank_matches) * len(settlement_matches)
+            complete = (
+                bank_index.complete_for(total)
+                and settlement_index.complete_for(total)
+                and pair_count <= MAX_GROUP_HYPOTHESES_PER_TOTAL
+            )
+            if not complete:
+                unsafe_nodes.update(
+                    f"B:{identifier}"
+                    for identifier in bank_index.participants_by_total.get(total, set())
+                )
+                unsafe_nodes.update(
+                    f"S:{identifier}"
+                    for identifier in settlement_index.participants_by_total.get(total, set())
+                )
+                generation_issues.append({
+                    "code": "nm_candidate_pairing_truncated",
+                    "side": "many_to_many",
+                    "signed_total": str(total),
+                    "retained_pair_count": min(pair_count, MAX_GROUP_HYPOTHESES_PER_TOTAL),
+                    "known_pair_count": pair_count,
+                    "reason": "N:M candidate pairing is incomplete and therefore fail-closed",
+                })
+                subset_sum_audit["status"] = "truncated_fail_closed"
             emitted = 0
             for bank_ids in bank_matches:
                 for settlement_ids in settlement_matches:
@@ -357,12 +458,17 @@ def build_candidate_graph(
                         continue
                     if emitted >= MAX_GROUP_HYPOTHESES_PER_TOTAL:
                         break
-                    candidates.append(group_candidate(
+                    candidate = group_candidate(
                         "many_banks_to_many_settlements",
                         [bank_by_id[identifier] for identifier in bank_ids],
                         [(identifier, settlements[identifier]) for identifier in settlement_ids],
-                        unique_combination=pair_count == 1,
-                    ))
+                        unique_combination=complete and pair_count == 1,
+                    )
+                    candidate["candidate_generation_complete"] = complete
+                    if not complete:
+                        candidate["eligible"] = False
+                        candidate["blockers"].append("candidate_generation_truncated")
+                    candidates.append(candidate)
                     emitted += 1
                 if emitted >= MAX_GROUP_HYPOTHESES_PER_TOTAL:
                     break
@@ -529,6 +635,12 @@ def build_candidate_graph(
         "candidates": sorted(candidates, key=lambda item: (-item["evidence_score"], item["candidate_id"])),
         "max_group_size": max_group_size,
         "group_hypothesis_cap_per_total": MAX_GROUP_HYPOTHESES_PER_TOTAL,
+        "candidate_generation": {
+            **subset_sum_audit,
+            "complete": not generation_issues,
+            "unsafe_nodes": sorted(unsafe_nodes),
+            "issues": generation_issues,
+        },
     }
 
 
@@ -539,6 +651,10 @@ class ComponentSolution:
     tied: bool
     branches: int
     exhausted: bool
+    status: str
+    best_bound: int
+    wall_time_seconds: float
+    ambiguity_checks: int
 
 
 def candidate_nodes(candidate: dict[str, Any]) -> set[str]:
@@ -567,50 +683,122 @@ def connected_candidate_components(candidates: list[dict[str, Any]]) -> list[lis
     return components
 
 
-def solve_component(candidates: list[dict[str, Any]]) -> ComponentSolution:
+def _cp_sat_model(
+    ordered: list[dict[str, Any]],
+    weights: list[int],
+    *,
+    fixed_objective: int | None = None,
+    excluded_index: int | None = None,
+) -> tuple[cp_model.CpModel, list[cp_model.IntVar]]:
+    model = cp_model.CpModel()
+    variables = [model.new_bool_var(f"candidate_{index}") for index in range(len(ordered))]
+    by_node: dict[str, list[int]] = defaultdict(list)
+    for index, candidate in enumerate(ordered):
+        for node in candidate_nodes(candidate):
+            by_node[node].append(index)
+    for indices in by_node.values():
+        model.add(sum(variables[index] for index in indices) <= 1)
+    objective = sum(weights[index] * variables[index] for index in range(len(ordered)))
+    if fixed_objective is None:
+        model.maximize(objective)
+    else:
+        model.add(objective == fixed_objective)
+    if excluded_index is not None:
+        model.add(variables[excluded_index] == 0)
+    return model, variables
+
+
+def _configured_solver(time_limit_seconds: float) -> cp_model.CpSolver:
+    solver = cp_model.CpSolver()
+    solver.parameters.max_time_in_seconds = max(0.001, time_limit_seconds)
+    # A single worker and fixed seed make proof artifacts reproducible across
+    # repeated runs.  Money and objective coefficients remain integers.
+    solver.parameters.num_search_workers = 1
+    solver.parameters.random_seed = 0
+    return solver
+
+
+def solve_component(
+    candidates: list[dict[str, Any]],
+    *,
+    time_limit_seconds: float = DEFAULT_CP_SAT_TIME_LIMIT_SECONDS,
+) -> ComponentSolution:
+    """Solve one candidate component and retain only mandatory optimal edges.
+
+    The first CP-SAT run proves the optimal objective.  Each selected edge is
+    then excluded in a fixed-objective feasibility probe.  If another optimum
+    exists without that edge, it is ambiguous and excluded from the safe
+    intersection.  Any unproven main solve or ambiguity probe abstains for the
+    entire component.
+    """
+    if time_limit_seconds <= 0:
+        return ComponentSolution(
+            set(), 0, False, 0, True, "TIME_LIMIT_ZERO", 0, 0.0, 0
+        )
     ordered = sorted(
         candidates,
         key=lambda item: (-(item["evidence_score"] + 20 * (len(item["bank_ids"]) + len(item["settlement_ids"]) - 2)), item["candidate_id"]),
     )
     weights = [item["evidence_score"] + 20 * (len(item["bank_ids"]) + len(item["settlement_ids"]) - 2) for item in ordered]
-    suffix = [0] * (len(weights) + 1)
-    for index in range(len(weights) - 1, -1, -1):
-        suffix[index] = suffix[index + 1] + max(0, weights[index])
-    best_objective = -1
-    best_intersection: set[str] | None = None
-    optimal_solution_count = 0
-    branches = 0
-    exhausted = False
+    started = perf_counter()
+    deadline = started + time_limit_seconds
+    model, variables = _cp_sat_model(ordered, weights)
+    solver = _configured_solver(time_limit_seconds)
+    status = solver.solve(model)
+    status_name = solver.status_name(status)
+    branches = int(solver.num_branches)
+    if status != cp_model.OPTIMAL:
+        return ComponentSolution(
+            set(), 0, False, branches, True, status_name,
+            int(round(solver.best_objective_bound)) if status in (cp_model.FEASIBLE, cp_model.OPTIMAL) else 0,
+            perf_counter() - started, 0,
+        )
 
-    def search(index: int, used: set[str], selected: list[str], objective: int) -> None:
-        nonlocal best_objective, best_intersection, optimal_solution_count, branches, exhausted
-        branches += 1
-        if branches > MAX_BRANCHES_PER_COMPONENT:
-            exhausted = True
-            return
-        if objective + suffix[index] < best_objective:
-            return
-        if index == len(ordered):
-            chosen = frozenset(selected)
-            if objective > best_objective:
-                best_objective = objective
-                best_intersection = set(chosen)
-                optimal_solution_count = 1
-            elif objective == best_objective:
-                best_intersection = (best_intersection or set()) & set(chosen)
-                optimal_solution_count += 1
-            return
-        candidate = ordered[index]
-        nodes = candidate_nodes(candidate)
-        if not (used & nodes):
-            search(index + 1, used | nodes, [*selected, candidate["candidate_id"]], objective + weights[index])
-        search(index + 1, used, selected, objective)
+    optimum = int(round(solver.objective_value))
+    best_bound = int(round(solver.best_objective_bound))
+    initially_selected = [index for index, variable in enumerate(variables) if solver.value(variable)]
+    mandatory_ids: set[str] = set()
+    tied = False
+    ambiguity_checks = 0
+    for index in initially_selected:
+        remaining = deadline - perf_counter()
+        if remaining <= 0:
+            return ComponentSolution(
+                set(), optimum, tied, branches, True, "AMBIGUITY_CHECK_TIMEOUT",
+                best_bound, perf_counter() - started, ambiguity_checks,
+            )
+        probe_model, _ = _cp_sat_model(
+            ordered,
+            weights,
+            fixed_objective=optimum,
+            excluded_index=index,
+        )
+        probe_solver = _configured_solver(remaining)
+        probe_status = probe_solver.solve(probe_model)
+        branches += int(probe_solver.num_branches)
+        ambiguity_checks += 1
+        if probe_status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
+            tied = True
+            continue
+        if probe_status == cp_model.INFEASIBLE:
+            mandatory_ids.add(ordered[index]["candidate_id"])
+            continue
+        return ComponentSolution(
+            set(), optimum, tied, branches, True,
+            f"AMBIGUITY_CHECK_{probe_solver.status_name(probe_status)}",
+            best_bound, perf_counter() - started, ambiguity_checks,
+        )
 
-    search(0, set(), [], 0)
-    if exhausted or best_intersection is None:
-        return ComponentSolution(set(), 0, False, branches, True)
     return ComponentSolution(
-        best_intersection, best_objective, optimal_solution_count > 1, branches, False
+        mandatory_ids,
+        optimum,
+        tied,
+        branches,
+        False,
+        "OPTIMAL_AMBIGUOUS" if tied else "OPTIMAL_UNIQUE",
+        best_bound,
+        perf_counter() - started,
+        ambiguity_checks,
     )
 
 
@@ -629,23 +817,35 @@ def solve_candidate_graph(
     graph: dict[str, Any],
     *,
     selection_threshold: int = DEFAULT_SELECTION_THRESHOLD,
+    component_time_limit_seconds: float = DEFAULT_CP_SAT_TIME_LIMIT_SECONDS,
 ) -> dict[str, Any]:
+    unsafe_nodes = set(graph.get("candidate_generation", {}).get("unsafe_nodes", []))
     selectable = [
         candidate for candidate in graph["candidates"]
         if candidate["eligible"] and candidate["evidence_score"] >= selection_threshold
+        and not (candidate_nodes(candidate) & unsafe_nodes)
     ]
     components = connected_candidate_components(selectable)
     selected_ids: set[str] = set()
     component_reports = []
     for candidates in components:
-        solution = solve_component(candidates)
+        component_node_ids = sorted(set().union(*(candidate_nodes(item) for item in candidates)))
+        solution = solve_component(
+            candidates,
+            time_limit_seconds=component_time_limit_seconds,
+        )
         selected_ids |= solution.selected_ids
         component_reports.append({
             "candidate_count": len(candidates),
+            "node_ids": component_node_ids,
             "objective": solution.objective,
+            "best_bound": solution.best_bound,
+            "status": solution.status,
             "tied_optimum": solution.tied,
             "branches": solution.branches,
             "exhausted": solution.exhausted,
+            "wall_time_seconds": round(solution.wall_time_seconds, 6),
+            "ambiguity_checks": solution.ambiguity_checks,
         })
     selected = [candidate for candidate in graph["candidates"] if candidate["candidate_id"] in selected_ids]
     selected_nodes = set().union(*(candidate_nodes(item) for item in selected)) if selected else set()
@@ -684,6 +884,9 @@ def solve_candidate_graph(
                 "global_one_use",
                 "bounded_group_size",
                 "selection_threshold",
+                "complete_candidate_generation_for_selected_nodes",
+                "cp_sat_optimum_proven",
+                "selected_edge_mandatory_across_all_optima",
             ],
             "rejected_alternatives": alternatives,
         })
@@ -710,24 +913,45 @@ def solve_candidate_graph(
             item["topology"] == topology
             and item["eligible"]
             and item["evidence_score"] >= selection_threshold
+            and not (candidate_nodes(item) & unsafe_nodes)
             and item["candidate_id"] not in selected_ids
             for item in graph["candidates"]
         )
         for topology in ("1:1", "1:N", "N:1", "N:M")
     }
+    generation_rejected_topology_counts = {
+        topology: sum(
+            item["topology"] == topology
+            and bool(candidate_nodes(item) & unsafe_nodes)
+            for item in graph["candidates"]
+        )
+        for topology in ("1:1", "1:N", "N:1", "N:M")
+    }
     return {
-        "solver": "exact_component_set_packing",
+        "solver": "ortools_cp_sat_component_set_packing",
+        "solver_policy": (
+            "only proven-optimal edges mandatory across every optimum may proceed; "
+            "feasible-only, unknown, timed-out, truncated, or ambiguous edges abstain"
+        ),
         "selection_threshold": selection_threshold,
+        "component_time_limit_seconds": component_time_limit_seconds,
         "threshold_policy": "synthetic-suite selective threshold; exact money remains a hard constraint",
         "candidate_count": len(graph["candidates"]),
         "selectable_candidate_count": len(selectable),
         "selected_candidate_count": len(selected),
+        "candidate_generation": graph.get("candidate_generation", {}),
+        "candidate_generation_unsafe_node_count": len(unsafe_nodes),
+        "all_components_proven": (
+            bool(graph.get("candidate_generation", {}).get("complete", True))
+            and all(not item["exhausted"] for item in component_reports)
+        ),
         "selected": selected,
         "certificates": certificates,
         "candidate_topology_counts": candidate_topology_counts,
         "selected_topology_counts": selected_topology_counts,
         "hard_gate_rejected_topology_counts": hard_gate_rejected_topology_counts,
         "global_rejected_topology_counts": global_rejected_topology_counts,
+        "generation_rejected_topology_counts": generation_rejected_topology_counts,
         "abstained_bank_ids": sorted(identifier for identifier in all_bank_ids if f"B:{identifier}" not in selected_nodes),
         "unused_settlement_ids": sorted(identifier for identifier in all_settlement_ids if f"S:{identifier}" not in selected_nodes),
         "components": component_reports,
@@ -736,6 +960,7 @@ def solve_candidate_graph(
             "each settlement used at most once",
             "signed grouped amounts conserve money exactly",
             "tied optimal edges are excluded",
-            "search exhaustion fails closed",
+            "candidate-generation truncation fails closed",
+            "non-optimal or timed-out CP-SAT components fail closed",
         ],
     }

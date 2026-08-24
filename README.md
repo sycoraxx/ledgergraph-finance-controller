@@ -88,13 +88,23 @@ netting assumptions; they are not production prevalence claims.
 
 ## LedgerGraph: the flagship reconciliation engine
 
-The production path no longer chooses settlements one bank row at a time. It
-constructs a canonical candidate graph across the full batch, then solves an
-exact weighted set-packing problem over connected components. Controlled fuzzy
+The production path no longer chooses settlements one bank row at a time.
+Bounded dynamic programming indexes signed subset totals and constructs a
+canonical candidate graph across the full batch. OR-Tools CP-SAT then solves
+the weighted set-packing problem over connected components. Controlled fuzzy
 evidence—normalized UTRs, bounded edit distance, date windows, and amount
 uniqueness—may generate or rank a candidate, but it can never override signed
 money conservation. Every bank and settlement node may be selected at most
-once. Tied optima, branch exhaustion, and insufficient evidence abstain.
+once. Only a proven optimum may proceed, and only edges mandatory across every
+optimum are retained. Candidate truncation, a merely feasible solution,
+timeout, ambiguity, and insufficient evidence all abstain.
+
+The interactive 75-settlement fixture deliberately keeps `max_group_size=2`.
+The same DP engine supports configured larger groups—the invariant tests include
+a four-settlement aggregate—but group size remains a declared safety budget,
+not an “arbitrary size” claim. Each DP total retains at most 64 witnesses and
+the index at most 250,000 states. If either cap is reached, affected money-event
+nodes are labelled incomplete and excluded from optimization.
 
 The engine supports all four bounded reconciliation topologies: 1:1, one bank
 entry to many settlements (1:N), many bank entries to one settlement (N:1),
@@ -378,7 +388,8 @@ generic leaderboard score.
   the tie.
 - Fuzzy evidence can rank candidates but cannot relax exact signed-money
   conservation.
-- Split/merge matches are bounded and globally constrained; tied optima abstain.
+- Split/merge matches are bounded and globally constrained; DP truncation,
+  unproven CP-SAT status, and tied optimal edges abstain.
 - Journal proposal IDs are deterministic, making reruns idempotent.
 - Every journal must balance before it reaches the approval policy.
 - The approval node accepts only `approve` or `reject`; amounts are immutable.

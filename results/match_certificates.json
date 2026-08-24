@@ -45,7 +45,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -114,7 +117,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -183,7 +189,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -264,7 +273,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -345,7 +357,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -426,7 +441,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -508,7 +526,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -596,7 +617,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -684,7 +708,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -772,7 +799,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -860,7 +890,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -943,7 +976,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1026,7 +1062,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1109,7 +1148,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1197,7 +1239,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1285,7 +1330,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1368,7 +1416,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1451,7 +1502,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1529,7 +1583,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1616,7 +1673,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1703,7 +1763,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1790,7 +1853,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1877,7 +1943,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -1964,7 +2033,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2051,7 +2123,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2138,7 +2213,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2225,7 +2303,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2312,7 +2393,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2399,7 +2483,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2486,7 +2573,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2573,7 +2663,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2655,7 +2748,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2737,7 +2833,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2819,7 +2918,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2901,7 +3003,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -2983,7 +3088,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3065,7 +3173,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3147,7 +3258,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3229,7 +3343,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3311,7 +3428,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3393,7 +3513,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3475,7 +3598,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3556,7 +3682,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3631,7 +3760,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3712,7 +3844,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3781,7 +3916,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3846,7 +3984,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3922,7 +4063,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -3998,7 +4142,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -4056,7 +4203,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {

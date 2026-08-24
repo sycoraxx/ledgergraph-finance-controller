@@ -51,17 +51,25 @@ flowchart LR
 
 ### LedgerGraph
 
-LedgerGraph generates bounded fuzzy candidates, then selects a globally
-consistent explanation under hard accounting constraints:
+LedgerGraph uses bounded dynamic-programming subset-sum discovery to generate
+group candidates, then OR-Tools CP-SAT selects a globally consistent
+explanation under hard accounting constraints:
 
 - exact signed-money conservation;
 - every bank and settlement node used at most once;
 - 1:1, 1:N, N:1, and irreducible N:M group support;
-- tied optima, insufficient evidence, and branch exhaustion abstain;
+- candidate truncation, non-optimal solver status, timeout, tied optimal edges,
+  and insufficient evidence abstain;
 - selected groups emit proof certificates with rejected alternatives.
 
 Fuzzy reference/date evidence can propose or rank candidates. It can never
 override the money equation.
+
+The flagship run intentionally uses a 2:2 group-size budget. Larger configured
+groups use the same DP index (a tested 1:4 case is included), but witness and
+state caps remain explicit. Reaching either cap marks affected nodes unsafe and
+prevents them from entering the posting path. CP-SAT results proceed only when
+the optimum is proven; feasibility without proof is review-only.
 
 ### Deterministic component verification
 
@@ -213,6 +221,9 @@ The model is not required to reproduce reconciliation or evaluation results.
 - All labels and money are synthetic.
 - The balanced topology mixture is adversarial coverage, not observed merchant
   frequency.
+- The flagship candidate search is bounded to 2:2. Larger configured groups are
+  supported but remain subject to explicit DP state/witness and solver-time
+  budgets; any incomplete component fails closed.
 - The working-day simulator uses a simplified Monday-Friday calendar rather
   than the full Indian bank-holiday calendar.
 - The post-freeze holdout exposes missing temporal and aggregate GraphShield

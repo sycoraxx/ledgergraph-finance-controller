@@ -45,7 +45,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [],
     "case_id": "exact_reference"
@@ -91,7 +94,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -163,7 +169,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -245,7 +254,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [],
     "case_id": "reference_typo"
@@ -291,7 +303,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [],
     "case_id": "posting_window"
@@ -343,7 +358,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [],
     "case_id": "many_to_one"
@@ -395,7 +413,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [],
     "case_id": "one_to_many"
@@ -453,7 +474,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [
       {
@@ -529,7 +553,10 @@
       "signed_money_conservation",
       "global_one_use",
       "bounded_group_size",
-      "selection_threshold"
+      "selection_threshold",
+      "complete_candidate_generation_for_selected_nodes",
+      "cp_sat_optimum_proven",
+      "selected_edge_mandatory_across_all_optima"
     ],
     "rejected_alternatives": [],
     "case_id": "signed_debit"

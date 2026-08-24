@@ -88,7 +88,7 @@
     }
   },
   "known_control_gap": "GraphShield closes the two declared identity/motif gaps in this synthetic replay. Its features were designed after analysis of these misses, so this is regression evidence only\u2014not validation on unseen fraud families.",
-  "duration_ms": 15988,
+  "duration_ms": 14474,
   "per_seed": [
     {
       "seed": 20260831,

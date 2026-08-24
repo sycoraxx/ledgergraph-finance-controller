@@ -355,10 +355,14 @@ def run_pipeline(data_dir: str | Path = "data", outdir: str | Path = "results") 
         "event": "ledgergraph_global_solve",
         "at": utc_now(),
         "solver": graph_solution["solver"],
+        "solver_policy": graph_solution["solver_policy"],
         "candidate_count": graph_solution["candidate_count"],
         "selectable_candidate_count": graph_solution["selectable_candidate_count"],
         "selected_candidate_count": graph_solution["selected_candidate_count"],
         "abstained_bank_count": len(graph_solution["abstained_bank_ids"]),
+        "candidate_generation": graph_solution["candidate_generation"],
+        "all_components_proven": graph_solution["all_components_proven"],
+        "component_statuses": [item["status"] for item in graph_solution["components"]],
         "constraints": graph_solution["global_constraints"],
     })
 
@@ -442,6 +446,31 @@ def run_pipeline(data_dir: str | Path = "data", outdir: str | Path = "results") 
         bank_id = bank_row["bank_txn_id"]
         candidate = selected_by_bank.get(bank_id)
         if candidate is None:
+            bank_node = f"B:{bank_id}"
+            generation_unsafe = bank_node in set(
+                graph_solution["candidate_generation"].get("unsafe_nodes", [])
+            )
+            unresolved_component = next(
+                (
+                    component for component in graph_solution["components"]
+                    if bank_node in component.get("node_ids", []) and component["exhausted"]
+                ),
+                None,
+            )
+            if generation_unsafe:
+                abstention_reason = (
+                    "candidate generation was truncated for this money-event neighbourhood; "
+                    "LedgerGraph failed closed rather than optimize over an incomplete hypothesis set"
+                )
+            elif unresolved_component:
+                abstention_reason = (
+                    f"CP-SAT component status {unresolved_component['status']} did not prove a safe optimum; "
+                    "LedgerGraph failed closed"
+                )
+            else:
+                abstention_reason = (
+                    "no unambiguous, money-conserving candidate above the evidence threshold"
+                )
             prediction = {
                 "bank_txn_id": bank_id,
                 "bank_txn_ids": [bank_id],
@@ -456,7 +485,7 @@ def run_pipeline(data_dir: str | Path = "data", outdir: str | Path = "results") 
                 "component_adjustments": [],
                 "confidence": 0.0,
                 "layer": "LedgerGraph-global",
-                "reason": "global solver abstained: no unambiguous, money-conserving candidate above the evidence threshold",
+                "reason": f"global solver abstained: {abstention_reason}",
                 "citations": [citation(bank_row)],
                 "unresolved_amount": str(abs(bank_net(bank_row))),
                 "transaction_timestamp_utc": bank_row.get("txn_timestamp_utc"),

@@ -17,6 +17,7 @@ from agent.ledger import (
 )
 from agent.l1_search import parse_date_candidates, reconcile_search
 from agent.ledger_graph import build_candidate_graph, solve_candidate_graph
+from agent.subset_sum import build_subset_sum_index
 from agent.qa import answer_question, deterministic_route, validate_call
 from agent.risk import scan_bank_risk
 from agent.scenario_catalog import scenario_catalog, scenario_context
@@ -336,6 +337,91 @@ class FinanceControllerTests(unittest.TestCase):
         ))
         self.assertEqual("many_banks_to_many_settlements", grouped["selected"][0]["kind"])
         self.assertEqual("N:M", grouped["selected"][0]["topology"])
+
+    def test_dynamic_programming_discovers_and_cp_sat_selects_a_four_item_group(self):
+        settlements = {
+            f"setl_{amount}": {
+                "net": Decimal(f"{amount}.00"),
+                "utr": f"UTR{amount}",
+                "settled_dates": {"2026-01-01"},
+                "rows": [],
+            }
+            for amount in (10, 20, 30, 40)
+        }
+        banks = [{
+            "bank_txn_id": "bank_100",
+            "credit": "100.00",
+            "debit": "",
+            "value_date": "01/01/2026",
+            "narration": "AGGREGATED FOUR-WAY CREDIT",
+        }]
+        graph = build_candidate_graph(banks, settlements, max_group_size=4)
+        result = solve_candidate_graph(graph)
+        self.assertEqual("bounded_dynamic_programming_subset_sum", graph["candidate_generation"]["algorithm"])
+        self.assertTrue(graph["candidate_generation"]["complete"])
+        self.assertEqual("ortools_cp_sat_component_set_packing", result["solver"])
+        self.assertEqual(1, len(result["selected"]))
+        self.assertEqual("1:N", result["selected"][0]["topology"])
+        self.assertEqual(4, len(result["selected"][0]["settlement_ids"]))
+        self.assertEqual("OPTIMAL_UNIQUE", result["components"][0]["status"])
+
+    def test_subset_sum_witness_overflow_fails_closed(self):
+        settlements = {
+            f"setl_{index:02d}": {
+                "net": Decimal("1.00"),
+                "utr": f"UTR{index:02d}",
+                "settled_dates": {"2026-01-01"},
+                "rows": [],
+            }
+            for index in range(12)
+        }
+        banks = [{
+            "bank_txn_id": "bank_ambiguous",
+            "credit": "2.00",
+            "debit": "",
+            "value_date": "01/01/2026",
+            "narration": "DENSE SAME-TOTAL COLLISION",
+        }]
+        graph = build_candidate_graph(banks, settlements, max_group_size=2)
+        result = solve_candidate_graph(graph)
+        self.assertFalse(graph["candidate_generation"]["complete"])
+        self.assertEqual("truncated_fail_closed", graph["candidate_generation"]["status"])
+        self.assertIn("B:bank_ambiguous", graph["candidate_generation"]["unsafe_nodes"])
+        self.assertEqual([], result["selected"])
+        self.assertEqual(["bank_ambiguous"], result["abstained_bank_ids"])
+
+    def test_subset_sum_index_reports_complete_large_group_witness(self):
+        index = build_subset_sum_index(
+            [("a", Decimal("10")), ("b", Decimal("20")),
+             ("c", Decimal("30")), ("d", Decimal("40"))],
+            4,
+        )
+        self.assertIn(("a", "b", "c", "d"), index.matches(Decimal("100")))
+        self.assertTrue(index.complete_for(Decimal("100")))
+        self.assertGreater(index.transition_count, 0)
+        capped = build_subset_sum_index(
+            [("a", Decimal("10")), ("b", Decimal("20")), ("c", Decimal("30"))],
+            3,
+            max_states=2,
+        )
+        self.assertTrue(capped.globally_truncated)
+        self.assertFalse(capped.complete_for(Decimal("60")))
+
+    def test_zero_cp_sat_budget_fails_closed(self):
+        settlements = {
+            "setl_a": {"net": Decimal("10.00"), "utr": "UTRA", "settled_dates": {"2026-01-01"}, "rows": []},
+        }
+        banks = [{
+            "bank_txn_id": "bank_a", "credit": "10.00", "debit": "",
+            "value_date": "01/01/2026", "narration": "UTRA",
+        }]
+        result = solve_candidate_graph(
+            build_candidate_graph(banks, settlements, max_group_size=1),
+            component_time_limit_seconds=0,
+        )
+        self.assertEqual([], result["selected"])
+        self.assertEqual("TIME_LIMIT_ZERO", result["components"][0]["status"])
+        self.assertTrue(result["components"][0]["exhausted"])
 
     def test_mixed_date_parser_preserves_ambiguity(self):
         self.assertEqual({"2026-06-03", "2026-03-06"}, parse_date_candidates("2026-03-06 07:00:00"))

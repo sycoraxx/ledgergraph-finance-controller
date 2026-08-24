@@ -19,7 +19,7 @@ Intervals describe this synthetic challenge only and are not production confiden
 | specificity | 100.0% |
 | false negative exposure inr | 0.00 |
 | false positive review value inr | 0.00 |
-| duration ms | 15988 |
+| duration ms | 14474 |
 
 ## Before/after graph intelligence
 

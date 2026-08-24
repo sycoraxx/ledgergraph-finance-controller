@@ -163,7 +163,7 @@ corepack pnpm run build
 
 Expected frozen high-level outputs:
 
-- 24 Python tests pass
+- 28 Python tests pass
 - 87 bank entries checked
 - 47 balanced journal proposals, none automatically posted
 - LedgerGraph 11/11 adversarial cases exact with zero false selections

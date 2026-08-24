@@ -3928,7 +3928,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000054+BNK000055=>setl_b3z50Ug2GUMFKO+setl_g1xMCk6cJLMGJM",
@@ -3974,7 +3975,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000060+BNK000061=>setl_XoaOOR3s7fvtBP+setl_qmLhxWhLrJpNtC",
@@ -4020,7 +4022,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000063=>setl_ejdcKWvrHoo7c0+setl_slRVJp4KTej6gS",
@@ -4066,7 +4069,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000077+BNK000078=>setl_PBwJ9bXNhx0zI3+setl_gVBOkWB2r6g54J",
@@ -4112,7 +4116,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000050+BNK000051=>setl_SRLAXwKHOsT57S+setl_caJJW10fc12xjA",
@@ -4153,7 +4158,8 @@
         ],
         "evidence_score": 115,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000070+BNK000071=>setl_3ekoTpzAdwh622+setl_nkcd5S1PkAAVJV",
@@ -4194,7 +4200,8 @@
         ],
         "evidence_score": 115,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000074+BNK000075=>setl_ZYDI2T27UOatPw+setl_qaC7p1IPBVcTCv",
@@ -4235,7 +4242,8 @@
         ],
         "evidence_score": 115,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000000=>setl_2ybSd4d7inlUpZ",
@@ -5087,7 +5095,8 @@
         ],
         "evidence_score": 112,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000064+BNK000065=>setl_qG7TysJ8jp2OKf+setl_zmACAwQWSHq69R",
@@ -5133,7 +5142,8 @@
         ],
         "evidence_score": 112,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000048+BNK000049=>setl_AIZLEK5UBKpFxB+setl_MGhmHmSoDFzyZL",
@@ -5174,7 +5184,8 @@
         ],
         "evidence_score": 110,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000076=>setl_UfAHgVs02HhtzO+setl_X8PxwjgCEixxdv",
@@ -5215,7 +5226,8 @@
         ],
         "evidence_score": 110,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000001=>setl_5g70VduXp32PWu",
@@ -5592,7 +5604,8 @@
         ],
         "evidence_score": 100,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000068=>setl_PRU2FmYChZCLoA",
@@ -5690,7 +5703,8 @@
         ],
         "evidence_score": 99,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000049+BNK000051=>setl_MGhmHmSoDFzyZL+setl_caJJW10fc12xjA",
@@ -5736,7 +5750,8 @@
         ],
         "evidence_score": 98,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000054+BNK000056=>setl_53EyiUEtYmvXwL+setl_g1xMCk6cJLMGJM",
@@ -5782,7 +5797,8 @@
         ],
         "evidence_score": 98,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000059+BNK000061=>setl_XoaOOR3s7fvtBP+setl_mhEuuveD6ADCOC",
@@ -5828,7 +5844,8 @@
         ],
         "evidence_score": 98,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000068+BNK000070=>setl_PRU2FmYChZCLoA+setl_nkcd5S1PkAAVJV",
@@ -5874,7 +5891,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000069+BNK000071=>setl_3ekoTpzAdwh622+setl_IgFWKRwTcz9IM7",
@@ -5920,7 +5938,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000075=>setl_UfAHgVs02HhtzO+setl_qaC7p1IPBVcTCv",
@@ -5966,7 +5985,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000074+BNK000076=>setl_X8PxwjgCEixxdv+setl_ZYDI2T27UOatPw",
@@ -6012,7 +6032,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000083+BNK000084=>setl_6CGdsOk2sZpa5R+setl_6guwf0tUIPvxJe",
@@ -6101,7 +6122,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000001=>setl_5g70VduXp32PWu+setl_NoLryaazIk7Una",
@@ -6146,7 +6168,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000002=>setl_SvLhOsF67sYjC8+setl_yKlQPY9aOctIsT",
@@ -6191,7 +6214,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000005=>setl_GZzsTxZYNNlnv9+setl_eY8Iar1EG6FfsC",
@@ -6236,7 +6260,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000006=>setl_AfvzLGXEflJBNc+setl_OP5TkGL3e7wdAi",
@@ -6281,7 +6306,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000009=>setl_oQwyQ0L0q0qDds+setl_uXcZN6esCTFSCg",
@@ -6326,7 +6352,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000010=>setl_KSklJTfm2dg9pe+setl_LGp7r8z6FNmFNz",
@@ -6371,7 +6398,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000012=>setl_hlnB0rAFe81EEt+setl_oXgs4X2opWeFaH",
@@ -6416,7 +6444,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000014=>setl_DPalq0y05L810W+setl_pv7znre09sgKRo",
@@ -6461,7 +6490,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000016=>setl_V4IBtk1oREzbnT+setl_r6fDDdhayzAXy5",
@@ -6506,7 +6536,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000017=>setl_CF99Y58tTQ3a5C+setl_f4CUPbHJC3AyZ2",
@@ -6551,7 +6582,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000019=>setl_5t2qrdp6srvFVa+setl_d68qASlFJGHJVK",
@@ -6596,7 +6628,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000049+BNK000050=>setl_SRLAXwKHOsT57S+setl_caJJW10fc12xjA",
@@ -6637,7 +6670,8 @@
         ],
         "evidence_score": 96,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000064=>setl_ejdcKWvrHoo7c0+setl_qG7TysJ8jp2OKf",
@@ -6678,7 +6712,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000065=>setl_slRVJp4KTej6gS+setl_zmACAwQWSHq69R",
@@ -6719,7 +6754,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000063+BNK000064=>setl_ejdcKWvrHoo7c0+setl_qG7TysJ8jp2OKf",
@@ -6760,7 +6796,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000063+BNK000065=>setl_slRVJp4KTej6gS+setl_zmACAwQWSHq69R",
@@ -6801,7 +6838,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000069+BNK000070=>setl_3ekoTpzAdwh622+setl_nkcd5S1PkAAVJV",
@@ -6842,7 +6880,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000074=>setl_ZYDI2T27UOatPw+setl_qaC7p1IPBVcTCv",
@@ -6883,7 +6922,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000020+BNK000023=>setl_5l1f2vm6jktiWv",
@@ -6923,7 +6963,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000021+BNK000022=>setl_7fbLC6wmdjufOV",
@@ -6963,7 +7004,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000026+BNK000027=>setl_jD0kUG1N0JCnsR",
@@ -7003,7 +7045,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000029+BNK000030=>setl_Zu0XGCmxcQeztF",
@@ -7043,7 +7086,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000031+BNK000032=>setl_FrTOQ2QHd5PI6o",
@@ -7083,7 +7127,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000033+BNK000035=>setl_NDvZkAT0vGdlEh",
@@ -7123,7 +7168,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000042=>setl_Huw9gBeSnleXJn",
@@ -7163,7 +7209,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000039+BNK000040=>setl_cfcBmVw6GGZfgl",
@@ -7203,7 +7250,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000044+BNK000045=>setl_seMFRCCGsi23F8",
@@ -7243,7 +7291,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000046+BNK000047=>setl_j6FqciI6UEdH7R",
@@ -7283,7 +7332,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000048+BNK000050=>setl_AIZLEK5UBKpFxB+setl_SRLAXwKHOsT57S",
@@ -7329,7 +7379,8 @@
         ],
         "evidence_score": 94,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000058+BNK000060=>setl_gFeODHchjgluLH+setl_qmLhxWhLrJpNtC",
@@ -7375,7 +7426,8 @@
         ],
         "evidence_score": 93,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000048+BNK000051=>setl_AIZLEK5UBKpFxB+setl_MGhmHmSoDFzyZL",
@@ -7416,7 +7468,8 @@
         ],
         "evidence_score": 92,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000075+BNK000076=>setl_UfAHgVs02HhtzO+setl_X8PxwjgCEixxdv",
@@ -7457,7 +7510,8 @@
         ],
         "evidence_score": 90,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000024+BNK000025=>setl_dubwLO7omDkawb",
@@ -7497,7 +7551,8 @@
         ],
         "evidence_score": 90,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000011=>setl_8fyCkNhhJEhjAV",
@@ -7737,7 +7792,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000021+BNK000023=>setl_7fbLC6wmdjufOV",
@@ -7777,7 +7833,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000031+BNK000033=>setl_FrTOQ2QHd5PI6o",
@@ -7817,7 +7874,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000032+BNK000035=>setl_NDvZkAT0vGdlEh",
@@ -7857,7 +7915,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000040=>setl_cfcBmVw6GGZfgl",
@@ -7897,7 +7956,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000039+BNK000042=>setl_Huw9gBeSnleXJn",
@@ -7937,7 +7997,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000044+BNK000046=>setl_seMFRCCGsi23F8",
@@ -7977,7 +8038,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000045+BNK000047=>setl_j6FqciI6UEdH7R",
@@ -8017,7 +8079,8 @@
         ],
         "evidence_score": 86,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000025+BNK000027=>setl_jD0kUG1N0JCnsR",
@@ -8057,7 +8120,8 @@
         ],
         "evidence_score": 85,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000030+BNK000036=>setl_Zu0XGCmxcQeztF",
@@ -8097,7 +8161,8 @@
         ],
         "evidence_score": 85,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000068+BNK000071=>setl_IgFWKRwTcz9IM7+setl_PRU2FmYChZCLoA",
@@ -8133,7 +8198,8 @@
         ],
         "evidence_score": 80,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000024+BNK000026=>setl_dubwLO7omDkawb",
@@ -8173,7 +8239,8 @@
         ],
         "evidence_score": 80,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000034+BNK000036=>setl_XeuQK0gigAaoS0",
@@ -8208,7 +8275,8 @@
         ],
         "evidence_score": 80,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000079=>setl_lqpecjkIRi6XHl",
@@ -8345,7 +8413,8 @@
         ],
         "evidence_score": 70,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000001+BNK000002=>setl_SvLhOsF67sYjC8+setl_yKlQPY9aOctIsT",
@@ -18739,15 +18808,73 @@
       }
     ],
     "max_group_size": 2,
-    "group_hypothesis_cap_per_total": 64
+    "group_hypothesis_cap_per_total": 64,
+    "candidate_generation": {
+      "algorithm": "bounded_dynamic_programming_subset_sum",
+      "status": "complete",
+      "bank_index": {
+        "algorithm": "bounded_dynamic_programming_subset_sum",
+        "max_group_size": 2,
+        "max_solutions_per_total": 64,
+        "state_count": 2155,
+        "transition_count": 2850,
+        "indexed_total_count": 2089,
+        "incomplete_total_count": 0,
+        "globally_truncated": false
+      },
+      "settlement_index": {
+        "algorithm": "bounded_dynamic_programming_subset_sum",
+        "max_group_size": 2,
+        "max_solutions_per_total": 64,
+        "state_count": 2851,
+        "transition_count": 2850,
+        "indexed_total_count": 2775,
+        "incomplete_total_count": 0,
+        "globally_truncated": false
+      },
+      "complete": true,
+      "unsafe_nodes": [],
+      "issues": []
+    }
   },
   "solution": {
-    "solver": "exact_component_set_packing",
+    "solver": "ortools_cp_sat_component_set_packing",
+    "solver_policy": "only proven-optimal edges mandatory across every optimum may proceed; feasible-only, unknown, timed-out, truncated, or ambiguous edges abstain",
     "selection_threshold": 65,
+    "component_time_limit_seconds": 5.0,
     "threshold_policy": "synthetic-suite selective threshold; exact money remains a hard constraint",
     "candidate_count": 473,
     "selectable_candidate_count": 82,
     "selected_candidate_count": 50,
+    "candidate_generation": {
+      "algorithm": "bounded_dynamic_programming_subset_sum",
+      "status": "complete",
+      "bank_index": {
+        "algorithm": "bounded_dynamic_programming_subset_sum",
+        "max_group_size": 2,
+        "max_solutions_per_total": 64,
+        "state_count": 2155,
+        "transition_count": 2850,
+        "indexed_total_count": 2089,
+        "incomplete_total_count": 0,
+        "globally_truncated": false
+      },
+      "settlement_index": {
+        "algorithm": "bounded_dynamic_programming_subset_sum",
+        "max_group_size": 2,
+        "max_solutions_per_total": 64,
+        "state_count": 2851,
+        "transition_count": 2850,
+        "indexed_total_count": 2775,
+        "incomplete_total_count": 0,
+        "globally_truncated": false
+      },
+      "complete": true,
+      "unsafe_nodes": [],
+      "issues": []
+    },
+    "candidate_generation_unsafe_node_count": 0,
+    "all_components_proven": true,
     "selected": [
       {
         "candidate_id": "one_to_one:BNK000037=>setl_oIPdU6ZKS6OkmD",
@@ -19027,7 +19154,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000054+BNK000055=>setl_b3z50Ug2GUMFKO+setl_g1xMCk6cJLMGJM",
@@ -19073,7 +19201,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000060+BNK000061=>setl_XoaOOR3s7fvtBP+setl_qmLhxWhLrJpNtC",
@@ -19119,7 +19248,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000062+BNK000063=>setl_ejdcKWvrHoo7c0+setl_slRVJp4KTej6gS",
@@ -19165,7 +19295,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000077+BNK000078=>setl_PBwJ9bXNhx0zI3+setl_gVBOkWB2r6g54J",
@@ -19211,7 +19342,8 @@
         ],
         "evidence_score": 117,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000050+BNK000051=>setl_SRLAXwKHOsT57S+setl_caJJW10fc12xjA",
@@ -19252,7 +19384,8 @@
         ],
         "evidence_score": 115,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000070+BNK000071=>setl_3ekoTpzAdwh622+setl_nkcd5S1PkAAVJV",
@@ -19293,7 +19426,8 @@
         ],
         "evidence_score": 115,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000074+BNK000075=>setl_ZYDI2T27UOatPw+setl_qaC7p1IPBVcTCv",
@@ -19334,7 +19468,8 @@
         ],
         "evidence_score": 115,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000058+BNK000059=>setl_gFeODHchjgluLH+setl_mhEuuveD6ADCOC",
@@ -19380,7 +19515,8 @@
         ],
         "evidence_score": 112,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000064+BNK000065=>setl_qG7TysJ8jp2OKf+setl_zmACAwQWSHq69R",
@@ -19426,7 +19562,8 @@
         ],
         "evidence_score": 112,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000048+BNK000049=>setl_AIZLEK5UBKpFxB+setl_MGhmHmSoDFzyZL",
@@ -19467,7 +19604,8 @@
         ],
         "evidence_score": 110,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000073+BNK000076=>setl_UfAHgVs02HhtzO+setl_X8PxwjgCEixxdv",
@@ -19508,7 +19646,8 @@
         ],
         "evidence_score": 110,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_banks_to_many_settlements:BNK000068+BNK000069=>setl_IgFWKRwTcz9IM7+setl_PRU2FmYChZCLoA",
@@ -19544,7 +19683,8 @@
         ],
         "evidence_score": 100,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000000=>setl_2ybSd4d7inlUpZ+setl_gG78kZpIihQKJA",
@@ -19589,7 +19729,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000001=>setl_5g70VduXp32PWu+setl_NoLryaazIk7Una",
@@ -19634,7 +19775,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000002=>setl_SvLhOsF67sYjC8+setl_yKlQPY9aOctIsT",
@@ -19679,7 +19821,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000005=>setl_GZzsTxZYNNlnv9+setl_eY8Iar1EG6FfsC",
@@ -19724,7 +19867,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000006=>setl_AfvzLGXEflJBNc+setl_OP5TkGL3e7wdAi",
@@ -19769,7 +19913,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000009=>setl_oQwyQ0L0q0qDds+setl_uXcZN6esCTFSCg",
@@ -19814,7 +19959,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000010=>setl_KSklJTfm2dg9pe+setl_LGp7r8z6FNmFNz",
@@ -19859,7 +20005,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000012=>setl_hlnB0rAFe81EEt+setl_oXgs4X2opWeFaH",
@@ -19904,7 +20051,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000014=>setl_DPalq0y05L810W+setl_pv7znre09sgKRo",
@@ -19949,7 +20097,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000016=>setl_V4IBtk1oREzbnT+setl_r6fDDdhayzAXy5",
@@ -19994,7 +20143,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000017=>setl_CF99Y58tTQ3a5C+setl_f4CUPbHJC3AyZ2",
@@ -20039,7 +20189,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "many_settlements_to_one_bank:BNK000019=>setl_5t2qrdp6srvFVa+setl_d68qASlFJGHJVK",
@@ -20084,7 +20235,8 @@
         ],
         "evidence_score": 97,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000020+BNK000023=>setl_5l1f2vm6jktiWv",
@@ -20124,7 +20276,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000021+BNK000022=>setl_7fbLC6wmdjufOV",
@@ -20164,7 +20317,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000026+BNK000027=>setl_jD0kUG1N0JCnsR",
@@ -20204,7 +20358,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000029+BNK000030=>setl_Zu0XGCmxcQeztF",
@@ -20244,7 +20399,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000031+BNK000032=>setl_FrTOQ2QHd5PI6o",
@@ -20284,7 +20440,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000033+BNK000035=>setl_NDvZkAT0vGdlEh",
@@ -20324,7 +20481,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000038+BNK000042=>setl_Huw9gBeSnleXJn",
@@ -20364,7 +20522,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000039+BNK000040=>setl_cfcBmVw6GGZfgl",
@@ -20404,7 +20563,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000044+BNK000045=>setl_seMFRCCGsi23F8",
@@ -20444,7 +20604,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000046+BNK000047=>setl_j6FqciI6UEdH7R",
@@ -20484,7 +20645,8 @@
         ],
         "evidence_score": 95,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_settlement_to_many_banks:BNK000024+BNK000025=>setl_dubwLO7omDkawb",
@@ -20524,7 +20686,8 @@
         ],
         "evidence_score": 90,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000011=>setl_8fyCkNhhJEhjAV",
@@ -20715,7 +20878,8 @@
         ],
         "evidence_score": 80,
         "eligible": true,
-        "blockers": []
+        "blockers": [],
+        "candidate_generation_complete": true
       },
       {
         "candidate_id": "one_to_one:BNK000079=>setl_lqpecjkIRi6XHl",
@@ -20867,7 +21031,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -20936,7 +21103,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21005,7 +21175,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21086,7 +21259,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21167,7 +21343,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21248,7 +21427,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21330,7 +21512,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21418,7 +21603,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21506,7 +21694,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21594,7 +21785,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21682,7 +21876,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21765,7 +21962,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21848,7 +22048,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -21931,7 +22134,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22019,7 +22225,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22107,7 +22316,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22190,7 +22402,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22273,7 +22488,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22351,7 +22569,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22438,7 +22659,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22525,7 +22749,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22612,7 +22839,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22699,7 +22929,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22786,7 +23019,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22873,7 +23109,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -22960,7 +23199,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23047,7 +23289,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23134,7 +23379,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23221,7 +23469,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23308,7 +23559,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23395,7 +23649,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23477,7 +23734,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23559,7 +23819,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23641,7 +23904,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23723,7 +23989,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23805,7 +24074,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23887,7 +24159,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -23969,7 +24244,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24051,7 +24329,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24133,7 +24414,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24215,7 +24499,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24297,7 +24584,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24378,7 +24668,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24453,7 +24746,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24534,7 +24830,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24603,7 +24902,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24668,7 +24970,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24744,7 +25049,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24820,7 +25128,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24878,7 +25189,10 @@
           "signed_money_conservation",
           "global_one_use",
           "bounded_group_size",
-          "selection_threshold"
+          "selection_threshold",
+          "complete_candidate_generation_for_selected_nodes",
+          "cp_sat_optimum_proven",
+          "selected_edge_mandatory_across_all_optima"
         ],
         "rejected_alternatives": [
           {
@@ -24932,274 +25246,658 @@
       "N:1": 12,
       "N:M": 20
     },
+    "generation_rejected_topology_counts": {
+      "1:1": 0,
+      "1:N": 0,
+      "N:1": 0,
+      "N:M": 0
+    },
     "abstained_bank_ids": [],
     "unused_settlement_ids": [],
     "components": [
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000037",
+          "S:setl_oIPdU6ZKS6OkmD"
+        ],
         "objective": 175,
+        "best_bound": 175,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.005914,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000043",
+          "S:setl_KueUbhY4pGNMt4"
+        ],
         "objective": 175,
+        "best_bound": 175,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000915,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000067",
+          "S:setl_dXg4PutvO1hWMS"
+        ],
         "objective": 175,
+        "best_bound": 175,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000859,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000083",
+          "S:setl_6CGdsOk2sZpa5R"
+        ],
         "objective": 175,
+        "best_bound": 175,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.001635,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000084",
+          "S:setl_6guwf0tUIPvxJe"
+        ],
         "objective": 175,
+        "best_bound": 175,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000856,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000086",
+          "S:setl_0X4re7lK95Ytyf"
+        ],
         "objective": 175,
+        "best_bound": 175,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000786,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000053",
+          "B:BNK000054",
+          "B:BNK000055",
+          "B:BNK000056",
+          "S:setl_53EyiUEtYmvXwL",
+          "S:setl_b3z50Ug2GUMFKO",
+          "S:setl_g1xMCk6cJLMGJM",
+          "S:setl_kScRMmKkPsN4tZ"
+        ],
         "objective": 314,
+        "best_bound": 314,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.002329,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000058",
+          "B:BNK000059",
+          "B:BNK000060",
+          "B:BNK000061",
+          "S:setl_XoaOOR3s7fvtBP",
+          "S:setl_gFeODHchjgluLH",
+          "S:setl_mhEuuveD6ADCOC",
+          "S:setl_qmLhxWhLrJpNtC"
+        ],
         "objective": 309,
+        "best_bound": 309,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.002248,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 6,
+        "node_ids": [
+          "B:BNK000062",
+          "B:BNK000063",
+          "B:BNK000064",
+          "B:BNK000065",
+          "S:setl_ejdcKWvrHoo7c0",
+          "S:setl_qG7TysJ8jp2OKf",
+          "S:setl_slRVJp4KTej6gS",
+          "S:setl_zmACAwQWSHq69R"
+        ],
         "objective": 309,
+        "best_bound": 309,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 26,
-        "exhausted": false
+        "branches": 11,
+        "exhausted": false,
+        "wall_time_seconds": 0.002269,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000077",
+          "B:BNK000078",
+          "S:setl_PBwJ9bXNhx0zI3",
+          "S:setl_gVBOkWB2r6g54J"
+        ],
         "objective": 157,
+        "best_bound": 157,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000885,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 6,
+        "node_ids": [
+          "B:BNK000048",
+          "B:BNK000049",
+          "B:BNK000050",
+          "B:BNK000051",
+          "S:setl_AIZLEK5UBKpFxB",
+          "S:setl_MGhmHmSoDFzyZL",
+          "S:setl_SRLAXwKHOsT57S",
+          "S:setl_caJJW10fc12xjA"
+        ],
         "objective": 305,
+        "best_bound": 305,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 26,
-        "exhausted": false
+        "branches": 14,
+        "exhausted": false,
+        "wall_time_seconds": 0.002967,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 6,
+        "node_ids": [
+          "B:BNK000068",
+          "B:BNK000069",
+          "B:BNK000070",
+          "B:BNK000071",
+          "S:setl_3ekoTpzAdwh622",
+          "S:setl_IgFWKRwTcz9IM7",
+          "S:setl_PRU2FmYChZCLoA",
+          "S:setl_nkcd5S1PkAAVJV"
+        ],
         "objective": 295,
+        "best_bound": 295,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 27,
-        "exhausted": false
+        "branches": 14,
+        "exhausted": false,
+        "wall_time_seconds": 0.002434,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 6,
+        "node_ids": [
+          "B:BNK000073",
+          "B:BNK000074",
+          "B:BNK000075",
+          "B:BNK000076",
+          "S:setl_UfAHgVs02HhtzO",
+          "S:setl_X8PxwjgCEixxdv",
+          "S:setl_ZYDI2T27UOatPw",
+          "S:setl_qaC7p1IPBVcTCv"
+        ],
         "objective": 305,
+        "best_bound": 305,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 27,
-        "exhausted": false
+        "branches": 14,
+        "exhausted": false,
+        "wall_time_seconds": 0.002596,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000000",
+          "S:setl_2ybSd4d7inlUpZ",
+          "S:setl_gG78kZpIihQKJA"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.001154,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000001",
+          "S:setl_5g70VduXp32PWu",
+          "S:setl_NoLryaazIk7Una"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000829,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000002",
+          "S:setl_SvLhOsF67sYjC8",
+          "S:setl_yKlQPY9aOctIsT"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000795,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000005",
+          "S:setl_GZzsTxZYNNlnv9",
+          "S:setl_eY8Iar1EG6FfsC"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000796,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000006",
+          "S:setl_AfvzLGXEflJBNc",
+          "S:setl_OP5TkGL3e7wdAi"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.001088,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000009",
+          "S:setl_oQwyQ0L0q0qDds",
+          "S:setl_uXcZN6esCTFSCg"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000905,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000010",
+          "S:setl_KSklJTfm2dg9pe",
+          "S:setl_LGp7r8z6FNmFNz"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000831,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000012",
+          "S:setl_hlnB0rAFe81EEt",
+          "S:setl_oXgs4X2opWeFaH"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000829,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000014",
+          "S:setl_DPalq0y05L810W",
+          "S:setl_pv7znre09sgKRo"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.001015,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000016",
+          "S:setl_V4IBtk1oREzbnT",
+          "S:setl_r6fDDdhayzAXy5"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.0008,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000017",
+          "S:setl_CF99Y58tTQ3a5C",
+          "S:setl_f4CUPbHJC3AyZ2"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000802,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000019",
+          "S:setl_5t2qrdp6srvFVa",
+          "S:setl_d68qASlFJGHJVK"
+        ],
         "objective": 117,
+        "best_bound": 117,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000861,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000020",
+          "B:BNK000021",
+          "B:BNK000022",
+          "B:BNK000023",
+          "S:setl_5l1f2vm6jktiWv",
+          "S:setl_7fbLC6wmdjufOV"
+        ],
         "objective": 230,
+        "best_bound": 230,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.002311,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000024",
+          "B:BNK000025",
+          "B:BNK000026",
+          "B:BNK000027",
+          "S:setl_dubwLO7omDkawb",
+          "S:setl_jD0kUG1N0JCnsR"
+        ],
         "objective": 225,
+        "best_bound": 225,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.001838,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000029",
+          "B:BNK000030",
+          "B:BNK000034",
+          "B:BNK000036",
+          "S:setl_XeuQK0gigAaoS0",
+          "S:setl_Zu0XGCmxcQeztF"
+        ],
         "objective": 215,
+        "best_bound": 215,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 10,
-        "exhausted": false
+        "branches": 11,
+        "exhausted": false,
+        "wall_time_seconds": 0.002242,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000031",
+          "B:BNK000032",
+          "B:BNK000033",
+          "B:BNK000035",
+          "S:setl_FrTOQ2QHd5PI6o",
+          "S:setl_NDvZkAT0vGdlEh"
+        ],
         "objective": 230,
+        "best_bound": 230,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.002008,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000038",
+          "B:BNK000039",
+          "B:BNK000040",
+          "B:BNK000042",
+          "S:setl_Huw9gBeSnleXJn",
+          "S:setl_cfcBmVw6GGZfgl"
+        ],
         "objective": 230,
+        "best_bound": 230,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.00187,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 4,
+        "node_ids": [
+          "B:BNK000044",
+          "B:BNK000045",
+          "B:BNK000046",
+          "B:BNK000047",
+          "S:setl_j6FqciI6UEdH7R",
+          "S:setl_seMFRCCGsi23F8"
+        ],
         "objective": 230,
+        "best_bound": 230,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
         "branches": 11,
-        "exhausted": false
+        "exhausted": false,
+        "wall_time_seconds": 0.002141,
+        "ambiguity_checks": 2
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000011",
+          "S:setl_8fyCkNhhJEhjAV"
+        ],
         "objective": 90,
+        "best_bound": 90,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000913,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000015",
+          "S:setl_FeAdZNmc6Ly7H7"
+        ],
         "objective": 90,
+        "best_bound": 90,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000828,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000080",
+          "S:setl_ntLL5DSYK3SNTQ"
+        ],
         "objective": 90,
+        "best_bound": 90,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000976,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000082",
+          "S:setl_brAOFZubvE8FBi"
+        ],
         "objective": 90,
+        "best_bound": 90,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.00077,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000079",
+          "S:setl_lqpecjkIRi6XHl"
+        ],
         "objective": 75,
+        "best_bound": 75,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.00076,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000081",
+          "S:setl_UY2FIELlArQ3Lc"
+        ],
         "objective": 75,
+        "best_bound": 75,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.000955,
+        "ambiguity_checks": 1
       },
       {
         "candidate_count": 1,
+        "node_ids": [
+          "B:BNK000085",
+          "S:setl_VODZ18OGb9MKM4"
+        ],
         "objective": 75,
+        "best_bound": 75,
+        "status": "OPTIMAL_UNIQUE",
         "tied_optimum": false,
-        "branches": 3,
-        "exhausted": false
+        "branches": 0,
+        "exhausted": false,
+        "wall_time_seconds": 0.001062,
+        "ambiguity_checks": 1
       }
     ],
     "global_constraints": [
@@ -25207,7 +25905,8 @@
       "each settlement used at most once",
       "signed grouped amounts conserve money exactly",
       "tied optimal edges are excluded",
-      "search exhaustion fails closed"
+      "candidate-generation truncation fails closed",
+      "non-optimal or timed-out CP-SAT components fail closed"
     ]
   }
 }

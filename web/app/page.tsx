@@ -107,12 +107,16 @@ type GraphIntelligenceSummary = {
   fresh_holdout?: FraudHoldoutSummary;
 };
 type LedgerGraph = {
-  solver?: string; selection_threshold?: number; bank_node_count: number; settlement_node_count: number;
+  solver?: string; solver_policy?: string; selection_threshold?: number; bank_node_count: number; settlement_node_count: number;
+  all_components_proven?: boolean; component_status_counts?: Record<string, number>;
+  candidate_generation?: { algorithm?: string; status?: string; complete?: boolean; issues?: Array<{ code?: string; reason?: string }>; bank_index?: { state_count?: number; transition_count?: number }; settlement_index?: { state_count?: number; transition_count?: number } };
+  candidate_generation_unsafe_node_count?: number;
   candidate_count: number; selectable_candidate_count: number; selected_candidate_count: number;
   abstained_bank_count: number; rejected_candidate_count: number; money_conflict_count: number;
   contested_bank_count: number; global_constraints: string[]; selected_edges: GraphEdge[];
   candidate_topology_counts?: Record<string, number>; selected_topology_counts?: Record<string, number>;
   hard_gate_rejected_topology_counts?: Record<string, number>; global_rejected_topology_counts?: Record<string, number>;
+  generation_rejected_topology_counts?: Record<string, number>;
   timing_policy?: { policy_label: string; scope_note: string; cycle_counts: Record<string, number>; chronology_violations: number; thursday_t2_example?: { settlement_id: string; capture_date: string; settled_at: string; working_day_path: string } | null };
   rejected_examples: GraphEdge[]; contested_groups: ContestedGroup[];
   mesh: MeshData;
@@ -448,7 +452,14 @@ export default function Home() {
           </>}
 
           {tab === 'ledgergraph' && <section className="pageSection graphPage">
-            <div className="pageHead"><div><p className="eyebrow">Global constraint reconciliation</p><h1>Every rupee forms a graph.</h1><p>LedgerGraph proposes fuzzy candidates, then deterministically solves the whole batch under exact signed-money and one-use constraints. Ambiguity becomes an abstention—not a guess.</p></div><div className="summaryChip"><span>Held-out cases exact</span><strong>{data.ledgergraph_eval.held_out_ledgergraph?.cases_exactly_correct || '—'}/{data.ledgergraph_eval.held_out_case_count || '—'}</strong><small>{data.ledgergraph_eval.held_out_ledgergraph?.false_selections || 0} false selections · threshold frozen on 4 calibration cases</small></div></div>
+            <div className="pageHead"><div><p className="eyebrow">Global constraint reconciliation</p><h1>Every rupee forms a graph.</h1><p>Dynamic programming discovers bounded exact-total groups; CP-SAT selects the globally consistent set under signed-money and one-use constraints. Truncation, timeout and ambiguity become abstentions—not guesses.</p></div><div className="summaryChip"><span>Held-out cases exact</span><strong>{data.ledgergraph_eval.held_out_ledgergraph?.cases_exactly_correct || '—'}/{data.ledgergraph_eval.held_out_case_count || '—'}</strong><small>{data.ledgergraph_eval.held_out_ledgergraph?.false_selections || 0} false selections · threshold frozen on 4 calibration cases</small></div></div>
+
+            <div className="solverPolicyStrip" aria-label="LedgerGraph solver safety status">
+              <article><span>Candidate discovery</span><strong>Dynamic programming</strong><small>{data.ledgergraph.candidate_generation?.complete ? 'Complete for this batch' : 'Truncated · affected nodes abstained'}</small></article>
+              <article><span>Global optimizer</span><strong>OR-Tools CP-SAT</strong><small>Integer evidence objective · one-use constraints</small></article>
+              <article className={data.ledgergraph.all_components_proven ? '' : 'solverWarning'}><span>Proof status</span><strong>{data.ledgergraph.all_components_proven ? 'All components proven' : 'Unproven component held'}</strong><small>{Object.entries(data.ledgergraph.component_status_counts || {}).map(([status, count]) => `${count} ${status}`).join(' · ') || 'Awaiting pipeline run'}</small></article>
+              <article className={(data.ledgergraph.candidate_generation_unsafe_node_count || 0) > 0 ? 'solverWarning' : ''}><span>Unsafe candidate nodes</span><strong>{data.ledgergraph.candidate_generation_unsafe_node_count ?? 0}</strong><small>Candidate-cap truncation cannot silently enter optimization</small></article>
+            </div>
 
             <div className="timingPolicyStrip">
               <div><span>Settlement clock</span><strong>{data.ledgergraph.timing_policy?.policy_label || 'Synthetic T+1/T+2'}</strong><small>{data.ledgergraph.timing_policy?.scope_note || 'Demonstration timing policy.'}</small></div>
@@ -463,7 +474,7 @@ export default function Home() {
             </div>
             <p className="topologyBoundary">The 13 / 12 / 12 / 13 topology mix is deliberately balanced for solver coverage. It is not an estimate of how frequently these shapes occur in production.</p>
 
-            <div className="graphStats"><article><span>Money nodes</span><strong>{data.ledgergraph.bank_node_count + data.ledgergraph.settlement_node_count}</strong><small>{data.ledgergraph.bank_node_count} bank · {data.ledgergraph.settlement_node_count} settlement</small></article><article><span>Candidate edges</span><strong>{data.ledgergraph.candidate_count}</strong><small>{data.ledgergraph.contested_bank_count} bank nodes had competing hypotheses</small></article><article><span>Rejected edges</span><strong>{data.ledgergraph.rejected_candidate_count}</strong><small>{Object.values(data.ledgergraph.hard_gate_rejected_topology_counts || {}).reduce((sum, value) => sum + value, 0)} hard gate · {Object.values(data.ledgergraph.global_rejected_topology_counts || {}).reduce((sum, value) => sum + value, 0)} global conflict</small></article><article><span>Globally selected</span><strong>{data.ledgergraph.selected_candidate_count}</strong><small>₹0 residual · each node used once</small></article></div>
+            <div className="graphStats"><article><span>Money nodes</span><strong>{data.ledgergraph.bank_node_count + data.ledgergraph.settlement_node_count}</strong><small>{data.ledgergraph.bank_node_count} bank · {data.ledgergraph.settlement_node_count} settlement</small></article><article><span>Candidate edges</span><strong>{data.ledgergraph.candidate_count}</strong><small>{data.ledgergraph.contested_bank_count} bank nodes had competing hypotheses</small></article><article><span>Rejected edges</span><strong>{data.ledgergraph.rejected_candidate_count}</strong><small>{Object.values(data.ledgergraph.hard_gate_rejected_topology_counts || {}).reduce((sum, value) => sum + value, 0)} hard gate · {Object.values(data.ledgergraph.global_rejected_topology_counts || {}).reduce((sum, value) => sum + value, 0)} global · {Object.values(data.ledgergraph.generation_rejected_topology_counts || {}).reduce((sum, value) => sum + value, 0)} incomplete</small></article><article><span>Globally selected</span><strong>{data.ledgergraph.selected_candidate_count}</strong><small>₹0 residual · each node used once</small></article></div>
 
             <article className="panel graphCanvas">
               <div className="panelHead graphPanelHead"><div><span className="kicker">Inspectable batch proof</span><h2>{graphMode === 'candidates' ? 'The candidate field before optimization' : 'The globally consistent solution'}</h2></div><div className="graphModeSwitch"><button className={graphMode === 'candidates' ? 'active' : ''} onClick={() => setGraphMode('candidates')}>Before · {data.ledgergraph.candidate_count} candidates</button><button className={graphMode === 'solution' ? 'active' : ''} onClick={() => setGraphMode('solution')}>After · {data.ledgergraph.selected_candidate_count} selected</button></div></div>
@@ -479,7 +490,7 @@ export default function Home() {
                 <div className="ladderArrow">→</div>
                 <article className="l1Card"><div className="levelBadge">L1</div><span>Structured evidence</span><h3>Exact money + corroboration</h3><ul><li>Exact signed net remains mandatory.</li><li>Date agreement or a bounded posting window adds evidence.</li><li>Normalized UTR, prefix, or edit distance ≤ 2 can rank candidates.</li></ul><div className="scoreFormula"><b>≥65</b> selectable threshold</div></article>
                 <div className="ladderArrow">→</div>
-                <article className="globalCard"><div className="levelBadge">G</div><span>Global decision</span><h3>Whole-batch hypergraph solve</h3><ul><li>Each bank and settlement node can be used once.</li><li>1:1, 1:N, N:1 and bounded N:M groups are atomic selections.</li><li>Reducible group wrappers, tied optima and exhausted search fail closed.</li></ul><div className="scoreFormula"><b>₹0</b> required group residual</div></article>
+                <article className="globalCard"><div className="levelBadge">G</div><span>Global decision</span><h3>CP-SAT hypergraph solve</h3><ul><li>Dynamic programming indexes bounded signed subset sums.</li><li>Each bank and settlement node can be used once.</li><li>Truncation, non-optimal status and tied edges fail closed.</li></ul><div className="scoreFormula"><b>₹0</b> residual + proven optimum</div></article>
               </div>
               <div className="legacyClarifier"><strong>Important naming note</strong><p><code>l0_exact.py</code> and <code>l1_search.py</code> are retained as transparent evaluation baselines. The production controller does not run them greedily in sequence; LedgerGraph incorporates their evidence families, adds controlled fuzzy and grouped candidates, and decides globally.</p></div>
             </article>

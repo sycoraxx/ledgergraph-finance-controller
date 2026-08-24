@@ -5,7 +5,7 @@
     "direction": "credit",
     "amount": "402686.68",
     "transaction_timestamp_utc": "2026-06-04T16:24:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -16,7 +16,7 @@
     "citations": [
       "data/bank_statement.csv:row=2"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -35,7 +35,7 @@
     "direction": "credit",
     "amount": "415382.56",
     "transaction_timestamp_utc": "2026-06-08T10:35:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -46,7 +46,7 @@
     "citations": [
       "data/bank_statement.csv:row=3"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -65,7 +65,7 @@
     "direction": "credit",
     "amount": "301583.13",
     "transaction_timestamp_utc": "2026-06-08T11:46:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -76,7 +76,7 @@
     "citations": [
       "data/bank_statement.csv:row=4"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -95,7 +95,7 @@
     "direction": "credit",
     "amount": "51619.00",
     "transaction_timestamp_utc": "2026-06-09T14:01:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -106,7 +106,7 @@
     "citations": [
       "data/bank_statement.csv:row=5"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "bank_txn_id": "BNK000003",
@@ -147,7 +147,7 @@
     "direction": "credit",
     "amount": "51619.00",
     "transaction_timestamp_utc": "2026-06-09T14:18:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "duplicate_reference",
     "risk_title": "Duplicate operating credit",
     "reason": "This bank reference already appeared in an earlier statement row.",
@@ -159,7 +159,7 @@
       "data/bank_statement.csv:row=6",
       "data/cashbook.csv:row=2"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "bank_txn_id": "BNK000004",
@@ -200,7 +200,7 @@
     "direction": "credit",
     "amount": "562986.46",
     "transaction_timestamp_utc": "2026-06-10T12:57:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -211,7 +211,7 @@
     "citations": [
       "data/bank_statement.csv:row=7"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -230,7 +230,7 @@
     "direction": "credit",
     "amount": "247408.23",
     "transaction_timestamp_utc": "2026-06-12T13:08:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -241,7 +241,7 @@
     "citations": [
       "data/bank_statement.csv:row=8"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -260,7 +260,7 @@
     "direction": "debit",
     "amount": "42955.00",
     "transaction_timestamp_utc": "2026-06-13T14:05:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -271,7 +271,7 @@
     "citations": [
       "data/bank_statement.csv:row=9"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "bank_txn_id": "BNK000007",
@@ -312,7 +312,7 @@
     "direction": "debit",
     "amount": "42955.00",
     "transaction_timestamp_utc": "2026-06-13T14:22:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "duplicate_reference",
     "risk_title": "Duplicate operating debit",
     "reason": "This bank reference already appeared in an earlier statement row.",
@@ -324,7 +324,7 @@
       "data/bank_statement.csv:row=10",
       "data/cashbook.csv:row=6"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "bank_txn_id": "BNK000008",
@@ -365,7 +365,7 @@
     "direction": "credit",
     "amount": "458733.56",
     "transaction_timestamp_utc": "2026-06-15T14:19:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -376,7 +376,7 @@
     "citations": [
       "data/bank_statement.csv:row=11"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -395,7 +395,7 @@
     "direction": "credit",
     "amount": "352434.28",
     "transaction_timestamp_utc": "2026-06-16T15:30:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -406,7 +406,7 @@
     "citations": [
       "data/bank_statement.csv:row=12"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -425,7 +425,7 @@
     "direction": "credit",
     "amount": "175798.60",
     "transaction_timestamp_utc": "2026-06-18T10:01:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "unattributed_settlement_component",
     "risk_title": "Settlement contains unsupported money",
     "reason": "The bank amount matches a settlement, but its components do not close: adjustment has no attributable source record.",
@@ -437,7 +437,7 @@
       "data/bank_statement.csv:row=13",
       "data/settlement_recon.csv:row=507"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "score": 0,
@@ -456,7 +456,7 @@
     "direction": "credit",
     "amount": "399531.72",
     "transaction_timestamp_utc": "2026-06-18T16:41:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -467,7 +467,7 @@
     "citations": [
       "data/bank_statement.csv:row=14"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -486,7 +486,7 @@
     "direction": "credit",
     "amount": "32611.00",
     "transaction_timestamp_utc": "2026-06-20T14:02:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -497,7 +497,7 @@
     "citations": [
       "data/bank_statement.csv:row=15"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "bank_txn_id": "BNK000013",
@@ -532,7 +532,7 @@
     "direction": "credit",
     "amount": "471928.42",
     "transaction_timestamp_utc": "2026-06-22T10:52:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -543,7 +543,7 @@
     "citations": [
       "data/bank_statement.csv:row=16"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -562,7 +562,7 @@
     "direction": "credit",
     "amount": "267510.20",
     "transaction_timestamp_utc": "2026-06-22T11:12:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "unattributed_settlement_component",
     "risk_title": "Settlement contains unsupported money",
     "reason": "The bank amount matches a settlement, but its components do not close: adjustment has no attributable source record.",
@@ -574,7 +574,7 @@
       "data/bank_statement.csv:row=17",
       "data/settlement_recon.csv:row=687"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "score": 0,
@@ -593,7 +593,7 @@
     "direction": "credit",
     "amount": "436324.37",
     "transaction_timestamp_utc": "2026-06-24T11:03:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -604,7 +604,7 @@
     "citations": [
       "data/bank_statement.csv:row=18"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -623,7 +623,7 @@
     "direction": "credit",
     "amount": "499815.20",
     "transaction_timestamp_utc": "2026-06-26T12:14:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -634,7 +634,7 @@
     "citations": [
       "data/bank_statement.csv:row=19"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -653,7 +653,7 @@
     "direction": "debit",
     "amount": "19078.00",
     "transaction_timestamp_utc": "2026-06-28T14:06:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -664,7 +664,7 @@
     "citations": [
       "data/bank_statement.csv:row=20"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "bank_txn_id": "BNK000018",
@@ -699,7 +699,7 @@
     "direction": "credit",
     "amount": "406516.05",
     "transaction_timestamp_utc": "2026-06-29T13:25:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -710,7 +710,7 @@
     "citations": [
       "data/bank_statement.csv:row=21"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -729,7 +729,7 @@
     "direction": "credit",
     "amount": "3319.73",
     "transaction_timestamp_utc": "2026-06-30T10:10:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -740,7 +740,7 @@
     "citations": [
       "data/bank_statement.csv:row=22"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -759,7 +759,7 @@
     "direction": "credit",
     "amount": "102793.72",
     "transaction_timestamp_utc": "2026-06-30T14:36:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -770,7 +770,7 @@
     "citations": [
       "data/bank_statement.csv:row=23"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -789,7 +789,7 @@
     "direction": "credit",
     "amount": "1227.85",
     "transaction_timestamp_utc": "2026-06-30T15:48:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -800,7 +800,7 @@
     "citations": [
       "data/bank_statement.csv:row=24"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -819,7 +819,7 @@
     "direction": "credit",
     "amount": "1227.85",
     "transaction_timestamp_utc": "2026-06-30T16:58:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -830,7 +830,7 @@
     "citations": [
       "data/bank_statement.csv:row=25"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -849,7 +849,7 @@
     "direction": "credit",
     "amount": "108984.43",
     "transaction_timestamp_utc": "2026-07-02T11:20:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -860,7 +860,7 @@
     "citations": [
       "data/bank_statement.csv:row=26"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -879,7 +879,7 @@
     "direction": "credit",
     "amount": "44514.77",
     "transaction_timestamp_utc": "2026-07-02T12:32:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -890,7 +890,7 @@
     "citations": [
       "data/bank_statement.csv:row=27"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -909,7 +909,7 @@
     "direction": "credit",
     "amount": "44514.77",
     "transaction_timestamp_utc": "2026-07-02T13:42:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -920,7 +920,7 @@
     "citations": [
       "data/bank_statement.csv:row=28"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -939,7 +939,7 @@
     "direction": "credit",
     "amount": "277591.27",
     "transaction_timestamp_utc": "2026-07-02T14:54:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -950,7 +950,7 @@
     "citations": [
       "data/bank_statement.csv:row=29"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -969,7 +969,7 @@
     "direction": "credit",
     "amount": "35476.00",
     "transaction_timestamp_utc": "2026-07-04T16:40:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "unsupported_transaction",
     "risk_title": "Unsupported operating credit",
     "reason": "No approved ERP cashbook event carries this bank reference.",
@@ -980,7 +980,7 @@
     "citations": [
       "data/bank_statement.csv:row=30"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "bank_txn_id": "BNK000028",
@@ -1017,7 +1017,7 @@
     "direction": "credit",
     "amount": "23082.50",
     "transaction_timestamp_utc": "2026-07-06T10:26:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1028,7 +1028,7 @@
     "citations": [
       "data/bank_statement.csv:row=31"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1047,7 +1047,7 @@
     "direction": "credit",
     "amount": "59355.01",
     "transaction_timestamp_utc": "2026-07-06T11:38:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1058,7 +1058,7 @@
     "citations": [
       "data/bank_statement.csv:row=32"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1077,7 +1077,7 @@
     "direction": "credit",
     "amount": "274265.38",
     "transaction_timestamp_utc": "2026-07-06T12:48:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1088,7 +1088,7 @@
     "citations": [
       "data/bank_statement.csv:row=33"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1107,7 +1107,7 @@
     "direction": "credit",
     "amount": "42290.86",
     "transaction_timestamp_utc": "2026-07-06T13:00:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1118,7 +1118,7 @@
     "citations": [
       "data/bank_statement.csv:row=34"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1137,7 +1137,7 @@
     "direction": "credit",
     "amount": "42290.86",
     "transaction_timestamp_utc": "2026-07-06T14:10:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1148,7 +1148,7 @@
     "citations": [
       "data/bank_statement.csv:row=35"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1167,7 +1167,7 @@
     "direction": "credit",
     "amount": "253118.51",
     "transaction_timestamp_utc": "2026-07-06T15:04:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1178,7 +1178,7 @@
     "citations": [
       "data/bank_statement.csv:row=36"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1197,7 +1197,7 @@
     "direction": "credit",
     "amount": "114341.97",
     "transaction_timestamp_utc": "2026-07-06T15:22:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1208,7 +1208,7 @@
     "citations": [
       "data/bank_statement.csv:row=37"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1227,7 +1227,7 @@
     "direction": "credit",
     "amount": "23082.50",
     "transaction_timestamp_utc": "2026-07-06T16:16:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1238,7 +1238,7 @@
     "citations": [
       "data/bank_statement.csv:row=38"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1257,7 +1257,7 @@
     "direction": "credit",
     "amount": "193308.88",
     "transaction_timestamp_utc": "2026-07-07T12:23:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "unattributed_settlement_component",
     "risk_title": "Settlement contains unsupported money",
     "reason": "The bank amount matches a settlement, but its components do not close: adjustment has no attributable source record.",
@@ -1269,7 +1269,7 @@
       "data/bank_statement.csv:row=39",
       "data/settlement_recon.csv:row=1166"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "score": 0,
@@ -1288,7 +1288,7 @@
     "direction": "credit",
     "amount": "3576.43",
     "transaction_timestamp_utc": "2026-07-08T10:44:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1299,7 +1299,7 @@
     "citations": [
       "data/bank_statement.csv:row=40"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1318,7 +1318,7 @@
     "direction": "credit",
     "amount": "3576.43",
     "transaction_timestamp_utc": "2026-07-08T11:54:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1329,7 +1329,7 @@
     "citations": [
       "data/bank_statement.csv:row=41"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1348,7 +1348,7 @@
     "direction": "credit",
     "amount": "240706.08",
     "transaction_timestamp_utc": "2026-07-08T12:06:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1359,7 +1359,7 @@
     "citations": [
       "data/bank_statement.csv:row=42"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1378,7 +1378,7 @@
     "direction": "credit",
     "amount": "68982.00",
     "transaction_timestamp_utc": "2026-07-08T14:03:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1389,7 +1389,7 @@
     "citations": [
       "data/bank_statement.csv:row=43"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "bank_txn_id": "BNK000041",
@@ -1424,7 +1424,7 @@
     "direction": "credit",
     "amount": "8756.08",
     "transaction_timestamp_utc": "2026-07-08T16:32:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1435,7 +1435,7 @@
     "citations": [
       "data/bank_statement.csv:row=44"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1454,7 +1454,7 @@
     "direction": "debit",
     "amount": "30366.70",
     "transaction_timestamp_utc": "2026-07-10T13:34:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1465,7 +1465,7 @@
     "citations": [
       "data/bank_statement.csv:row=45"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1484,7 +1484,7 @@
     "direction": "credit",
     "amount": "153021.33",
     "transaction_timestamp_utc": "2026-07-13T13:16:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1495,7 +1495,7 @@
     "citations": [
       "data/bank_statement.csv:row=46"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1514,7 +1514,7 @@
     "direction": "credit",
     "amount": "39030.32",
     "transaction_timestamp_utc": "2026-07-13T14:28:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1525,7 +1525,7 @@
     "citations": [
       "data/bank_statement.csv:row=47"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1544,7 +1544,7 @@
     "direction": "credit",
     "amount": "39030.32",
     "transaction_timestamp_utc": "2026-07-13T15:38:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1555,7 +1555,7 @@
     "citations": [
       "data/bank_statement.csv:row=48"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1574,7 +1574,7 @@
     "direction": "credit",
     "amount": "100363.67",
     "transaction_timestamp_utc": "2026-07-13T16:50:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1585,7 +1585,7 @@
     "citations": [
       "data/bank_statement.csv:row=49"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1604,7 +1604,7 @@
     "direction": "credit",
     "amount": "377650.95",
     "transaction_timestamp_utc": "2026-07-16T10:00:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1615,7 +1615,7 @@
     "citations": [
       "data/bank_statement.csv:row=50"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1634,7 +1634,7 @@
     "direction": "credit",
     "amount": "97601.76",
     "transaction_timestamp_utc": "2026-07-16T11:12:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1645,7 +1645,7 @@
     "citations": [
       "data/bank_statement.csv:row=51"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1664,7 +1664,7 @@
     "direction": "credit",
     "amount": "123382.05",
     "transaction_timestamp_utc": "2026-07-16T12:22:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1675,7 +1675,7 @@
     "citations": [
       "data/bank_statement.csv:row=52"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1694,7 +1694,7 @@
     "direction": "credit",
     "amount": "97601.76",
     "transaction_timestamp_utc": "2026-07-16T13:34:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1705,7 +1705,7 @@
     "citations": [
       "data/bank_statement.csv:row=53"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1724,7 +1724,7 @@
     "direction": "debit",
     "amount": "64347.00",
     "transaction_timestamp_utc": "2026-07-17T14:07:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1735,7 +1735,7 @@
     "citations": [
       "data/bank_statement.csv:row=54"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "bank_txn_id": "BNK000052",
@@ -1770,7 +1770,7 @@
     "direction": "credit",
     "amount": "303580.26",
     "transaction_timestamp_utc": "2026-07-20T10:18:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1781,7 +1781,7 @@
     "citations": [
       "data/bank_statement.csv:row=55"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1800,7 +1800,7 @@
     "direction": "credit",
     "amount": "205034.18",
     "transaction_timestamp_utc": "2026-07-20T14:44:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1811,7 +1811,7 @@
     "citations": [
       "data/bank_statement.csv:row=56"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1830,7 +1830,7 @@
     "direction": "credit",
     "amount": "205034.17",
     "transaction_timestamp_utc": "2026-07-20T15:56:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1841,7 +1841,7 @@
     "citations": [
       "data/bank_statement.csv:row=57"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1860,7 +1860,7 @@
     "direction": "credit",
     "amount": "233206.88",
     "transaction_timestamp_utc": "2026-07-20T16:06:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1871,7 +1871,7 @@
     "citations": [
       "data/bank_statement.csv:row=58"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1890,7 +1890,7 @@
     "direction": "debit",
     "amount": "53399.00",
     "transaction_timestamp_utc": "2026-07-23T16:40:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "unsupported_transaction",
     "risk_title": "Unsupported operating debit",
     "reason": "No approved ERP cashbook event carries this bank reference.",
@@ -1901,7 +1901,7 @@
     "citations": [
       "data/bank_statement.csv:row=59"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "bank_txn_id": "BNK000057",
@@ -1938,7 +1938,7 @@
     "direction": "credit",
     "amount": "234934.69",
     "transaction_timestamp_utc": "2026-07-24T11:28:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1949,7 +1949,7 @@
     "citations": [
       "data/bank_statement.csv:row=60"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1968,7 +1968,7 @@
     "direction": "credit",
     "amount": "150987.63",
     "transaction_timestamp_utc": "2026-07-24T12:40:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -1979,7 +1979,7 @@
     "citations": [
       "data/bank_statement.csv:row=61"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -1998,7 +1998,7 @@
     "direction": "credit",
     "amount": "207010.88",
     "transaction_timestamp_utc": "2026-07-24T13:50:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2009,7 +2009,7 @@
     "citations": [
       "data/bank_statement.csv:row=62"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2028,7 +2028,7 @@
     "direction": "credit",
     "amount": "150987.64",
     "transaction_timestamp_utc": "2026-07-24T14:02:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2039,7 +2039,7 @@
     "citations": [
       "data/bank_statement.csv:row=63"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2058,7 +2058,7 @@
     "direction": "credit",
     "amount": "6325.29",
     "transaction_timestamp_utc": "2026-07-28T10:34:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2069,7 +2069,7 @@
     "citations": [
       "data/bank_statement.csv:row=64"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2088,7 +2088,7 @@
     "direction": "credit",
     "amount": "6325.29",
     "transaction_timestamp_utc": "2026-07-28T11:46:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2099,7 +2099,7 @@
     "citations": [
       "data/bank_statement.csv:row=65"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2118,7 +2118,7 @@
     "direction": "credit",
     "amount": "226434.58",
     "transaction_timestamp_utc": "2026-07-28T15:12:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2129,7 +2129,7 @@
     "citations": [
       "data/bank_statement.csv:row=66"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2148,7 +2148,7 @@
     "direction": "credit",
     "amount": "228335.42",
     "transaction_timestamp_utc": "2026-07-28T16:24:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2159,7 +2159,7 @@
     "citations": [
       "data/bank_statement.csv:row=67"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2178,7 +2178,7 @@
     "direction": "credit",
     "amount": "26783.00",
     "transaction_timestamp_utc": "2026-07-29T14:04:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "amount_mismatch",
     "risk_title": "Operating credit amount differs from approval",
     "reason": "The bank amount differs from the approved cashbook amount by INR 878.00.",
@@ -2190,7 +2190,7 @@
       "data/bank_statement.csv:row=68",
       "data/cashbook.csv:row=5"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "bank_txn_id": "BNK000066",
@@ -2225,7 +2225,7 @@
     "direction": "debit",
     "amount": "5992.97",
     "transaction_timestamp_utc": "2026-07-30T14:45:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2236,7 +2236,7 @@
     "citations": [
       "data/bank_statement.csv:row=69"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2255,7 +2255,7 @@
     "direction": "credit",
     "amount": "140226.79",
     "transaction_timestamp_utc": "2026-08-03T12:56:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2266,7 +2266,7 @@
     "citations": [
       "data/bank_statement.csv:row=70"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2285,7 +2285,7 @@
     "direction": "credit",
     "amount": "135822.20",
     "transaction_timestamp_utc": "2026-08-03T13:08:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2296,7 +2296,7 @@
     "citations": [
       "data/bank_statement.csv:row=71"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2315,7 +2315,7 @@
     "direction": "credit",
     "amount": "218227.01",
     "transaction_timestamp_utc": "2026-08-03T14:18:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2326,7 +2326,7 @@
     "citations": [
       "data/bank_statement.csv:row=72"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2345,7 +2345,7 @@
     "direction": "credit",
     "amount": "135822.20",
     "transaction_timestamp_utc": "2026-08-03T15:30:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2356,7 +2356,7 @@
     "citations": [
       "data/bank_statement.csv:row=73"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2375,7 +2375,7 @@
     "direction": "debit",
     "amount": "27479.00",
     "transaction_timestamp_utc": "2026-08-04T14:08:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "amount_mismatch",
     "risk_title": "Operating debit amount differs from approval",
     "reason": "The bank amount differs from the approved cashbook amount by INR 921.00.",
@@ -2387,7 +2387,7 @@
       "data/bank_statement.csv:row=74",
       "data/cashbook.csv:row=9"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "needs_review",
     "graph_ood": {
       "bank_txn_id": "BNK000072",
@@ -2422,7 +2422,7 @@
     "direction": "credit",
     "amount": "112427.81",
     "transaction_timestamp_utc": "2026-08-05T10:52:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2433,7 +2433,7 @@
     "citations": [
       "data/bank_statement.csv:row=75"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2452,7 +2452,7 @@
     "direction": "credit",
     "amount": "155780.86",
     "transaction_timestamp_utc": "2026-08-05T11:02:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2463,7 +2463,7 @@
     "citations": [
       "data/bank_statement.csv:row=76"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2482,7 +2482,7 @@
     "direction": "credit",
     "amount": "112427.81",
     "transaction_timestamp_utc": "2026-08-05T12:14:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2493,7 +2493,7 @@
     "citations": [
       "data/bank_statement.csv:row=77"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2512,7 +2512,7 @@
     "direction": "credit",
     "amount": "288617.66",
     "transaction_timestamp_utc": "2026-08-05T16:40:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2523,7 +2523,7 @@
     "citations": [
       "data/bank_statement.csv:row=78"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2542,7 +2542,7 @@
     "direction": "credit",
     "amount": "112098.84",
     "transaction_timestamp_utc": "2026-08-10T13:24:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2553,7 +2553,7 @@
     "citations": [
       "data/bank_statement.csv:row=79"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2572,7 +2572,7 @@
     "direction": "credit",
     "amount": "190870.99",
     "transaction_timestamp_utc": "2026-08-10T14:36:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2583,7 +2583,7 @@
     "citations": [
       "data/bank_statement.csv:row=80"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2602,7 +2602,7 @@
     "direction": "credit",
     "amount": "183053.79",
     "transaction_timestamp_utc": "2026-08-10T15:56:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2613,7 +2613,7 @@
     "citations": [
       "data/bank_statement.csv:row=81"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2632,7 +2632,7 @@
     "direction": "credit",
     "amount": "22426.94",
     "transaction_timestamp_utc": "2026-08-11T10:18:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2643,7 +2643,7 @@
     "citations": [
       "data/bank_statement.csv:row=82"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2662,7 +2662,7 @@
     "direction": "credit",
     "amount": "218419.06",
     "transaction_timestamp_utc": "2026-08-11T11:29:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2673,7 +2673,7 @@
     "citations": [
       "data/bank_statement.csv:row=83"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2692,7 +2692,7 @@
     "direction": "credit",
     "amount": "115225.52",
     "transaction_timestamp_utc": "2026-08-11T16:07:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2703,7 +2703,7 @@
     "citations": [
       "data/bank_statement.csv:row=84"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2722,7 +2722,7 @@
     "direction": "credit",
     "amount": "169447.60",
     "transaction_timestamp_utc": "2026-08-13T12:40:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2733,7 +2733,7 @@
     "citations": [
       "data/bank_statement.csv:row=85"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2752,7 +2752,7 @@
     "direction": "credit",
     "amount": "236416.62",
     "transaction_timestamp_utc": "2026-08-13T13:51:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2763,7 +2763,7 @@
     "citations": [
       "data/bank_statement.csv:row=86"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2782,7 +2782,7 @@
     "direction": "credit",
     "amount": "115499.20",
     "transaction_timestamp_utc": "2026-08-17T14:02:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2793,7 +2793,7 @@
     "citations": [
       "data/bank_statement.csv:row=87"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,
@@ -2812,7 +2812,7 @@
     "direction": "credit",
     "amount": "246110.89",
     "transaction_timestamp_utc": "2026-08-17T15:13:00+00:00",
-    "source_extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+    "source_extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
     "anomaly_type": "none",
     "risk_title": "Evidence checks passed",
     "reason": "The transaction agrees with its independent settlement or cashbook evidence.",
@@ -2823,7 +2823,7 @@
     "citations": [
       "data/bank_statement.csv:row=88"
     ],
-    "detected_at_utc": "2026-08-24T09:54:12.558003+00:00",
+    "detected_at_utc": "2026-08-24T10:41:23.949204+00:00",
     "status": "clear",
     "graph_ood": {
       "score": 0,

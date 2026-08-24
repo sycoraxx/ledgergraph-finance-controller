@@ -2,7 +2,7 @@
   "dataset_id": "synthetic-finance-controller-20260820",
   "synthetic": true,
   "seed": 20260820,
-  "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+  "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
   "coverage_start": "2026-06-01",
   "coverage_end": "2026-08-17",
   "timezone": "UTC",
@@ -12,7 +12,7 @@
     {
       "name": "orders.csv",
       "rows": 2232,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Official-schema-shaped Razorpay export"
@@ -20,7 +20,7 @@
     {
       "name": "payments.csv",
       "rows": 2243,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Official-schema-shaped Razorpay export"
@@ -28,7 +28,7 @@
     {
       "name": "refunds.csv",
       "rows": 95,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Official-schema-shaped Razorpay export"
@@ -36,7 +36,7 @@
     {
       "name": "settlement_recon.csv",
       "rows": 2338,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Official-schema-shaped Razorpay export"
@@ -44,7 +44,7 @@
     {
       "name": "settlement_schedule.csv",
       "rows": 75,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Synthetic T+1/T+2 working-day policy ledger"
@@ -52,7 +52,7 @@
     {
       "name": "bank_statement.csv",
       "rows": 87,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Synthetic bank export"
@@ -60,7 +60,7 @@
     {
       "name": "cashbook.csv",
       "rows": 8,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Synthetic ERP cashbook"
@@ -68,7 +68,7 @@
     {
       "name": "ground_truth.json",
       "rows": 75,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Evaluation truth (controller-blind)"
@@ -76,7 +76,7 @@
     {
       "name": "risk_truth.json",
       "rows": 87,
-      "extracted_at_utc": "2026-08-24T09:54:09.446200+00:00",
+      "extracted_at_utc": "2026-08-24T10:41:20.948039+00:00",
       "coverage_start": "2026-06-01",
       "coverage_end": "2026-08-17",
       "source_system": "Evaluation truth (controller-blind)"

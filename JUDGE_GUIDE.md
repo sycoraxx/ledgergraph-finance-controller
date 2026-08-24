@@ -93,14 +93,15 @@ merchant data has an even topology distribution.
 
 ## Why LedgerGraph is different
 
-The controller does not greedily accept the first plausible row match. It
-creates candidate edges between bank entries and Razorpay settlements, then
-selects the best consistent explanation of the entire batch. Exact money and
-one-use constraints are hard rules; fuzzy UTR/date evidence only ranks valid
+The controller does not greedily accept the first plausible row match. Dynamic
+programming discovers bounded exact-total groups; OR-Tools CP-SAT then selects
+the globally consistent explanation of the batch. Exact money and one-use
+constraints are hard rules; fuzzy UTR/date evidence only ranks valid
 hypotheses. It supports one-to-one, one-to-many, many-to-one, and irreducible
 many-to-many flows. A grouped match is one atomic hyperedge, not a collection
-of independently accepted pairwise links. A tie is
-shown as an abstention. Clicking any selected edge reveals its proof
+of independently accepted pairwise links. Candidate truncation, timeout, a
+merely feasible solution, or an edge that is not mandatory across every optimum
+is shown as an abstention. Clicking any selected edge reveals its proof
 certificate and rejected alternatives.
 
 The adversarial suite is intentionally separate from the 87-entry fixture. A
@@ -126,7 +127,8 @@ regenerated inside the interactive workflow.
 
 ### 1:05–1:35 — LedgerGraph
 
-Open **LedgerGraph**. Show the full-batch node/edge counts, one proof
+Open **LedgerGraph**. First point to the DP candidate-completeness and CP-SAT
+proof-status cards. Then show the full-batch node/edge counts, one proof
 certificate, exact ₹0 residual, and the balanced solution mix: 13 direct, 12
 aggregated, 12 split, and 13 irreducible many-to-many groups. Click a settlement
 node to show its capture date, T+1/T+2 cycle, working-day path, and settled date.

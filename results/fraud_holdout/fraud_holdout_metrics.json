@@ -63,5 +63,5 @@
     }
   },
   "methodological_limit": "This post-freeze partition tests new synthetic temporal, aggregate, and control-plane families without changing GraphShield. It is stronger than the known-miss replay but still does not estimate production fraud recall.",
-  "duration_ms": 15837
+  "duration_ms": 14443
 }

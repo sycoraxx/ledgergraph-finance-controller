@@ -19,7 +19,7 @@ This remains a synthetic post-freeze test, not production fraud validation.
 | recall | 0.0% |
 | recall 95 ci | ['0.0%', '9.9%'] |
 | specificity | 100.0% |
-| duration ms | 15837 |
+| duration ms | 14443 |
 
 ## Results by frozen mutation family
 

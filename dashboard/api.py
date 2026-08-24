@@ -378,6 +378,18 @@ def dashboard_overview() -> dict[str, Any]:
         "scenario_catalog": scenario_catalog(),
         "ledgergraph": {
             "solver": graph_solution.get("solver"),
+            "solver_policy": graph_solution.get("solver_policy"),
+            "all_components_proven": graph_solution.get("all_components_proven", False),
+            "component_status_counts": {
+                status: sum(
+                    item.get("status") == status
+                    for item in graph_solution.get("components", [])
+                )
+                for status in sorted({
+                    item.get("status", "unknown")
+                    for item in graph_solution.get("components", [])
+                })
+            },
             "selection_threshold": graph_solution.get("selection_threshold"),
             "bank_node_count": len(graph.get("bank_nodes", [])),
             "settlement_node_count": len(graph.get("settlement_nodes", [])),
@@ -388,6 +400,9 @@ def dashboard_overview() -> dict[str, Any]:
             "selected_topology_counts": graph_solution.get("selected_topology_counts", {}),
             "hard_gate_rejected_topology_counts": graph_solution.get("hard_gate_rejected_topology_counts", {}),
             "global_rejected_topology_counts": graph_solution.get("global_rejected_topology_counts", {}),
+            "generation_rejected_topology_counts": graph_solution.get("generation_rejected_topology_counts", {}),
+            "candidate_generation": graph_solution.get("candidate_generation", graph.get("candidate_generation", {})),
+            "candidate_generation_unsafe_node_count": graph_solution.get("candidate_generation_unsafe_node_count", 0),
             "timing_policy": {
                 "policy_label": "Synthetic T+1/T+2 · Monday-Friday working days",
                 "scope_note": "Demonstration policy, not a universal Razorpay merchant contract.",
