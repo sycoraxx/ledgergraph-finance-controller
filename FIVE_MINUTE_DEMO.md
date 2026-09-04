@@ -5,11 +5,13 @@ graph theory, or machine learning terminology.
 
 ## Before recording
 
-1. Run `python scripts/start.py` and open `http://localhost:3000`.
-2. Confirm the top-left status says **Controller ready**.
-3. If configured, confirm the assistant says **AI explanations on**.
-4. Keep `BNK000015` in the question box.
-5. Start on **Home** at 100% browser zoom.
+1. Put `docs/assets/video-opening-slide.png` at the start of the video for
+   eight seconds. Begin the problem narration over this card.
+2. Run `python scripts/start.py` and open `http://localhost:3000`.
+3. Confirm the top-left status says **Controller ready**.
+4. If configured, confirm the assistant says **AI explanations on**.
+5. Keep `BNK000015` in the question box.
+6. Start on **Home** at 100% browser zoom.
 
 If the optional AI is unavailable, continue the recording. Built-in mode
 returns the same checked evidence without conversational rewriting.

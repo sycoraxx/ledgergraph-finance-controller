@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">LedgerGraph Finance Controller video opening slide</title>
+  <desc id="desc">Dark emerald title card for the Razorpay Buildathon. It introduces LedgerGraph Finance Controller as deterministic reconciliation with AI explanations and human approval.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06100c"/>
+      <stop offset="0.58" stop-color="#091812"/>
+      <stop offset="1" stop-color="#10251b"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#40c985" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#2d8c60" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#07110d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titleMint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8ffda"/>
+      <stop offset="1" stop-color="#75e8ad"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#a1f4c8" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .eyebrow{font:800 19px Inter,Segoe UI,Arial,sans-serif;letter-spacing:3.2px;fill:#9cf7c5}
+      .title{font:750 88px Inter,Segoe UI,Arial,sans-serif;letter-spacing:-3.4px}
+      .summary{font:450 30px Inter,Segoe UI,Arial,sans-serif;fill:#b7c8c0}
+      .principle{font:750 18px Inter,Segoe UI,Arial,sans-serif;letter-spacing:1.25px;fill:#dce9e3}
+      .micro{font:700 15px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.5px;fill:#769386}
+      .graphLabel{font:800 15px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px;fill:#719083}
+      .edge{fill:none;stroke:#587568;stroke-width:2.2;stroke-linecap:round;opacity:.52}
+      .edgeRejected{fill:none;stroke:#b86e5a;stroke-width:2.2;stroke-linecap:round;stroke-dasharray:7 9;opacity:.58}
+      .edgeAccepted{fill:none;stroke:#9cf7c5;stroke-width:4;stroke-linecap:round;opacity:.94}
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <circle cx="1525" cy="520" r="590" fill="url(#halo)"/>
+  <circle cx="50" cy="1100" r="370" fill="#42bd7e" opacity="0.035"/>
+
+  <!-- Editorial title block -->
+  <rect x="118" y="116" width="5" height="38" rx="2.5" fill="#9cf7c5"/>
+  <text x="145" y="143" class="eyebrow">RAZORPAY BUILDATHON · AI FINANCE CONTROLLER</text>
+
+  <text x="112" y="330" class="title" fill="url(#titleMint)">LedgerGraph</text>
+  <text x="112" y="426" class="title" fill="#f0f7f3">Finance Controller</text>
+
+  <text x="118" y="518" class="summary">Reconcile Razorpay settlements against bank and</text>
+  <text x="118" y="559" class="summary">cashbook records—without guessing.</text>
+
+  <line x1="118" y1="625" x2="858" y2="625" stroke="#315044" stroke-width="2"/>
+  <text x="118" y="681" class="principle">CODE PROVES THE MONEY</text>
+  <circle cx="393" cy="674" r="5" fill="#9cf7c5"/>
+  <text x="416" y="681" class="principle">AI EXPLAINS THE EVIDENCE</text>
+  <circle cx="726" cy="674" r="5" fill="#9cf7c5"/>
+  <text x="749" y="681" class="principle">HUMANS APPROVE</text>
+
+  <rect x="118" y="882" width="468" height="44" rx="22" fill="#10251b" stroke="#345746"/>
+  <circle cx="146" cy="904" r="6" fill="#9cf7c5"/>
+  <text x="165" y="910" class="micro" fill="#a8cbbb">SIMULATED DATA · NO AUTOMATIC POSTING</text>
+  <text x="118" y="975" class="micro">github.com/sycoraxx/ledgergraph-finance-controller</text>
+
+  <!-- A deliberately messy candidate mesh: visual texture, not a process diagram -->
+  <text x="1112" y="176" class="graphLabel">POSSIBILITIES</text>
+  <path d="M1242 171H1573" stroke="#49695a" stroke-width="1.5"/>
+  <text x="1596" y="176" class="graphLabel" fill="#9cf7c5">PROOF</text>
+
+  <g>
+    <path d="M1128 294L1402 252L1690 352M1128 294L1402 426L1690 352M1128 294L1402 608L1690 532M1128 470L1402 252L1690 532M1128 470L1402 426L1690 352M1128 470L1402 608L1690 706M1128 650L1402 426L1690 706M1128 650L1402 608L1690 532M1128 826L1402 608L1690 706M1128 826L1402 790L1690 706" class="edge"/>
+    <path d="M1128 294L1402 790L1690 532M1128 470L1402 790L1690 352M1128 650L1402 252L1690 706M1128 826L1402 426L1690 532" class="edgeRejected"/>
+    <path d="M1128 470L1402 426L1690 532M1128 650L1402 608L1690 706" class="edgeAccepted"/>
+  </g>
+
+  <g fill="#102a38" stroke="#67c3e7" stroke-width="3">
+    <circle cx="1128" cy="294" r="17"/>
+    <circle cx="1128" cy="470" r="17"/>
+    <circle cx="1128" cy="650" r="17"/>
+    <circle cx="1128" cy="826" r="17"/>
+  </g>
+  <g fill="#173425" stroke="#9cf7c5" stroke-width="3">
+    <circle cx="1402" cy="252" r="14"/>
+    <circle cx="1402" cy="426" r="14" filter="url(#nodeGlow)"/>
+    <circle cx="1402" cy="608" r="14" filter="url(#nodeGlow)"/>
+    <circle cx="1402" cy="790" r="14"/>
+  </g>
+  <g fill="#322813" stroke="#dcb45b" stroke-width="3">
+    <circle cx="1690" cy="352" r="18"/>
+    <circle cx="1690" cy="532" r="18" filter="url(#nodeGlow)"/>
+    <circle cx="1690" cy="706" r="18" filter="url(#nodeGlow)"/>
+  </g>
+
+  <text x="1086" y="878" class="micro">BANK</text>
+  <text x="1344" y="878" class="micro">SETTLEMENT</text>
+  <text x="1644" y="878" class="micro">CASHBOOK</text>
+
+  <rect x="1086" y="936" width="650" height="1" fill="#355346"/>
+  <circle cx="1110" cy="975" r="5" fill="#9cf7c5"/>
+  <text x="1127" y="981" class="micro" fill="#a6c8b8">EXACT MONEY</text>
+  <circle cx="1290" cy="975" r="5" fill="#9cf7c5"/>
+  <text x="1307" y="981" class="micro" fill="#a6c8b8">CITED EVIDENCE</text>
+  <circle cx="1519" cy="975" r="5" fill="#9cf7c5"/>
+  <text x="1536" y="981" class="micro" fill="#a6c8b8">HUMAN GATE</text>
+</svg>
