@@ -19,6 +19,7 @@ from agent.ledger import (
 from agent.l1_search import parse_date_candidates, reconcile_search
 from agent.ledger_graph import build_candidate_graph, solve_candidate_graph
 from agent.model_gateway import ExplanationModelClient, LocalQwenClient
+from agent.membership_solver import MembershipItem, solve_unique_membership
 from agent.subset_sum import build_subset_sum_index
 from agent.qa import answer_question, deterministic_route, validate_call
 from agent.risk import scan_bank_risk
@@ -408,6 +409,187 @@ class FinanceControllerTests(unittest.TestCase):
         )
         self.assertTrue(capped.globally_truncated)
         self.assertFalse(capped.complete_for(Decimal("60")))
+
+    def test_direct_membership_solver_proves_unique_and_rejects_ambiguous_groups(self):
+        unique = solve_unique_membership(
+            Decimal("100.00"),
+            [
+                MembershipItem("a", Decimal("10.00"), 30),
+                MembershipItem("b", Decimal("20.00"), 30),
+                MembershipItem("c", Decimal("70.00"), 30),
+                MembershipItem("decoy", Decimal("41.00"), 30),
+            ],
+            max_members=4,
+        )
+        self.assertTrue(unique.proven_unique)
+        self.assertEqual(("a", "b", "c"), unique.member_ids)
+
+        ambiguous = solve_unique_membership(
+            Decimal("100.00"),
+            [
+                MembershipItem("a40", Decimal("40.00"), 30),
+                MembershipItem("b40", Decimal("40.00"), 30),
+                MembershipItem("a60", Decimal("60.00"), 30),
+                MembershipItem("b60", Decimal("60.00"), 30),
+            ],
+            max_members=4,
+        )
+        self.assertEqual("OPTIMAL_AMBIGUOUS", ambiguous.status)
+        self.assertEqual(tuple(), ambiguous.member_ids)
+
+        thousand_record_pool = solve_unique_membership(
+            Decimal("100.00"),
+            [
+                *(
+                    MembershipItem(f"member_{index:03d}", Decimal("1.00"), 40)
+                    for index in range(100)
+                ),
+                *(
+                    MembershipItem(f"decoy_{index:03d}", Decimal("101.00"), 40)
+                    for index in range(900)
+                ),
+            ],
+            max_members=100,
+            max_pool_size=1000,
+            time_limit_seconds=3.0,
+        )
+        self.assertTrue(thousand_record_pool.proven_unique)
+        self.assertEqual(100, len(thousand_record_pool.member_ids))
+        self.assertEqual(1000, thousand_record_pool.pool_size)
+
+    def test_declared_group_supports_one_to_one_thousand_without_subset_enumeration(self):
+        group_id = "payout:large-one-to-many"
+        settlements = {
+            f"setl_{index:04d}": {
+                "net": Decimal("1.00"),
+                "utr": f"UTR{index:04d}",
+                "settled_dates": {"2026-01-01"},
+                "rows": [],
+                "reconciliation_group_id": group_id,
+            }
+            for index in range(1000)
+        }
+        banks = [{
+            "bank_txn_id": "bank_aggregate_1000",
+            "credit": "1000.00",
+            "debit": "",
+            "value_date": "01/01/2026",
+            "narration": "DECLARED PAYOUT GROUP",
+            "reconciliation_group_id": group_id,
+        }]
+        graph = build_candidate_graph(banks, settlements, max_group_size=2)
+        result = solve_candidate_graph(graph)
+        self.assertEqual(1, len(graph["candidates"]))
+        self.assertEqual("1:N", result["selected"][0]["topology"])
+        self.assertEqual(1000, len(result["selected"][0]["settlement_ids"]))
+        self.assertEqual(
+            "declared_cross_source_membership",
+            result["selected"][0]["generation_strategy"],
+        )
+        self.assertEqual(1001, graph["candidate_generation"]["declared_groups"]["accepted_member_count"])
+        self.assertTrue(result["all_components_proven"])
+
+    def test_declared_group_supports_large_many_to_many_as_one_atomic_scope(self):
+        group_id = "batch:large-many-to-many"
+        banks = [
+            {
+                "bank_txn_id": f"bank_{index:03d}",
+                "credit": "1.00",
+                "debit": "",
+                "value_date": "01/01/2026",
+                "narration": "DECLARED BATCH",
+                "batch_id": group_id,
+            }
+            for index in range(120)
+        ]
+        settlements = {
+            f"setl_{index:03d}": {
+                "net": Decimal("0.80"),
+                "utr": f"NM{index:03d}",
+                "settled_dates": {"2026-01-01"},
+                "rows": [],
+                "batch_id": group_id,
+            }
+            for index in range(150)
+        }
+        graph = build_candidate_graph(banks, settlements, max_group_size=2)
+        result = solve_candidate_graph(graph)
+        selected = result["selected"][0]
+        self.assertEqual("N:M", selected["topology"])
+        self.assertEqual(120, len(selected["bank_ids"]))
+        self.assertEqual(150, len(selected["settlement_ids"]))
+        self.assertEqual("0.00", selected["residual"])
+
+    def test_declared_group_limit_and_money_failure_both_fail_closed(self):
+        settlements = {
+            f"setl_{index}": {
+                "net": Decimal("1.00"), "utr": f"U{index}",
+                "settled_dates": {"2026-01-01"}, "rows": [],
+                "payout_id": "too-large",
+            }
+            for index in range(3)
+        }
+        banks = [{
+            "bank_txn_id": "bank_limit", "credit": "3.00", "debit": "",
+            "value_date": "01/01/2026", "narration": "PAYOUT",
+            "payout_id": "too-large",
+        }]
+        limited = build_candidate_graph(
+            banks, settlements, max_group_size=1, max_declared_group_members=2
+        )
+        self.assertEqual([], solve_candidate_graph(limited)["selected"])
+        self.assertEqual("declared_group_size_limit", limited["candidate_generation"]["issues"][0]["code"])
+
+        mismatched = dict(settlements)
+        mismatched["setl_2"] = {**mismatched["setl_2"], "net": Decimal("2.00")}
+        failed = build_candidate_graph(banks, mismatched, max_group_size=1)
+        self.assertEqual([], solve_candidate_graph(failed)["selected"])
+        self.assertEqual("declared_group_control_failure", failed["candidate_generation"]["issues"][0]["code"])
+
+    def test_large_inferred_group_requires_unique_cp_sat_membership(self):
+        settlements = {
+            f"setl_{amount}": {
+                "net": Decimal(f"{amount}.00"),
+                "utr": f"UTR{amount}",
+                "settled_dates": {"2026-01-01"},
+                "rows": [],
+            }
+            for amount in (10, 20, 30, 40)
+        }
+        banks = [{
+            "bank_txn_id": "bank_100",
+            "credit": "100.00",
+            "debit": "",
+            "value_date": "01/01/2026",
+            "narration": "UTR10 UTR20 UTR30 UTR40",
+        }]
+        graph = build_candidate_graph(banks, settlements, max_group_size=2)
+        result = solve_candidate_graph(graph)
+        large = next(
+            item for item in result["selected"]
+            if item.get("generation_strategy") == "cp_sat_unique_anchor_membership"
+        )
+        self.assertEqual(4, len(large["settlement_ids"]))
+        self.assertEqual("OPTIMAL_UNIQUE", large["membership_proof"]["status"])
+
+        ambiguous_settlements = {
+            "setl_A10": {"net": Decimal("10.00"), "utr": "A10", "settled_dates": {"2026-01-01"}, "rows": []},
+            "setl_A90": {"net": Decimal("90.00"), "utr": "A90", "settled_dates": {"2026-01-01"}, "rows": []},
+            "setl_X20": {"net": Decimal("20.00"), "utr": "X20", "settled_dates": {"2026-01-01"}, "rows": []},
+            "setl_Y20": {"net": Decimal("20.00"), "utr": "Y20", "settled_dates": {"2026-01-01"}, "rows": []},
+        }
+        ambiguous_banks = [{
+            "bank_txn_id": "bank_ambiguous_120", "credit": "120.00", "debit": "",
+            "value_date": "01/01/2026", "narration": "A10 A90",
+        }]
+        ambiguous_graph = build_candidate_graph(
+            ambiguous_banks, ambiguous_settlements, max_group_size=2
+        )
+        self.assertEqual([], solve_candidate_graph(ambiguous_graph)["selected"])
+        self.assertEqual(
+            "large_membership_not_proven",
+            ambiguous_graph["candidate_generation"]["issues"][0]["code"],
+        )
 
     def test_zero_cp_sat_budget_fails_closed(self):
         settlements = {

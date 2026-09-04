@@ -7,6 +7,7 @@ one-use constraints. Tied optimal solutions abstain on the ambiguous edges.
 
 from __future__ import annotations
 
+import hashlib
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date
@@ -17,6 +18,7 @@ from typing import Any, Iterable
 from ortools.sat.python import cp_model
 
 from .l1_search import parse_date_candidates
+from .membership_solver import MembershipItem, solve_unique_membership
 from .subset_sum import SubsetSumIndex, build_subset_sum_index, reachable_totals_by_size
 
 
@@ -24,6 +26,11 @@ DEFAULT_SELECTION_THRESHOLD = 65
 MAX_GROUP_HYPOTHESES_PER_TOTAL = 64
 MAX_DP_STATES = 250_000
 DEFAULT_CP_SAT_TIME_LIMIT_SECONDS = 5.0
+MAX_DECLARED_GROUP_MEMBERS_PER_SIDE = 1000
+MAX_INFERRED_GROUP_MEMBERS = 100
+MAX_MEMBERSHIP_POOL_SIZE = 1000
+DEFAULT_MEMBERSHIP_TIME_LIMIT_SECONDS = 2.0
+DECLARED_GROUP_FIELDS = ("reconciliation_group_id", "payout_id", "batch_id")
 
 
 def normalize_reference(value: str | None) -> str:
@@ -100,6 +107,20 @@ def reference_evidence(narration: str, utr: str) -> list[dict[str, Any]]:
     return []
 
 
+def pair_support_features(
+    bank: dict[str, str], settlement: dict[str, Any]
+) -> list[dict[str, Any]]:
+    features = list(reference_evidence(bank.get("narration", ""), settlement.get("utr", "")))
+    distance = minimum_date_distance(bank_dates(bank), set(settlement.get("settled_dates", set())))
+    if distance == 0:
+        features.append({"feature": "settlement_date_exact", "points": 20, "detail": "bank and settlement dates agree"})
+    elif distance is not None and distance <= 2:
+        features.append({"feature": "posting_window", "points": 14, "detail": f"bank posted {distance} day(s) from settlement"})
+    elif distance is not None and distance <= 5:
+        features.append({"feature": "extended_posting_window", "points": 5, "detail": f"bank posted {distance} days from settlement"})
+    return features
+
+
 def feature_score(features: Iterable[dict[str, Any]]) -> int:
     return sum(int(feature["points"]) for feature in features)
 
@@ -107,7 +128,22 @@ def feature_score(features: Iterable[dict[str, Any]]) -> int:
 def candidate_id(kind: str, bank_ids: tuple[str, ...], settlement_ids: tuple[str, ...]) -> str:
     # Group membership is unordered. Canonical IDs prevent the same hyperedge
     # being emitted twice as A+B and B+A, which would create a false tied optimum.
+    if len(bank_ids) + len(settlement_ids) > 100:
+        canonical = "\0".join((kind, *sorted(bank_ids), "=>", *sorted(settlement_ids)))
+        digest = hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:24]
+        return f"{kind}:large:{len(bank_ids)}x{len(settlement_ids)}:{digest}"
     return f"{kind}:{'+'.join(sorted(bank_ids))}=>{'+'.join(sorted(settlement_ids))}"
+
+
+def declared_group_key(item: dict[str, Any]) -> str | None:
+    """Return a dedicated cross-source membership key, never a fuzzy reference."""
+    for field in DECLARED_GROUP_FIELDS:
+        if item.get(f"{field}_conflict"):
+            return None
+        value = str(item.get(field) or "").strip()
+        if value:
+            return f"{field}:{value}"
+    return None
 
 
 def topology_for(bank_count: int, settlement_count: int) -> str:
@@ -126,6 +162,7 @@ def single_candidate(
     settlement: dict[str, Any],
     *,
     exact_amount_frequency: int,
+    support_features: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any] | None:
     bank_amount = signed_bank_amount(bank)
     settlement_amount = Decimal(settlement["net"])
@@ -136,14 +173,7 @@ def single_candidate(
         features.append({"feature": "signed_amount_exact", "points": 50, "detail": "signed bank amount equals settlement net"})
         if exact_amount_frequency == 1:
             features.append({"feature": "globally_unique_amount", "points": 5, "detail": "only one settlement has this signed net"})
-    features.extend(reference_evidence(bank.get("narration", ""), settlement.get("utr", "")))
-    distance = minimum_date_distance(bank_dates(bank), set(settlement.get("settled_dates", set())))
-    if distance == 0:
-        features.append({"feature": "settlement_date_exact", "points": 20, "detail": "bank and settlement dates agree"})
-    elif distance is not None and distance <= 2:
-        features.append({"feature": "posting_window", "points": 14, "detail": f"bank posted {distance} day(s) from settlement"})
-    elif distance is not None and distance <= 5:
-        features.append({"feature": "extended_posting_window", "points": 5, "detail": f"bank posted {distance} days from settlement"})
+    features.extend(support_features if support_features is not None else pair_support_features(bank, settlement))
     reference_points = sum(item["points"] for item in features if "utr" in item["feature"])
     if not amount_exact and not reference_points:
         return None
@@ -177,26 +207,32 @@ def group_candidate(
     settlement_items: list[tuple[str, dict[str, Any]]],
     *,
     unique_combination: bool,
+    declared_membership_key: str | None = None,
 ) -> dict[str, Any]:
     bank_total = sum((signed_bank_amount(row) for row in banks), Decimal("0"))
     settlement_total = sum((Decimal(item["net"]) for _, item in settlement_items), Decimal("0"))
     amount_exact = bank_total == settlement_total
-    features: list[dict[str, Any]] = [
-        {"feature": "bounded_group_structure", "points": 10, "detail": f"bounded {kind.replace('_', ' ')} hypothesis"},
-    ]
+    features: list[dict[str, Any]] = [{
+        "feature": "declared_group_structure" if declared_membership_key else "bounded_group_structure",
+        "points": 35 if declared_membership_key else 10,
+        "detail": (
+            f"the dedicated group key {declared_membership_key!r} agrees across both sources"
+            if declared_membership_key
+            else f"bounded {kind.replace('_', ' ')} hypothesis"
+        ),
+    }]
     if amount_exact:
         features.insert(0, {"feature": "signed_group_amount_exact", "points": 50, "detail": "grouped signed amounts conserve money exactly"})
-    if unique_combination and amount_exact:
+    if unique_combination and amount_exact and not declared_membership_key:
         features.append({"feature": "unique_group_sum", "points": 2, "detail": "only one bounded group produces this exact total; uniqueness is weak corroboration"})
-    distances = [
-        minimum_date_distance(bank_dates(bank), set(settlement.get("settled_dates", set())))
-        for bank in banks
-        for _, settlement in settlement_items
-    ]
-    known_distances = [value for value in distances if value is not None]
-    if known_distances and min(known_distances) == 0:
+    combined_bank_dates = set().union(*(bank_dates(bank) for bank in banks))
+    combined_settlement_dates = set().union(*(
+        set(settlement.get("settled_dates", set())) for _, settlement in settlement_items
+    ))
+    group_distance = minimum_date_distance(combined_bank_dates, combined_settlement_dates)
+    if group_distance == 0:
         features.append({"feature": "group_date_exact", "points": 15, "detail": "at least one bank/settlement date agrees exactly"})
-    elif known_distances and min(known_distances) <= 2:
+    elif group_distance is not None and group_distance <= 2:
         features.append({"feature": "group_posting_window", "points": 10, "detail": "group falls inside the two-day posting window"})
     canonical_settlement_dates = [
         date.fromisoformat(str(settlement.get("canonical_settled_at")))
@@ -211,13 +247,11 @@ def group_candidate(
             or max(date.fromisoformat(value) for value in bank_dates(bank)) >= latest_settlement_date
             for bank in banks
         )
-    reference_links = [
+    reference_links = [] if declared_membership_key else [
         evidence
         for bank in banks
         for _, settlement in settlement_items
-        for evidence in [reference_evidence(
-            bank.get("narration", ""), settlement.get("utr", "")
-        )]
+        for evidence in [reference_evidence(bank.get("narration", ""), settlement.get("utr", ""))]
         if evidence
     ]
     if reference_links:
@@ -236,7 +270,7 @@ def group_candidate(
         blockers.append("money_conservation_failed")
     if not chronology_valid:
         blockers.append("chronology_conflict")
-    return {
+    candidate = {
         "candidate_id": candidate_id(kind, bank_ids, settlement_ids),
         "kind": kind,
         "topology": topology_for(len(bank_ids), len(settlement_ids)),
@@ -250,6 +284,11 @@ def group_candidate(
         "eligible": amount_exact and chronology_valid,
         "blockers": blockers,
     }
+    if declared_membership_key:
+        candidate["generation_strategy"] = "declared_cross_source_membership"
+        candidate["declared_membership_key"] = declared_membership_key
+        candidate["candidate_generation_complete"] = True
+    return candidate
 
 
 def has_money_conserving_proper_subgroup(
@@ -279,27 +318,192 @@ def has_money_conserving_proper_subgroup(
     return False
 
 
+def _group_kind(bank_count: int, settlement_count: int) -> str:
+    if bank_count == 1 and settlement_count == 1:
+        return "declared_one_to_one"
+    if bank_count == 1:
+        return "many_settlements_to_one_bank"
+    if settlement_count == 1:
+        return "one_settlement_to_many_banks"
+    return "many_banks_to_many_settlements"
+
+
+def build_declared_group_candidates(
+    bank_rows: list[dict[str, str]],
+    settlements: dict[str, dict[str, Any]],
+    *,
+    max_members_per_side: int = MAX_DECLARED_GROUP_MEMBERS_PER_SIDE,
+) -> tuple[list[dict[str, Any]], set[str], set[str], list[dict[str, Any]], dict[str, Any]]:
+    """Build O(N+M) candidates from dedicated membership keys.
+
+    A key must appear on both sources.  Nodes carrying such a key are reserved
+    for that declared group: if its totals, chronology, counterpart, or size
+    fail a control, those nodes are held rather than rematched opportunistically.
+    """
+    banks_by_key: dict[str, list[dict[str, str]]] = defaultdict(list)
+    settlements_by_key: dict[str, list[tuple[str, dict[str, Any]]]] = defaultdict(list)
+    conflicted_nodes: set[str] = set()
+    for row in bank_rows:
+        if any(row.get(f"{field}_conflict") for field in DECLARED_GROUP_FIELDS):
+            conflicted_nodes.add(f"B:{row['bank_txn_id']}")
+            continue
+        key = declared_group_key(row)
+        if key:
+            banks_by_key[key].append(row)
+    for identifier, settlement in settlements.items():
+        if any(settlement.get(f"{field}_conflict") for field in DECLARED_GROUP_FIELDS):
+            conflicted_nodes.add(f"S:{identifier}")
+            continue
+        key = declared_group_key(settlement)
+        if key:
+            settlements_by_key[key].append((identifier, settlement))
+
+    candidates: list[dict[str, Any]] = []
+    reserved_nodes: set[str] = set(conflicted_nodes)
+    unsafe_nodes: set[str] = set(conflicted_nodes)
+    issues: list[dict[str, Any]] = []
+    if conflicted_nodes:
+        issues.append({
+            "code": "declared_group_key_conflict",
+            "node_ids": sorted(conflicted_nodes),
+            "reason": "one source entity carries conflicting dedicated group keys",
+        })
+    accepted_member_count = 0
+    for key in sorted(set(banks_by_key) | set(settlements_by_key)):
+        banks = banks_by_key.get(key, [])
+        settlement_items = settlements_by_key.get(key, [])
+        nodes = {
+            *(f"B:{row['bank_txn_id']}" for row in banks),
+            *(f"S:{identifier}" for identifier, _ in settlement_items),
+        }
+        reserved_nodes.update(nodes)
+        if not banks or not settlement_items:
+            unsafe_nodes.update(nodes)
+            issues.append({
+                "code": "declared_group_missing_counterpart",
+                "membership_key": key,
+                "bank_member_count": len(banks),
+                "settlement_member_count": len(settlement_items),
+                "reason": "dedicated group key is present on only one source",
+            })
+            continue
+        if len(banks) > max_members_per_side or len(settlement_items) > max_members_per_side:
+            unsafe_nodes.update(nodes)
+            issues.append({
+                "code": "declared_group_size_limit",
+                "membership_key": key,
+                "bank_member_count": len(banks),
+                "settlement_member_count": len(settlement_items),
+                "limit_per_side": max_members_per_side,
+                "reason": "declared membership exceeds the configured verification limit",
+            })
+            continue
+        candidate = group_candidate(
+            _group_kind(len(banks), len(settlement_items)),
+            banks,
+            settlement_items,
+            unique_combination=True,
+            declared_membership_key=key,
+        )
+        if not candidate["eligible"]:
+            unsafe_nodes.update(nodes)
+            issues.append({
+                "code": "declared_group_control_failure",
+                "membership_key": key,
+                "bank_member_count": len(banks),
+                "settlement_member_count": len(settlement_items),
+                "blockers": candidate["blockers"],
+                "residual": candidate["residual"],
+                "reason": "declared membership failed money or chronology controls",
+            })
+        candidates.append(candidate)
+        accepted_member_count += len(banks) + len(settlement_items)
+
+    audit = {
+        "algorithm": "declared_cross_source_membership",
+        "supported_fields": list(DECLARED_GROUP_FIELDS),
+        "max_members_per_side": max_members_per_side,
+        "declared_group_count": len(set(banks_by_key) | set(settlements_by_key)),
+        "candidate_count": len(candidates),
+        "accepted_member_count": accepted_member_count,
+        "reserved_node_count": len(reserved_nodes),
+    }
+    return candidates, reserved_nodes, unsafe_nodes, issues, audit
+
+
+def _membership_evidence(features: list[dict[str, Any]]) -> tuple[int, bool, bool]:
+    reference_points = max(
+        (int(item["points"]) for item in features if "utr" in item["feature"]),
+        default=0,
+    )
+    feature_names = {item["feature"] for item in features}
+    date_close = bool({"settlement_date_exact", "posting_window"} & feature_names)
+    date_points = 15 if "settlement_date_exact" in feature_names else 10 if "posting_window" in feature_names else 0
+    # The membership cost prevents a large weakly dated subset from beating a
+    # smaller, strongly referenced explanation merely because it has more rows.
+    return reference_points + date_points - 15, reference_points >= 35, date_close
+
+
 def build_candidate_graph(
     bank_rows: list[dict[str, str]],
     settlements: dict[str, dict[str, Any]],
     *,
     max_group_size: int = 3,
+    max_declared_group_members: int = MAX_DECLARED_GROUP_MEMBERS_PER_SIDE,
+    max_inferred_group_members: int = MAX_INFERRED_GROUP_MEMBERS,
+    max_membership_pool_size: int = MAX_MEMBERSHIP_POOL_SIZE,
+    membership_time_limit_seconds: float = DEFAULT_MEMBERSHIP_TIME_LIMIT_SECONDS,
 ) -> dict[str, Any]:
+    all_bank_rows = bank_rows
+    all_settlements = settlements
+    (
+        declared_candidates,
+        reserved_nodes,
+        declared_unsafe_nodes,
+        declared_issues,
+        declared_audit,
+    ) = build_declared_group_candidates(
+        all_bank_rows,
+        all_settlements,
+        max_members_per_side=max_declared_group_members,
+    )
+    # Dedicated cross-source group keys define an atomic verification scope.
+    # Do not feed those nodes into fuzzy or subset candidate generation.
+    bank_rows = [
+        row for row in all_bank_rows
+        if f"B:{row['bank_txn_id']}" not in reserved_nodes
+    ]
+    settlements = {
+        identifier: item for identifier, item in all_settlements.items()
+        if f"S:{identifier}" not in reserved_nodes
+    }
     settlement_amount_frequency: dict[Decimal, int] = defaultdict(int)
     for settlement in settlements.values():
         settlement_amount_frequency[Decimal(settlement["net"])] += 1
-    candidates = []
-    unsafe_nodes: set[str] = set()
-    generation_issues: list[dict[str, Any]] = []
+    candidates = list(declared_candidates)
+    unsafe_nodes: set[str] = set(declared_unsafe_nodes)
+    generation_issues: list[dict[str, Any]] = list(declared_issues)
+    membership_audit: dict[str, Any] = {
+        "algorithm": "cp_sat_unique_anchor_membership",
+        "max_inferred_group_members": max_inferred_group_members,
+        "max_pool_size": max_membership_pool_size,
+        "time_limit_seconds_per_anchor": membership_time_limit_seconds,
+        "attempts": [],
+        "proven_unique_count": 0,
+    }
     subset_sum_audit: dict[str, Any] = {
         "algorithm": "bounded_dynamic_programming_subset_sum",
         "status": "not_required",
     }
+    pair_support: dict[tuple[str, str], list[dict[str, Any]]] = {}
     for bank in bank_rows:
         for settlement_id, settlement in settlements.items():
+            support = pair_support_features(bank, settlement)
+            pair_support[(bank["bank_txn_id"], settlement_id)] = support
             candidate = single_candidate(
                 bank, settlement_id, settlement,
                 exact_amount_frequency=settlement_amount_frequency[signed_bank_amount(bank)],
+                support_features=support,
             )
             if candidate:
                 candidates.append(candidate)
@@ -420,6 +624,149 @@ def build_candidate_graph(
                     candidate["blockers"].append("candidate_generation_truncated")
                 candidates.append(candidate)
 
+        # For groups larger than the enumerable DP bound, solve membership
+        # directly around a strongly referenced bank or settlement anchor.
+        # This avoids enumerating every subset in a pool that may contain up to
+        # 1,000 records.  Only a proven-unique optimum becomes a candidate.
+        if max_inferred_group_members > max_group_size:
+            for bank in bank_rows:
+                target = signed_bank_amount(bank)
+                if settlement_index.matches(target) or not settlement_index.complete_for(target):
+                    continue
+                pool: list[MembershipItem] = []
+                strong_count = 0
+                strong_total = Decimal("0")
+                for identifier, settlement in settlements.items():
+                    amount = Decimal(settlement["net"])
+                    if target == 0 or amount == 0 or (target > 0) != (amount > 0):
+                        continue
+                    score, strong, date_close = _membership_evidence(
+                        pair_support[(bank["bank_txn_id"], identifier)]
+                    )
+                    if not strong and not date_close:
+                        continue
+                    pool.append(MembershipItem(identifier, amount, score))
+                    strong_count += int(strong)
+                    if strong:
+                        strong_total += amount
+                if (
+                    len(pool) <= max_group_size
+                    or strong_count < 2
+                    or abs(strong_total) > abs(target)
+                ):
+                    continue
+                proof = solve_unique_membership(
+                    target,
+                    pool,
+                    max_members=max_inferred_group_members,
+                    max_pool_size=max_membership_pool_size,
+                    time_limit_seconds=membership_time_limit_seconds,
+                )
+                proof_audit = {
+                    "side": "settlements_for_bank",
+                    "anchor_node": f"B:{bank['bank_txn_id']}",
+                    **proof.audit_summary(),
+                }
+                membership_audit["attempts"].append(proof_audit)
+                if proof.proven_unique:
+                    candidate = group_candidate(
+                        "many_settlements_to_one_bank",
+                        [bank],
+                        [(identifier, settlements[identifier]) for identifier in proof.member_ids],
+                        unique_combination=True,
+                    )
+                    candidate["features"].append({
+                        "feature": "cp_sat_membership_unique",
+                        "points": 25,
+                        "detail": "large-group membership is the unique evidence-optimal exact sum",
+                    })
+                    candidate["evidence_score"] = feature_score(candidate["features"])
+                    candidate["generation_strategy"] = "cp_sat_unique_anchor_membership"
+                    candidate["membership_proof"] = proof_audit
+                    candidate["candidate_generation_complete"] = True
+                    candidates.append(candidate)
+                    membership_audit["proven_unique_count"] += 1
+                elif proof.status != "NO_SOLUTION":
+                    affected = {f"B:{bank['bank_txn_id']}", *(f"S:{item.identifier}" for item in pool)}
+                    unsafe_nodes.update(affected)
+                    generation_issues.append({
+                        "code": "large_membership_not_proven",
+                        "side": "settlements_for_bank",
+                        "anchor_node": f"B:{bank['bank_txn_id']}",
+                        "status": proof.status,
+                        "pool_size": len(pool),
+                        "reason": "large inferred membership was ambiguous, over budget, or timed out",
+                    })
+
+            for settlement_id, settlement in settlements.items():
+                target = Decimal(settlement["net"])
+                if bank_index.matches(target) or not bank_index.complete_for(target):
+                    continue
+                pool = []
+                strong_count = 0
+                strong_total = Decimal("0")
+                for bank in bank_rows:
+                    amount = signed_bank_amount(bank)
+                    if target == 0 or amount == 0 or (target > 0) != (amount > 0):
+                        continue
+                    score, strong, date_close = _membership_evidence(
+                        pair_support[(bank["bank_txn_id"], settlement_id)]
+                    )
+                    if not strong and not date_close:
+                        continue
+                    pool.append(MembershipItem(bank["bank_txn_id"], amount, score))
+                    strong_count += int(strong)
+                    if strong:
+                        strong_total += amount
+                if (
+                    len(pool) <= max_group_size
+                    or strong_count < 2
+                    or abs(strong_total) > abs(target)
+                ):
+                    continue
+                proof = solve_unique_membership(
+                    target,
+                    pool,
+                    max_members=max_inferred_group_members,
+                    max_pool_size=max_membership_pool_size,
+                    time_limit_seconds=membership_time_limit_seconds,
+                )
+                proof_audit = {
+                    "side": "banks_for_settlement",
+                    "anchor_node": f"S:{settlement_id}",
+                    **proof.audit_summary(),
+                }
+                membership_audit["attempts"].append(proof_audit)
+                if proof.proven_unique:
+                    candidate = group_candidate(
+                        "one_settlement_to_many_banks",
+                        [bank_by_id[identifier] for identifier in proof.member_ids],
+                        [(settlement_id, settlement)],
+                        unique_combination=True,
+                    )
+                    candidate["features"].append({
+                        "feature": "cp_sat_membership_unique",
+                        "points": 25,
+                        "detail": "large-group membership is the unique evidence-optimal exact sum",
+                    })
+                    candidate["evidence_score"] = feature_score(candidate["features"])
+                    candidate["generation_strategy"] = "cp_sat_unique_anchor_membership"
+                    candidate["membership_proof"] = proof_audit
+                    candidate["candidate_generation_complete"] = True
+                    candidates.append(candidate)
+                    membership_audit["proven_unique_count"] += 1
+                elif proof.status != "NO_SOLUTION":
+                    affected = {f"S:{settlement_id}", *(f"B:{item.identifier}" for item in pool)}
+                    unsafe_nodes.update(affected)
+                    generation_issues.append({
+                        "code": "large_membership_not_proven",
+                        "side": "banks_for_settlement",
+                        "anchor_node": f"S:{settlement_id}",
+                        "status": proof.status,
+                        "pool_size": len(pool),
+                        "reason": "large inferred membership was ambiguous, over budget, or timed out",
+                    })
+
         bank_groups = bank_index.groups_by_total
         settlement_groups = settlement_index.groups_by_total
         for total in sorted(set(bank_groups) & set(settlement_groups)):
@@ -491,9 +838,8 @@ def build_candidate_graph(
                 identifier for identifier, settlement in settlements.items()
                 if any(
                     item["points"] >= 35
-                    for item in reference_evidence(
-                        row.get("narration", ""), settlement.get("utr", "")
-                    )
+                    for item in pair_support[(row["bank_txn_id"], identifier)]
+                    if "utr" in item["feature"]
                 )
             ]
             for row in bank_rows
@@ -503,9 +849,8 @@ def build_candidate_graph(
                 row["bank_txn_id"] for row in bank_rows
                 if any(
                     item["points"] >= 35
-                    for item in reference_evidence(
-                        row.get("narration", ""), settlement.get("utr", "")
-                    )
+                    for item in pair_support[(row["bank_txn_id"], identifier)]
+                    if "utr" in item["feature"]
                 )
             ]
             for identifier, settlement in settlements.items()
@@ -613,8 +958,9 @@ def build_candidate_graph(
                 "amount": str(signed_bank_amount(row)),
                 "date_candidates": sorted(bank_dates(row)),
                 "narration": row.get("narration", ""),
+                "declared_membership_key": declared_group_key(row),
             }
-            for row in bank_rows
+            for row in all_bank_rows
         ],
         "settlement_nodes": [
             {
@@ -629,14 +975,19 @@ def build_candidate_graph(
                 "settled_at": item.get("canonical_settled_at", ""),
                 "working_day_path": item.get("working_day_path", ""),
                 "chronology_valid": item.get("chronology_valid"),
+                "declared_membership_key": declared_group_key(item),
             }
-            for identifier, item in settlements.items()
+            for identifier, item in all_settlements.items()
         ],
         "candidates": sorted(candidates, key=lambda item: (-item["evidence_score"], item["candidate_id"])),
         "max_group_size": max_group_size,
+        "max_declared_group_members_per_side": max_declared_group_members,
+        "max_inferred_group_members": max_inferred_group_members,
         "group_hypothesis_cap_per_total": MAX_GROUP_HYPOTHESES_PER_TOTAL,
         "candidate_generation": {
             **subset_sum_audit,
+            "declared_groups": declared_audit,
+            "large_inferred_groups": membership_audit,
             "complete": not generation_issues,
             "unsafe_nodes": sorted(unsafe_nodes),
             "issues": generation_issues,
@@ -882,7 +1233,11 @@ def solve_candidate_graph(
             "constraints_satisfied": [
                 "signed_money_conservation",
                 "global_one_use",
-                "bounded_group_size",
+                (
+                    "declared_cross_source_membership_limit"
+                    if candidate.get("generation_strategy") == "declared_cross_source_membership"
+                    else "bounded_group_size_or_unique_membership_proof"
+                ),
                 "selection_threshold",
                 "complete_candidate_generation_for_selected_nodes",
                 "cp_sat_optimum_proven",
@@ -959,6 +1314,8 @@ def solve_candidate_graph(
             "each bank entry used at most once",
             "each settlement used at most once",
             "signed grouped amounts conserve money exactly",
+            "declared cross-source groups may contain up to the configured per-side limit",
+            "large inferred anchor groups require a unique CP-SAT membership optimum",
             "tied optimal edges are excluded",
             "candidate-generation truncation fails closed",
             "non-optimal or timed-out CP-SAT components fail closed",

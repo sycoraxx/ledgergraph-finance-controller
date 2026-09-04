@@ -9,7 +9,9 @@ plain business language; this page maps that language to the implementation.
 |---|---|
 | Finance Controller workflow | LangGraph state machine in `agent/workflow.py` |
 | Reconciliation engine | LedgerGraph in `agent/ledger_graph.py` |
-| Possible grouped matches | bounded dynamic-programming subset-sum generation |
+| Declared large groups | cross-source group-key verification, up to 1,000 members per side |
+| Small possible groups | bounded dynamic-programming subset-sum generation |
+| Large inferred 1:N/N:1 groups | time-bounded CP-SAT membership search with a uniqueness proof |
 | Whole-batch answer | OR-Tools CP-SAT weighted set-packing model |
 | Extra risk checks | deterministic GraphShield signals in `agent/graph_intelligence.py` |
 | Explanation assistant | optional OpenAI-compatible local or hosted model |
@@ -18,17 +20,28 @@ plain business language; this page maps that language to the implementation.
 ## Reconciliation guarantees
 
 - `Decimal` money arithmetic and signed-money conservation
-- direct, 1:N, N:1, and bounded N:M hypotheses
+- direct, 1:N, N:1, and N:M hypotheses
+- declared cross-source groups up to 1,000 members per side without subset enumeration
+- inferred anchor groups up to 100 members from a 1,000-record evidence pool
 - each bank and settlement node used at most once
 - exact global optimization over the generated candidate set
 - ties, solver timeouts, non-optimal statuses, and incomplete candidate coverage
   fail closed for affected records
 - candidate proofs include accepted evidence and rejected alternatives
 
-Group size remains bounded by configuration. Dynamic programming reduces the
-cost of generating equal-total subsets; CP-SAT selects the best compatible
-groups. Larger bounds increase the search space and may hit time or candidate
-caps, which are reported as review states rather than silently accepted results.
+There are three candidate-generation paths. Dedicated
+`reconciliation_group_id`, `payout_id`, or `batch_id` values that agree across
+both sources define an atomic group whose totals and chronology are verified in
+linear time. Small unknown groups use dynamic-programming subset-sum discovery.
+Larger unknown 1:N and N:1 groups use a direct CP-SAT exact-sum membership model
+and a second solve that rules out an equally supported alternative.
+
+The whole-batch CP-SAT set-packing model still enforces one-use constraints
+across the resulting candidates. A missing group counterpart, excess declared
+membership, ambiguous membership, incomplete DP search, non-optimal solve, or
+timeout marks the affected records unsafe and sends them to review. Arbitrary
+unstructured N:M search is intentionally not advertised as tractable at 1,000
+records per side.
 
 ## AI boundary
 

@@ -37,6 +37,12 @@ The extraction time and coverage window remain visible in the dashboard.
 The controller finds all reasonable direct and grouped matches. It supports one
 bank entry to one settlement, one to many, many to one, and many to many.
 
+Large batches do not trigger blind subset enumeration. A dedicated group key
+shared by the two source systems can carry up to 1,000 members per side and is
+verified as one atomic scope. Unknown membership is searched only inside a
+bounded evidence neighbourhood and must have a uniquely proven CP-SAT answer;
+otherwise the records stop for review.
+
 It then chooses one complete answer for the batch. Every accepted group must:
 
 - balance to the exact paisa;

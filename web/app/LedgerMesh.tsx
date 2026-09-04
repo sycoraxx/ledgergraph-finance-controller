@@ -150,7 +150,10 @@ export default function LedgerMesh({ mesh, mode, onSelectEdge }: {
   useEffect(() => {
     const element = wrapRef.current;
     if (!element) return;
-    const update = () => setSize({ width: Math.max(480, element.clientWidth), height: Math.max(480, Math.min(680, window.innerHeight * 0.66)) });
+    const update = () => setSize({
+      width: Math.max(280, element.clientWidth),
+      height: Math.max(380, Math.min(680, window.innerHeight * 0.66)),
+    });
     update();
     const observer = new ResizeObserver(update);
     observer.observe(element);

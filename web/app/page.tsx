@@ -109,7 +109,14 @@ type GraphIntelligenceSummary = {
 type LedgerGraph = {
   solver?: string; solver_policy?: string; selection_threshold?: number; bank_node_count: number; settlement_node_count: number;
   all_components_proven?: boolean; component_status_counts?: Record<string, number>;
-  candidate_generation?: { algorithm?: string; status?: string; complete?: boolean; issues?: Array<{ code?: string; reason?: string }>; bank_index?: { state_count?: number; transition_count?: number }; settlement_index?: { state_count?: number; transition_count?: number } };
+  candidate_generation?: {
+    algorithm?: string; status?: string; complete?: boolean;
+    issues?: Array<{ code?: string; reason?: string }>;
+    bank_index?: { state_count?: number; transition_count?: number };
+    settlement_index?: { state_count?: number; transition_count?: number };
+    declared_groups?: { max_members_per_side?: number; candidate_count?: number; accepted_member_count?: number };
+    large_inferred_groups?: { max_inferred_group_members?: number; max_pool_size?: number; proven_unique_count?: number };
+  };
   candidate_generation_unsafe_node_count?: number;
   candidate_count: number; selectable_candidate_count: number; selected_candidate_count: number;
   abstained_bank_count: number; rejected_candidate_count: number; money_conflict_count: number;
@@ -389,7 +396,7 @@ export default function Home() {
       <aside className="sidebar">
         <div className="brand"><span className="brandMark">FC</span><div><strong>Finance Controller</strong><small>Reconcile, review, approve</small></div></div>
         <nav aria-label="Primary navigation">
-          {tabs.map(item => <button key={item.id} onClick={() => setTab(item.id)} className={tab === item.id ? 'active' : ''}><span>{item.key}</span>{item.label}{item.id === 'exceptions' && <em>{data.risk_findings.length}</em>}{item.id === 'approvals' && <em>{data.approval_summary.pending}</em>}</button>)}
+          {tabs.map(item => <button key={item.id} aria-label={item.label} title={item.label} onClick={() => setTab(item.id)} className={tab === item.id ? 'active' : ''}><span>{item.key}</span>{item.label}{item.id === 'exceptions' && <em>{data.risk_findings.length}</em>}{item.id === 'approvals' && <em>{data.approval_summary.pending}</em>}</button>)}
         </nav>
         <div className="authorityCard">
           <span className="authorityIcon">◆</span><div><strong>Safe by design</strong><p>AI explains the evidence. Code handles money. A person approves.</p></div>
@@ -473,7 +480,7 @@ export default function Home() {
             <div className="pageHead"><div><p className="eyebrow">Reconciliation</p><h1>See why one payout can be hard to explain.</h1><p>The messy view shows every plausible link between bank entries and settlements. The clean view keeps only a complete, conflict-free explanation. If two answers are equally good, the controller stops and asks for review.</p></div><div className="summaryChip"><span>Difficult test cases solved</span><strong>{data.ledgergraph_eval.held_out_ledgergraph?.cases_exactly_correct || '—'}/{data.ledgergraph_eval.held_out_case_count || '—'}</strong><small>{data.ledgergraph_eval.held_out_ledgergraph?.false_selections || 0} wrong matches selected</small></div></div>
 
             <div className="solverPolicyStrip" aria-label="Reconciliation safety status">
-              <article><span>Possible groups</span><strong>{data.ledgergraph.candidate_generation?.complete ? 'All found' : 'Search limit reached'}</strong><small>{data.ledgergraph.candidate_generation?.complete ? 'Complete for this batch' : 'Affected records sent for review'}</small></article>
+              <article><span>Large groups</span><strong>Up to {data.ledgergraph.candidate_generation?.declared_groups?.max_members_per_side?.toLocaleString() || '1,000'} per side</strong><small>Dedicated group keys are verified directly; inferred groups are capped at {data.ledgergraph.candidate_generation?.large_inferred_groups?.max_inferred_group_members || 100} members and require a unique proof</small></article>
               <article><span>Whole-batch check</span><strong>No record reused</strong><small>Every accepted group must fit with every other group</small></article>
               <article className={data.ledgergraph.all_components_proven ? '' : 'solverWarning'}><span>Final answer</span><strong>{data.ledgergraph.all_components_proven ? 'Complete and unambiguous' : 'Uncertain records held'}</strong><small>{Object.entries(data.ledgergraph.component_status_counts || {}).map(([status, count]) => `${count} ${eventLabel(status)}`).join(' · ') || 'Awaiting pipeline run'}</small></article>
               <article className={(data.ledgergraph.candidate_generation_unsafe_node_count || 0) > 0 ? 'solverWarning' : ''}><span>When unsure</span><strong>Stop, never guess</strong><small>{data.ledgergraph.candidate_generation_unsafe_node_count ?? 0} records affected by search limits</small></article>

@@ -65,6 +65,19 @@ The included data is synthetic. If a future pilot introduces business data:
 Do not send business data to a hosted AI provider until legal, security, privacy,
 and vendor reviews have approved the exact data flow. The model is optional.
 
+### Large declared groups
+
+For an aggregate containing many rows, export one dedicated membership field on
+both sides: `reconciliation_group_id`, `payout_id`, or `batch_id`. Use the same
+field name and value for every member of that accounting scope. Do not place a
+free-text bank narration into these fields.
+
+The controller reserves all records carrying the key for that group. If the
+other source is missing, the total does not balance, chronology fails, or either
+side exceeds 1,000 records, the whole declared group is held. It is not silently
+rematched against unrelated records. Unknown memberships over the bounded
+inference budget are also review conditions.
+
 ## Incident procedure
 
 Stop the batch and preserve its inputs and outputs if any of these occurs:

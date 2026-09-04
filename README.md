@@ -7,31 +7,26 @@ person before recording anything.
 The repository ships with a complete simulated business dataset. It never needs
 real financial data and cannot move real money.
 
+## How it works
+
+![Finance Controller architecture: simulated inputs flow through deterministic verification, LedgerGraph matching, exception handling, and a human approval gate](docs/assets/architecture.svg)
+
+The core workflow is deterministic: code verifies the inputs, builds possible
+reconciliation groups, and chooses one conflict-free batch answer. The optional
+AI assistant can explain cited evidence in plain language, but it cannot match,
+approve, or post money. The product exposes both the messy candidate Match Graph
+and the final Human Approval Gate after it is started locally.
+
 ## What a finance team gets
 
 - One work queue for settlement matching, exceptions, and journal approvals.
-- Exact support for 1:1, 1:N, N:1, and N:M reconciliation groups.
+- Exact support for 1:1, 1:N, N:1, and N:M reconciliation groups—including
+  declared cross-source groups with up to 1,000 records per side.
 - Business-day chronology checks, including T+1 and T+2 settlement windows.
 - Clear reasons, timestamps, amounts, and source-row citations for every stop.
 - Balanced, immutable journal proposals with an explicit human approval gate.
 - A full activity trail and repeatable reliability tests.
 - Optional AI explanations without giving a language model financial authority.
-
-```text
-Razorpay report + bank statement + cashbook
-                       │
-                       ▼
-       exact money, date, and reference checks
-                       │
-                       ▼
-          one conflict-free batch solution
-                 ┌─────┴─────┐
-                 ▼           ▼
-          review queue   journal proposal
-                              │
-                              ▼
-                       human approval
-```
 
 ## Safety model
 
@@ -40,7 +35,7 @@ The important boundary is simple:
 | Responsibility | Owner |
 | --- | --- |
 | Calculate totals and signs | Deterministic Python using `Decimal` |
-| Generate and select match groups | Subset-sum generation + exact optimizer |
+| Generate and select match groups | Declared-group verification, bounded subset-sum, and exact CP-SAT proofs |
 | Enforce one-use, chronology, and balancing rules | Deterministic code |
 | Route questions and retrieve evidence | Allowlisted deterministic code |
 | Rewrite checked evidence in plain language | Optional AI provider |
@@ -50,6 +45,25 @@ The important boundary is simple:
 If the candidate search is incomplete, the optimum is tied, a component cannot
 be explained, or a control fails, the system stops for review. AI cannot change
 a match, amount, score, approval, or ledger entry.
+
+### Large reconciliation groups
+
+Large groups use two different safety policies:
+
+- A dedicated `reconciliation_group_id`, `payout_id`, or `batch_id` appearing
+  on both sources can identify up to **1,000 bank records and 1,000 settlement
+  records**. The controller verifies the declared membership, exact total, and
+  chronology directly instead of enumerating subsets.
+- When membership is unknown, CP-SAT may infer up to **100 members** from a
+  pool of at most **1,000 strongly related records**. The optimum and its
+  uniqueness must both be proven within the time budget.
+- Small unlabelled groups continue through complete dynamic-programming
+  candidate generation. Arbitrary or timed-out N:M searches stop for review.
+
+These are computation and control limits, not claims that a 1,000×1,000
+unstructured match is always identifiable. Large declared groups receive a
+compact hashed candidate ID while retaining their complete member lists in the
+audit artifact.
 
 ## Quick start: Windows, macOS, or Linux
 

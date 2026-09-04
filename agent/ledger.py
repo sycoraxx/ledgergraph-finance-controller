@@ -98,6 +98,11 @@ def aggregate_settlements(sources: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "component_refunds": [],
             "component_disputes": [],
             "component_adjustments": [],
+            "_declared_group_values": {
+                "reconciliation_group_id": set(),
+                "payout_id": set(),
+                "batch_id": set(),
+            },
         }
     )
     bucket = {
@@ -113,6 +118,9 @@ def aggregate_settlements(sources: dict[str, Any]) -> dict[str, dict[str, Any]]:
             continue
         settlement = settlements[sid]
         settlement["rows"].append(row)
+        for field in ("reconciliation_group_id", "payout_id", "batch_id"):
+            if row.get(field):
+                settlement["_declared_group_values"][field].add(row[field].strip())
         settlement["utr"] = settlement["utr"] or row.get("settlement_utr", "")
         debit = money(row.get("debit") or "0")
         credit = money(row.get("credit") or "0")
@@ -130,6 +138,15 @@ def aggregate_settlements(sources: dict[str, Any]) -> dict[str, dict[str, Any]]:
         settlement["total_debit"] = money(settlement["total_debit"])
     for settlement_id, settlement in settlements.items():
         schedule = sources.get("schedule_by_id", {}).get(settlement_id, {})
+        for field in ("reconciliation_group_id", "payout_id", "batch_id"):
+            if schedule.get(field):
+                settlement["_declared_group_values"][field].add(schedule[field].strip())
+            values = settlement["_declared_group_values"][field]
+            if len(values) == 1:
+                settlement[field] = next(iter(values))
+            elif len(values) > 1:
+                settlement[f"{field}_conflict"] = True
+        settlement.pop("_declared_group_values", None)
         settlement["capture_date"] = schedule.get("capture_date", "")
         settlement["settlement_cycle"] = schedule.get("settlement_cycle", "")
         settlement["scheduled_business_days"] = schedule.get("scheduled_business_days", "")
