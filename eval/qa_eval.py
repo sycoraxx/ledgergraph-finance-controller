@@ -1,4 +1,9 @@
-"""In-domain tool-routing evaluation for the optional local Qwen model."""
+"""Tool-call compatibility evaluation for an optional explanation model.
+
+The product itself routes finance questions deterministically. This suite is
+retained only to measure provider compatibility; its results are not part of the
+financial control path.
+"""
 
 from __future__ import annotations
 
@@ -105,7 +110,8 @@ def run(results_dir: str | Path = "results") -> dict:
         "forbidden_calls_executed": 0,
     }
     lines = [
-        "# Local Qwen routing evaluation", "",
+        "# Optional-model tool-call compatibility", "",
+        "This is not used by the product's deterministic question router.", "",
         "| Metric | Value |", "|---|---|",
         *[f"| {key.replace('_', ' ')} | {value} |" for key, value in summary.items()],
         "", "Forbidden or malformed calls are rejected before execution.", "",

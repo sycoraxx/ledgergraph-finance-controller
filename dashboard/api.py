@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 from datetime import datetime, timezone
 from decimal import Decimal
 from pathlib import Path
@@ -13,7 +14,8 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from agent.model_gateway import LocalQwenClient
+from agent.config import load_project_env
+from agent.model_gateway import ExplanationModelClient
 from agent.qa import answer_question
 from agent.scenario_catalog import scenario_catalog, scenario_context
 from agent.workflow import REQUIRED_SOURCES, WorkflowRuntime, file_sha256, row_count
@@ -22,6 +24,7 @@ from integrations.razorpay_feed import RazorpayFeedError, feed_status, sync_feed
 
 
 ROOT = Path(__file__).resolve().parents[1]
+load_project_env(ROOT)
 DATA = ROOT / "data"
 RESULTS = ROOT / "results"
 runtime = WorkflowRuntime(ROOT)
@@ -33,7 +36,14 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[
+        origin.strip()
+        for origin in os.getenv(
+            "FINCTRL_ALLOWED_ORIGINS",
+            "http://localhost:3000,http://127.0.0.1:3000",
+        ).split(",")
+        if origin.strip()
+    ],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
@@ -135,7 +145,7 @@ def pipeline_stages(latest: dict[str, Any]) -> list[dict[str, Any]]:
         ("Sources", "3 simulated systems"),
         ("Reconcile", "Find one complete, conflict-free answer"),
         ("Verify", "Metrics + honest misses"),
-        ("Approve", "Human-only sandbox gate"),
+        ("Approve", "Human-only recording gate"),
     ]
     return [
         {
@@ -149,7 +159,7 @@ def pipeline_stages(latest: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def dashboard_overview() -> dict[str, Any]:
-    model_runtime = LocalQwenClient().health_status()
+    model_runtime = ExplanationModelClient().health_status()
     predictions = load_json(RESULTS / "preds_agent.json", [])
     journals = load_json(RESULTS / "journal_proposals.json", [])
     truth = load_json(DATA / "ground_truth.json", [])
@@ -351,12 +361,12 @@ def dashboard_overview() -> dict[str, Any]:
         "runtime": {
             "orchestrator": "LangGraph",
             "money_engine": "Deterministic Python",
-            "language_model": "Qwen 3.5 4B Q4_K_M · HF GGUF",
+            "language_model": model_runtime["label"],
+            "model_provider": model_runtime["provider"],
             "model_available": model_runtime["available"],
             "model_status": model_runtime["status"],
-            "model_endpoint": model_runtime["endpoint"],
-            "ledger": "Local sandbox SQLite",
-            "mode": "local",
+            "ledger": "Simulation ledger · SQLite",
+            "mode": "simulation",
         },
         "headline": {
             "bank_value": str(total_bank_credit()),
@@ -475,7 +485,7 @@ def dashboard_overview() -> dict[str, Any]:
         "audit": audit,
         "latest_run": latest,
         "architecture": {
-            "nodes": ["validate", "reconcile", "measure", "review", "human gate", "sandbox post"],
+            "nodes": ["validate", "reconcile", "measure", "review", "human gate", "simulation ledger"],
             "authority": "Only deterministic code constructs or validates money. Only a human can resume a posting interrupt.",
         },
     }
@@ -483,16 +493,19 @@ def dashboard_overview() -> dict[str, Any]:
 
 @app.get("/api/health")
 def health() -> dict[str, Any]:
-    model_runtime = LocalQwenClient().health_status()
+    model_runtime = ExplanationModelClient().health_status()
     return {
         "status": "ok",
         "orchestrator": "langgraph",
-        "model_backend": "huggingface-gguf/llama.cpp",
-        "model_device": "CUDA0" if model_runtime["available"] else "not_running",
+        "model_backend": model_runtime["provider"],
+        "model_device": (
+            "CUDA" if model_runtime["provider"] == "local" and model_runtime["available"]
+            else "hosted" if model_runtime["provider"] not in {"local", "none"}
+            else "not_running"
+        ),
         "model_available": model_runtime["available"],
         "model_status": model_runtime["status"],
-        "model_endpoint": model_runtime["endpoint"],
-        "mode": "local",
+        "mode": "simulation",
     }
 
 
@@ -548,7 +561,7 @@ def ask(request: QuestionRequest) -> dict[str, Any]:
     return {
         "question": request.question,
         "answer": answer,
-        "mode": "qwen_grounded" if request.use_model and not used_fallback else "deterministic_evidence",
+        "mode": "ai_grounded" if request.use_model and not used_fallback else "deterministic_evidence",
         "model_requested": request.use_model,
-        "model_available": LocalQwenClient().health_status()["available"],
+        "model_available": ExplanationModelClient().health_status()["available"],
     }

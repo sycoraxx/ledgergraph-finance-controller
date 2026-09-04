@@ -18,7 +18,7 @@ from agent.ledger import (
 )
 from agent.l1_search import parse_date_candidates, reconcile_search
 from agent.ledger_graph import build_candidate_graph, solve_candidate_graph
-from agent.model_gateway import LocalQwenClient
+from agent.model_gateway import ExplanationModelClient, LocalQwenClient
 from agent.subset_sum import build_subset_sum_index
 from agent.qa import answer_question, deterministic_route, validate_call
 from agent.risk import scan_bank_risk
@@ -460,6 +460,27 @@ class FinanceControllerTests(unittest.TestCase):
             status = client.health_status()
         self.assertFalse(status["available"])
         self.assertEqual("unavailable", status["status"])
+
+    def test_hosted_explanation_provider_is_configured_without_network_probe(self):
+        client = ExplanationModelClient(provider="groq", api_key="test-secret")
+        with patch.object(client.opener, "open", side_effect=AssertionError("no probe")):
+            status = client.health_status()
+        self.assertTrue(status["available"])
+        self.assertEqual("configured", status["status"])
+        self.assertEqual("groq", status["provider"])
+
+    def test_q_and_a_never_delegates_routing_to_a_model(self):
+        with patch.object(
+            ExplanationModelClient,
+            "choose_tool",
+            side_effect=AssertionError("model routing is forbidden"),
+        ):
+            answer = answer_question(
+                "Please make a financial decision for me",
+                self.results,
+                use_model=True,
+            )
+        self.assertIn("cannot route", answer)
 
     def test_q_and_a_fallback_is_concise_and_grounded(self):
         exception = next(

@@ -40,7 +40,7 @@ realistic without checking it first.
 | Value | Note |
 |---|---|
 | The specific rates in `RATE_CARD` | Real rate cards are negotiated per merchant, blended or split. These sit inside published ranges but are one plausible card, not the card. The agent must infer effective rates from settlement history, never hardcode these. |
-| Refund rate of 4.5%, dispute rate of 0.8% of card payments | Plausible order of magnitude, not sourced. If a judge asks, say so. |
+| Refund rate of 4.5%, dispute rate of 0.8% of card payments | Plausible order of magnitude, not sourced. Treat as a simulation assumption, not a benchmark. |
 | Method mix (55% UPI, 30% card, 10% netbanking, 5% wallet) | Reflects the general Indian shift toward UPI. Not from a specific dataset. |
 | Premium card share of 15% of credit cards, international share of 3% | Invented. |
 | Tier proportions | Chosen to make the difficulty curve useful, not to mirror a real merchant. This is the biggest single assumption in the project and belongs in the limitations slide. |

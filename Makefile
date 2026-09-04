@@ -12,7 +12,7 @@ help:
 	@echo "  make offline-eval - Run robustness, known replay, and post-freeze holdout"
 	@echo "  make razorpay-sync - Fetch read-only Razorpay Test Mode API snapshot"
 	@echo "  make test      - Run fail-closed invariant tests"
-	@echo "  make qa-eval   - Measure local Qwen tool routing"
+	@echo "  make qa-eval   - Measure optional-model tool-call compatibility"
 	@echo "  make api       - Start the local LangGraph dashboard API"
 	@echo "  make web       - Start the dashboard frontend"
 	@echo "  make web-build - Validate the production frontend build"

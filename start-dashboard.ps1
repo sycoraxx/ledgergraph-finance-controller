@@ -85,6 +85,7 @@ try {
 
     $env:FINCTRL_MODEL_URL = 'http://127.0.0.1:8001/v1'
     $env:FINCTRL_MODEL = 'qwen3.5-4b-q4_k_m'
+    $env:FINCTRL_MODEL_PROVIDER = 'local'
 
     $apiReady = $false
     try {
@@ -99,6 +100,7 @@ try {
             Set-Location -LiteralPath $workingDirectory
             $env:FINCTRL_MODEL_URL = 'http://127.0.0.1:8001/v1'
             $env:FINCTRL_MODEL = 'qwen3.5-4b-q4_k_m'
+            $env:FINCTRL_MODEL_PROVIDER = 'local'
             & $pythonPath -m uvicorn dashboard.api:app --host 127.0.0.1 --port 8000
         } -ArgumentList $pythonExecutable, $projectRoot
         for ($attempt = 0; $attempt -lt 24; $attempt++) {

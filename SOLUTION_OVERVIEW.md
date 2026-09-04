@@ -71,8 +71,10 @@ create a duplicate posting.
 
 ## Where AI helps
 
-The local Qwen model is an explanation assistant. It receives a checked evidence
-object and turns it into a readable answer such as “Why was BNK000015 held?”
+An optional local or hosted language model is an explanation assistant. It
+receives a checked evidence object and turns it into a readable answer such as
+“Why was BNK000015 held?” Deterministic routing and built-in wording remain
+available when no model is configured.
 
 It cannot:
 
@@ -83,8 +85,8 @@ It cannot:
 - post an entry; or
 - move money.
 
-This separation lets a small local model improve usability without becoming a
-financial authority.
+This separation lets a small model improve usability without becoming a
+financial authority or a runtime dependency.
 
 ## What makes the demo credible
 

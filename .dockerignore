@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.venv
+__pycache__
+*.pyc
+*.log
+web/node_modules
+web/.next
+web/dist
+models
+runtime
+logs
+results/*.sqlite*

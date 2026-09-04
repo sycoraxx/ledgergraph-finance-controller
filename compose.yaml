@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      FINCTRL_ALLOWED_ORIGINS: http://localhost:3000
+      FINCTRL_MODEL_PROVIDER: ${FINCTRL_MODEL_PROVIDER:-none}
+      FINCTRL_MODEL_URL: ${FINCTRL_MODEL_URL:-}
+      FINCTRL_MODEL: ${FINCTRL_MODEL:-}
+      FINCTRL_MODEL_API_KEY: ${FINCTRL_MODEL_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET:-}
+    volumes:
+      - ./results:/app/results
+
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"

@@ -9,7 +9,8 @@ from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
-from .model_gateway import LocalModelUnavailable, LocalQwenClient
+from .config import load_project_env
+from .model_gateway import ExplanationModelClient, LocalModelUnavailable
 
 
 TOOLS = [
@@ -288,14 +289,13 @@ def answer_question(
     results_dir: str | Path = "results",
     use_model: bool = True,
 ) -> str:
+    load_project_env()
     results_dir = Path(results_dir)
     store = EvidenceStore(results_dir)
-    client = LocalQwenClient()
-    # Exact identifiers and known finance intents are routed by code. The
-    # model is allowed to route only genuinely open wording, and even then its
-    # call must pass the same strict validator before execution.
+    client = ExplanationModelClient()
+    # Routing stays deterministic. The optional model receives evidence only
+    # after an allowlisted read operation has been selected and executed.
     call = deterministic_route(question)
-    model_error = None
 
     if call is not None:
         append_audit(results_dir, {
@@ -304,39 +304,18 @@ def answer_question(
             "call": call,
         })
 
-    if use_model and call is None:
-        try:
-            proposed = client.choose_tool(question, TOOLS)
-            valid, reason = validate_call(proposed)
-            if valid:
-                call = proposed
-                append_audit(results_dir, {"event": "model_tool_accepted", "question": question, "call": call})
-            else:
-                model_error = reason
-                append_audit(results_dir, {"event": "model_tool_rejected", "question": question, "call": proposed, "reason": reason})
-        except LocalModelUnavailable as exc:
-            model_error = str(exc)
-
     if call is None:
-        call = deterministic_route(question)
-        if call is None:
-            return "I cannot route that question safely. Provide an exact BNK or setl identifier, or ask for metrics or exceptions."
-        append_audit(results_dir, {
-            "event": "deterministic_fallback",
-            "question": question,
-            "call": call,
-            "model_error": model_error,
-        })
+        return "I cannot route that question safely. Provide an exact BNK or setl identifier, or ask for metrics or exceptions."
 
     evidence = store.execute(call)
-    if use_model and model_error is None:
+    if use_model:
         try:
             return client.grounded_answer(question, evidence)
         except LocalModelUnavailable as exc:
             append_audit(results_dir, {"event": "model_answer_failed", "reason": str(exc)})
 
     # Safe fallback: render only values already computed by deterministic code.
-    note = "[Deterministic fallback: local Qwen was unavailable.]\n" if use_model else ""
+    note = "[Deterministic fallback: the optional AI assistant was unavailable.]\n" if use_model else ""
     return note + render_evidence(evidence)
 
 

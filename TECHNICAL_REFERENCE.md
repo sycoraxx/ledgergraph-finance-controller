@@ -12,7 +12,7 @@ plain business language; this page maps that language to the implementation.
 | Possible grouped matches | bounded dynamic-programming subset-sum generation |
 | Whole-batch answer | OR-Tools CP-SAT weighted set-packing model |
 | Extra risk checks | deterministic GraphShield signals in `agent/graph_intelligence.py` |
-| Explanation assistant | local Qwen 3.5 4B GGUF through llama.cpp |
+| Explanation assistant | optional OpenAI-compatible local or hosted model |
 | Web product | Next.js dashboard in `web/` and FastAPI in `dashboard/` |
 
 ## Reconciliation guarantees
@@ -32,10 +32,12 @@ caps, which are reported as review states rather than silently accepted results.
 
 ## AI boundary
 
-Qwen is accessed through `agent/model_gateway.py`. It receives only retrieved,
-read-only evidence. Reconciliation, risk decisions, amounts, journal construction,
-approval, and posting do not depend on model output. The API probes the observed
-model health, and the UI clearly reports GPU availability or deterministic fallback.
+The optional model is accessed through `agent/model_gateway.py`. Question routing
+is deterministic; the model receives only retrieved, read-only evidence after
+the allowlisted lookup. Reconciliation, risk decisions, amounts, journal
+construction, approval, and posting do not depend on model output. Local Qwen,
+Groq, Gemini, and generic OpenAI-compatible endpoints are supported. The UI
+reports AI explanations or built-in deterministic mode without exposing secrets.
 
 ## Evaluation layers
 
@@ -52,12 +54,13 @@ fraud validation.
 
 ## Key commands
 
-```powershell
+```bash
 python run.py
 python -m eval.suite
 python -m unittest discover -v
 python -m agent.qa "Why was BNK000015 held for review?"
 ```
 
-See [Local setup](LOCAL_SETUP.md) for service commands and
+See the [README](README.md) for setup and service commands,
+[Business operations](BUSINESS_OPERATIONS.md) for the operator runbook, and
 [Data policy](DATA_POLICY.md) for source boundaries.

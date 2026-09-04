@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Finance Controller — Settlement Control Room',
-  description: 'Evidence-first reconciliation with deterministic money logic and gated AI assistance.',
+  title: 'Finance Controller — Reconcile, review, approve',
+  description: 'Explain payouts, review exceptions, and approve balanced journals with deterministic financial controls.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

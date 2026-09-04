@@ -123,7 +123,7 @@ type LedgerGraph = {
 };
 type Overview = {
   generated_at: string | null;
-  runtime: { orchestrator: string; money_engine: string; language_model: string; ledger: string; mode: string; model_available?: boolean; model_status?: string; model_endpoint?: string };
+  runtime: { orchestrator: string; money_engine: string; language_model: string; ledger: string; mode: string; model_available?: boolean; model_status?: string; model_provider?: string };
   headline: { bank_value: string; bank_value_display: string; bank_records: number; bank_entries: number; bank_credits: number; bank_debits: number; bank_debit_value?: string; bank_debit_value_display?: string; orders: number; recon_rows: number };
   metrics: Record<string, string | number>;
   tiers: Tier[]; sources: Source[]; stages: Stage[]; exceptions: ExceptionItem[];
@@ -143,7 +143,7 @@ const API = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
 
 const fallback: Overview = {
   generated_at: null,
-  runtime: { orchestrator: 'LangGraph', money_engine: 'Deterministic Python', language_model: 'Qwen 3.5 4B Q4_K_M · HF GGUF', ledger: 'Local sandbox SQLite', mode: 'snapshot' },
+  runtime: { orchestrator: 'LangGraph', money_engine: 'Deterministic Python', language_model: 'Deterministic evidence renderer', ledger: 'Simulation ledger', mode: 'snapshot' },
   headline: { bank_value: '0', bank_value_display: '₹—', bank_records: 75, bank_entries: 87, bank_credits: 79, bank_debits: 8, orders: 2232, recon_rows: 2338 },
   metrics: {
     bank_match_precision: '100.0%', bank_recall_on_resolvable: '100.0%', component_closure_rate: '96.0%',
@@ -193,12 +193,12 @@ function normalizeOverview(value: Partial<Overview>): Overview {
 }
 
 const tabs = [
-  { id: 'overview', label: 'Overview', key: '⌁' },
-  { id: 'ledgergraph', label: 'Reconciliation', key: '◇' },
-  { id: 'exceptions', label: 'Exceptions', key: '!' },
-  { id: 'approvals', label: 'Approvals', key: '✓' },
-  { id: 'audit', label: 'Activity', key: '≡' },
-  { id: 'evaluation', label: 'Reliability', key: '◎' },
+  { id: 'overview', label: 'Home', key: '⌁' },
+  { id: 'ledgergraph', label: 'Match', key: '◇' },
+  { id: 'exceptions', label: 'Review', key: '!' },
+  { id: 'approvals', label: 'Approve', key: '✓' },
+  { id: 'audit', label: 'History', key: '≡' },
+  { id: 'evaluation', label: 'Controls', key: '◎' },
 ] as const;
 const topologyScenarioIds = ['topology:1:1', 'topology:1:N', 'topology:N:1', 'topology:N:M'] as const;
 type Tab = typeof tabs[number]['id'];
@@ -220,7 +220,7 @@ function stageNote(note: string): string {
   const friendly: Record<string, string> = {
     'LedgerGraph global solve': 'Find one complete, conflict-free answer',
     'Metrics + honest misses': 'Measure correct answers and visible misses',
-    'Human-only sandbox gate': 'Wait for a person before recording',
+    'Human-only recording gate': 'Wait for a person before recording',
   };
   return friendly[note] || note;
 }
@@ -292,7 +292,13 @@ export default function Home() {
       })
       .catch(error => {
         if (error instanceof DOMException && error.name === 'AbortError') return;
-        setConnection('snapshot');
+        void fetch('/demo-overview.json', { cache: 'no-store' })
+          .then(response => {
+            if (!response.ok) throw new Error('sample snapshot unavailable');
+            return response.json() as Promise<Partial<Overview>>;
+          })
+          .then(overview => setData(normalizeOverview(overview)))
+          .finally(() => setConnection('snapshot'));
       });
     return () => controller.abort();
   }, []);
@@ -389,7 +395,7 @@ export default function Home() {
           <span className="authorityIcon">◆</span><div><strong>Safe by design</strong><p>AI explains the evidence. Code handles money. A person approves.</p></div>
         </div>
         <div className="runtimeStack">
-          <span>System status</span><strong>{connection === 'live' ? 'Ready' : 'Offline snapshot'}</strong><small>Money checks: deterministic</small><small>Assistant: {data.runtime.model_available ? 'local Qwen ready' : 'safe fallback'}</small>
+          <span>System status</span><strong>{connection === 'live' ? 'Ready' : 'Offline snapshot'}</strong><small>Money checks: deterministic</small><small>Explanations: {data.runtime.model_available ? 'AI enabled' : 'built-in safe mode'}</small>
         </div>
       </aside>
 
@@ -403,10 +409,10 @@ export default function Home() {
           {tab === 'overview' && <>
             <section className="hero">
               <div><p className="eyebrow">Your daily settlement check</p><h1>Know where every payout went.<br /><span>Review only what needs you.</span></h1><p className="lede">Finance Controller compares Razorpay settlements, bank entries, and your cashbook—then prepares safe journal entries for a person to approve.</p></div>
-              <div className="batchStamp"><span>Simulation-only batch</span><strong>{data.headline.bank_entries} entries</strong><small>{data.risk_findings.length} dubious · {data.approval_summary.total} safe proposals · 0 auto-posted</small><small>Extracted {timestamp(data.provenance.extracted_at_utc)}</small></div>
+              <div className="batchStamp"><span>Simulation-only batch</span><strong>{data.headline.bank_entries} entries</strong><small>{data.risk_findings.length} need review · {data.approval_summary.total} proposals · 0 auto-posted</small><small>Extracted {timestamp(data.provenance.extracted_at_utc)}</small></div>
             </section>
 
-            <section className="judgeThesis">
+            <section className="productSummary">
               <strong>The problem</strong><p>One bank payout can contain many payments, fees, refunds, and adjustments. Comparing three exports by hand is slow and easy to get wrong.</p>
               <strong>The solution</strong><p>The controller finds the complete explanation, shows uncertain items with their source rows, and waits for human approval before recording anything.</p>
             </section>
@@ -415,7 +421,7 @@ export default function Home() {
               <article><span>Extraction timestamp</span><strong>{timestamp(data.provenance.extracted_at_utc)}</strong><small>{data.provenance.dataset_id || 'Synthetic source bundle'}</small></article>
               <article><span>Data coverage window</span><strong>{data.provenance.coverage_start || '—'} → {data.provenance.coverage_end || '—'}</strong><small>Timezone: {data.provenance.timezone || 'UTC'}</small></article>
               <article><span>Pipeline completed</span><strong>{timestamp(data.provenance.run_completed_at_utc || data.generated_at)}</strong><small>Started {timestamp(data.provenance.run_started_at_utc)}</small></article>
-              <article><span>Latest reliability test</span><strong>{fraudHoldout.recall || '—'} recall</strong><small>{fraudHoldout.false_negatives ?? '—'} new test cases missed · shown honestly</small></article>
+              <article><span>Human decisions waiting</span><strong>{data.approval_summary.pending}</strong><small>{data.approval_summary.posted} recorded · {data.approval_summary.rejected} rejected</small></article>
             </section>
 
             <section className="stageRail" aria-label="Pipeline stages">
@@ -423,12 +429,6 @@ export default function Home() {
             </section>
 
             <section className="metricGrid">{metricCards.map(([label, value, note, tone]) => <article key={label} className={tone === 'mint' ? 'metricMint' : ''}><span>{label}</span><strong>{value}</strong><small>{note}</small></article>)}</section>
-
-            <section className="realityPanel" aria-label="Synthetic scenario realism legend">
-              <div className="realityIntro"><div><span className="kicker">About this demo data</span><h2>Realistic situations, simulated money.</h2></div><p>The batch covers normal payouts, timing differences, missing references, refunds, fees, duplicate records, and suspicious credits and debits. Counts show test coverage, not how often these events happen in real life.</p></div>
-              <div className="realityGrid">{data.scenario_catalog.categories.map(category => <article key={category.id}><span className={`scenarioBadge scenario-${category.id}`}>{category.short_label}</span><p>{category.description}</p><small>{category.examples.join(' · ')}</small></article>)}</div>
-              <div className="realitySources"><strong>Realism basis:</strong><span>official settlement/report mechanics plus explicitly synthetic cross-system and ERP stress cases.</span>{(data.scenario_catalog.references || []).map(reference => <a key={reference.url} href={reference.url} target="_blank" rel="noreferrer">{reference.label} ↗</a>)}</div>
-            </section>
 
             <section className="overviewGrid">
               <article className="panel tierPanel">
@@ -444,12 +444,12 @@ export default function Home() {
               </article>
 
               <article className="panel reviewPanel">
-                <div className="panelHead"><div><span className="kicker">Needs attention</span><h2>{data.risk_findings.length} dubious entries</h2></div><button className="textButton" onClick={() => setTab('exceptions')}>Open queue →</button></div>
-                <div className="reviewList">{data.risk_findings.slice(0, 4).map(item => <button key={item.bank_txn_id} onClick={() => setSelectedRisk(item)}><span className="warningDot">!</span><div><strong>{item.bank_txn_id} · {item.direction}</strong><small>{item.risk_title}</small><ScenarioBadge context={item.scenario_context} /></div><b>{item.amount_display}</b></button>)}{!data.risk_findings.length && <p className="empty">No dubious bank entries were detected.</p>}</div>
+                <div className="panelHead"><div><span className="kicker">Needs attention</span><h2>{data.risk_findings.length} entries need review</h2></div><button className="textButton" onClick={() => setTab('exceptions')}>Open queue →</button></div>
+                <div className="reviewList">{data.risk_findings.slice(0, 4).map(item => <button key={item.bank_txn_id} onClick={() => setSelectedRisk(item)}><span className="warningDot">!</span><div><strong>{item.bank_txn_id} · {item.direction}</strong><small>{item.risk_title}</small><ScenarioBadge context={item.scenario_context} /></div><b>{item.amount_display}</b></button>)}{!data.risk_findings.length && <p className="empty">No bank entries require review.</p>}</div>
               </article>
 
               <article className="panel evidencePanel">
-                <div className="panelHead"><div><span className="kicker">Ask about a result</span><h2>Get a plain-language answer with sources</h2></div><label className={`modelToggle ${data.runtime.model_available ? 'modelReady' : 'modelOffline'}`}><input type="checkbox" checked={useModel} onChange={event => setUseModel(event.target.checked)} /><span />{data.runtime.model_available ? 'Local assistant ready · GPU' : 'Assistant offline · safe fallback'}</label></div>
+                <div className="panelHead"><div><span className="kicker">Ask about a result</span><h2>Get a plain-language answer with sources</h2></div><label className={`modelToggle ${data.runtime.model_available ? 'modelReady' : 'modelOffline'}`}><input type="checkbox" checked={useModel} onChange={event => setUseModel(event.target.checked)} /><span />{data.runtime.model_available ? 'AI explanations on' : 'Built-in explanations'}</label></div>
                 <form onSubmit={ask} className="askForm"><input value={question} onChange={event => setQuestion(event.target.value)} aria-label="Ask a settlement question" /><button disabled={asking || connection !== 'live'}>{asking ? 'Checking…' : 'Ask'} <span>↗</span></button></form>
                 <div className={`answer ${answer ? 'hasAnswer' : ''}`}>{answer || <><span className="answerMark">i</span><p>The assistant can only read results already produced by the controller. Every answer can point back to the original source rows.</p></>}</div>
                 <div className="suggestions"><button onClick={() => setQuestion('List the unresolved exceptions')}>Unresolved exceptions</button><button onClick={() => setQuestion('Show the measured precision and recall')}>Measured performance</button></div>
@@ -459,7 +459,7 @@ export default function Home() {
                 <div className="panelHead"><div><span className="kicker">Provenance</span><h2>Source manifest</h2></div><span className="proofTag">SHA-256</span></div>
                 <div className={`apiFeedCard ${data.razorpay_feed.configured ? 'configured' : ''}`}>
                   <div><span className="feedDot" /><div><strong>Razorpay Test API · read only</strong><small>{data.razorpay_feed.configured ? `Credential ${data.razorpay_feed.key_id_hint || 'configured'}` : 'Credentials not configured'}</small></div></div>
-                  <button onClick={syncRazorpay} disabled={busy}>{busy ? 'Syncing…' : 'Sync API feed'}</button>
+                  <button onClick={syncRazorpay} disabled={busy || connection !== 'live'}>{busy ? 'Syncing…' : connection === 'live' ? 'Sync API feed' : 'API required'}</button>
                   <p>{data.razorpay_feed.last_sync ? `Last extracted ${timestamp(data.razorpay_feed.last_sync.extracted_at_utc)} · ${Object.values(data.razorpay_feed.last_sync.counts || {}).reduce((sum, value) => sum + value, 0)} simulated records` : 'Uses Razorpay’s hosted Test Mode API and official schemas. All entities and money are simulated.'}</p>
                   <p className="feedBoundary">Simulation-only policy: live keys, real bank exports, real ERP records, and money-moving endpoints are prohibited.</p>
                   {feedMessage && <p className="feedMessage">{feedMessage}</p>}
@@ -541,7 +541,16 @@ export default function Home() {
           </section>}
 
           {tab === 'evaluation' && <section className="pageSection evaluationPage">
-            <div className="pageHead"><div><p className="eyebrow">Reliability</p><h1>What works, what was tested, and what still fails.</h1><p>We separate familiar checks from genuinely new fraud patterns. That keeps a perfect score on known rules from being mistaken for real-world fraud performance.</p></div><div className="summaryChip challengeChip"><span>New fraud-pattern test</span><strong>{fraudHoldout.recall || '—'} recall</strong><small>{fraudHoldout.false_negatives ?? '—'} misses kept visible · {fraudHoldout.specificity || '—'} clean-entry accuracy</small></div></div>
+            <div className="pageHead"><div><p className="eyebrow">Controls and testing</p><h1>Know what the system can—and cannot—do.</h1><p>Operational controls, data lineage, test results, and known blind spots live here so the daily workflow stays simple.</p></div><div className="summaryChip challengeChip"><span>New fraud-pattern test</span><strong>{fraudHoldout.recall || '—'} recall</strong><small>{fraudHoldout.false_negatives ?? '—'} misses kept visible · {fraudHoldout.specificity || '—'} clean-entry accuracy</small></div></div>
+
+            <details className="controlDisclosure">
+              <summary><span>Data coverage and realism</span><small>Realistic situations, simulated money</small></summary>
+              <section className="realityPanel" aria-label="Synthetic scenario realism legend">
+                <div className="realityIntro"><div><span className="kicker">About this data</span><h2>Realistic situations, simulated money.</h2></div><p>The batch covers normal payouts, timing differences, missing references, refunds, fees, duplicate records, and suspicious credits and debits. Counts show test coverage, not production frequency.</p></div>
+                <div className="realityGrid">{data.scenario_catalog.categories.map(category => <article key={category.id}><span className={`scenarioBadge scenario-${category.id}`}>{category.short_label}</span><p>{category.description}</p><small>{category.examples.join(' · ')}</small></article>)}</div>
+                <div className="realitySources"><strong>Realism basis:</strong><span>official settlement/report mechanics plus explicitly synthetic cross-system and ERP stress cases.</span>{(data.scenario_catalog.references || []).map(reference => <a key={reference.url} href={reference.url} target="_blank" rel="noreferrer">{reference.label} ↗</a>)}</div>
+              </section>
+            </details>
 
             <div className="evaluationDefinitions">
               <article><span>Known rules</span><strong>“Did the controller perform the checks we wrote?”</strong><p>These tests cover declared situations such as duplicates, missing references, timing shifts, and unsupported adjustments. A perfect score here means the rules work as written.</p></article>
@@ -570,7 +579,7 @@ export default function Home() {
 
             <div className="proofBoundary">
               <article><span className="safeMark">✓</span><div><h2>What this proves</h2><ul><li>Every declared money rule runs deterministically across a batch.</li><li>Credit and debit findings carry explanations, timestamps and citations.</li><li>Uncertainty stops before automatic posting.</li><li>Performance regressions and known misses are measurable.</li></ul></div></article>
-              <article><span className="limitMark">!</span><div><h2>What this does not prove</h2><ul><li>Production fraud-detection performance.</li><li>Detection of every unknown anomaly family.</li><li>Real bank or ERP connectivity—all financial records are simulated.</li><li>Authority for Qwen to calculate, approve or move money.</li></ul></div></article>
+              <article><span className="limitMark">!</span><div><h2>What this does not prove</h2><ul><li>Production fraud-detection performance.</li><li>Detection of every unknown anomaly family.</li><li>Real bank or ERP connectivity—all financial records are simulated.</li><li>Authority for any language model to calculate, approve, or move money.</li></ul></div></article>
             </div>
 
             <article className="panel tierPanel evaluationTiers">
@@ -606,13 +615,13 @@ export default function Home() {
           <div className="reasonBlock"><span>Transparent score breakdown</span>{selectedGraph.features.map(feature => <div className="featureRow" key={feature.feature}><strong>+{feature.points}</strong><p><b>{eventLabel(feature.feature)}</b>{feature.detail}</p></div>)}</div>
           {selectedGraph.certificate ? <div className="citations"><span>Hard constraints satisfied</span>{selectedGraph.certificate.constraints_satisfied.map(rule => <code key={rule}>✓ {eventLabel(rule)}</code>)}</div> : <div className="citations rejectedRules"><span>Selection blockers</span>{selectedGraph.blockers.map(rule => <code key={rule}>× {eventLabel(rule)}</code>)}</div>}
           {!!selectedGraph.certificate?.rejected_alternatives.length && <div className="alternatives"><span>Nearest rejected alternatives</span>{selectedGraph.certificate.rejected_alternatives.map(item => <div key={item.candidate_id}><strong>{shortId(item.candidate_id)}</strong><small>score {item.evidence_score} · {item.reason}</small></div>)}</div>}
-          <div className="gateNotice"><span>◆</span><p><strong>Authority boundary</strong>The certificate was computed by deterministic code. Qwen may explain it, but cannot change the edge, score, amount, or approval state.</p></div>
+          <div className="gateNotice"><span>◆</span><p><strong>Authority boundary</strong>The certificate was computed by deterministic code. The optional AI may explain it, but cannot change the edge, score, amount, or approval state.</p></div>
         </>}
         {selectedJournal && <>
           <p className="eyebrow">Atomic {selectedJournal.topology || '1:1'} journal proposal</p><h2>{selectedJournal.proposal_id}</h2><div className="drawerMeta"><div><span>Bank group</span><strong>{(selectedJournal.bank_txn_ids || [selectedJournal.bank_txn_id]).join(' + ')}</strong></div><div><span>Settlement group</span><strong>{(selectedJournal.settlement_ids || [selectedJournal.settlement_id]).join(' + ')}</strong></div><div><span>Total value</span><strong>{selectedJournal.display_amount}</strong></div><div><span>Balance check</span><strong className="safeText">✓ Group debit = credit</strong></div></div>
           <div className="journal"><div className="journalHead"><span>Account</span><span>Debit</span><span>Credit</span></div>{selectedJournal.entries.map(entry => <div key={entry.account}><strong>{entry.account}</strong><span>{Number(entry.debit) ? `₹${Number(entry.debit).toLocaleString('en-IN',{minimumFractionDigits:2})}` : '—'}</span><span>{Number(entry.credit) ? `₹${Number(entry.credit).toLocaleString('en-IN',{minimumFractionDigits:2})}` : '—'}</span></div>)}<div className="journalTotal"><strong>Total</strong><span>{selectedJournal.display_amount}</span><span>{selectedJournal.display_amount}</span></div></div>
           <div className="gateNotice"><span>◆</span><p><strong>Human approval required</strong>{selectedJournal.approval.reason}. No financial fields can be edited here.</p></div>
-          {selectedJournal.workflow_status === 'awaiting_human_approval' ? <div className="drawerActions"><button className="rejectButton" onClick={() => decide(selectedJournal, 'reject')} disabled={busy}>Reject</button><button className="approveButton" onClick={() => decide(selectedJournal, 'approve')} disabled={busy}>{busy ? 'Recording…' : 'Approve to sandbox ledger'} <span>→</span></button></div> : <div className="decisionReceipt"><span className={selectedJournal.workflow_status === 'rejected' ? 'badReceipt' : ''}>{selectedJournal.workflow_status === 'rejected' ? '×' : '✓'}</span><div><strong>{eventLabel(selectedJournal.workflow_status)}</strong><small>{selectedJournal.ledger_entry_id || selectedJournal.reviewer || 'Decision recorded'}</small></div></div>}
+          {selectedJournal.workflow_status === 'awaiting_human_approval' ? <div className="drawerActions"><button className="rejectButton" onClick={() => decide(selectedJournal, 'reject')} disabled={busy || connection !== 'live'}>Reject</button><button className="approveButton" onClick={() => decide(selectedJournal, 'approve')} disabled={busy || connection !== 'live'}>{connection !== 'live' ? 'Connect API to decide' : busy ? 'Recording…' : 'Approve to simulation ledger'} <span>→</span></button></div> : <div className="decisionReceipt"><span className={selectedJournal.workflow_status === 'rejected' ? 'badReceipt' : ''}>{selectedJournal.workflow_status === 'rejected' ? '×' : '✓'}</span><div><strong>{eventLabel(selectedJournal.workflow_status)}</strong><small>{selectedJournal.ledger_entry_id || selectedJournal.reviewer || 'Decision recorded'}</small></div></div>}
         </>}
         {selectedRisk && <>
           <p className="eyebrow">Bank-entry review evidence</p><h2>{selectedRisk.bank_txn_id}</h2><div className="exceptionHero"><span>{selectedRisk.direction} under review</span><strong>{selectedRisk.amount_display}</strong><small>{selectedRisk.risk_title}</small></div><div className="drawerMeta"><div><span>Direction</span><strong className={selectedRisk.direction === 'debit' ? 'debitText' : 'creditText'}>{selectedRisk.direction.toUpperCase()}</strong></div><div><span>Priority</span><strong>{selectedRisk.severity.toUpperCase()}</strong></div><div><span>Transaction timestamp</span><strong>{timestamp(selectedRisk.transaction_timestamp_utc)}</strong></div><div><span>Source extracted</span><strong>{timestamp(selectedRisk.source_extracted_at_utc)}</strong></div></div>{selectedRisk.scenario_context && <div className="scenarioEvidence"><div><ScenarioBadge context={selectedRisk.scenario_context} /><strong>{selectedRisk.scenario_context.label}</strong></div><p>{selectedRisk.scenario_context.realism_basis}</p><small><b>Evidence required:</b> {selectedRisk.scenario_context.required_sources.join(' · ')}</small><small><b>What this finding claims:</b> {selectedRisk.scenario_context.claim_boundary}</small></div>}<div className="reasonBlock"><span>Why it was stopped</span><h3>{selectedRisk.reason}</h3></div><div className="evidenceText"><span>What the bank says</span><p>{selectedRisk.observed_text}</p></div><div className="evidenceText"><span>What the other records should show</span><p>{selectedRisk.expected_text}</p></div>

@@ -5,18 +5,18 @@ graph theory, or machine learning terminology.
 
 ## Before recording
 
-1. Run `.\start-dashboard.ps1` and open `http://localhost:3000`.
+1. Run `python scripts/start.py` and open `http://localhost:3000`.
 2. Confirm the top-left status says **Controller ready**.
-3. If available, confirm the assistant says **Local assistant ready · GPU**.
+3. If configured, confirm the assistant says **AI explanations on**.
 4. Keep `BNK000015` in the question box.
-5. Start on **Overview** at 100% browser zoom.
+5. Start on **Home** at 100% browser zoom.
 
-If Qwen is unavailable, continue the recording. The safe fallback returns the
-same checked evidence without conversational rewriting.
+If the optional AI is unavailable, continue the recording. Built-in mode
+returns the same checked evidence without conversational rewriting.
 
 ## 0:00–0:35 — the problem
 
-**Show:** Overview hero and the three-source diagram.
+**Show:** Home hero and the three-source diagram.
 
 **Say:**
 
@@ -39,7 +39,7 @@ batch** only if you want to demonstrate the live pipeline.
 
 ## 1:10–2:15 — why reconciliation is hard
 
-**Click:** **Reconciliation**. Keep **Messy view** selected, then switch to
+**Click:** **Match**. Keep **Messy view** selected, then switch to
 **Accepted view**.
 
 **Say:**
@@ -59,7 +59,7 @@ batch** only if you want to demonstrate the live pipeline.
 
 ## 2:15–3:10 — investigate an exception
 
-**Click:** **Exceptions**, then open `BNK000015`.
+**Click:** **Review**, then open `BNK000015`.
 
 **Say:**
 
@@ -73,18 +73,19 @@ Close the detail panel.
 
 ## 3:10–3:50 — ask the evidence
 
-**Click:** **Overview**. Ask: `Why was BNK000015 held for review?`
+**Click:** **Home**. Ask: `Why was BNK000015 held for review?`
 
 **Say:**
 
-> A local four-billion-parameter Qwen model turns the checked result into a plain
-> answer. It runs on the laptop GPU and receives only read-only evidence. It does
-> not calculate money, choose matches, change journals, or approve anything. If
-> the model is offline, the controller safely returns the same facts directly.
+> The optional AI assistant turns the checked result into a plain answer. It can
+> run through a hosted API or locally, and receives only read-only evidence. It
+> does not route the question, calculate money, choose matches, change journals,
+> or approve anything. If it is offline, the controller returns the same facts
+> directly.
 
 ## 3:50–4:30 — human approval
 
-**Click:** **Approvals**, then open any pending proposal.
+**Click:** **Approve**, then open any pending proposal.
 
 **Say:**
 
@@ -97,7 +98,7 @@ Do not approve during the main take unless you have rehearsed the state change.
 
 ## 4:30–4:55 — honest reliability
 
-**Click:** **Reliability**.
+**Click:** **Controls**.
 
 **Say:**
 
@@ -124,5 +125,5 @@ Do not approve during the main take unless you have rehearsed the state change.
   bank statement and cashbook.
 - **Can it post real money?** No. The connector is read-only Test Mode, and the
   ledger is simulated.
-- **Does it catch every fraud?** No. The Reliability page shows the current
+- **Does it catch every fraud?** No. The Controls page shows the current
   misses on new synthetic fraud patterns.
