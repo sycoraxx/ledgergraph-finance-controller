@@ -40,9 +40,9 @@
       .cardBody{font:400 16px Inter,Segoe UI,Arial,sans-serif;fill:#91a39b}
       .small{font:600 13px ui-monospace,SFMono-Regular,Consolas,monospace;fill:#6f857b}
       .pill{font:800 12px Inter,Segoe UI,Arial,sans-serif;letter-spacing:.7px}
-      .flow{fill:none;stroke:#66877a;stroke-width:2.5;marker-end:url(#arrow)}
-      .flowMint{fill:none;stroke:#9cf7c5;stroke-width:2.5;marker-end:url(#mintArrow)}
-      .soft{fill:none;stroke:#4e685d;stroke-width:2;stroke-dasharray:8 8}
+      .flow{fill:none;stroke:#66877a;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+      .flowMint{fill:none;stroke:#9cf7c5;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mintArrow)}
+      .soft{fill:none;stroke:#4e685d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8 8}
     </style>
   </defs>
 
@@ -95,7 +95,7 @@
   <circle cx="476" cy="495" r="5" fill="#9cf7c5"/>
   <text x="491" y="500" class="pill" fill="#9cf7c5">AUDITABLE INPUT</text>
 
-  <path d="M690 400H738" class="flow"/>
+  <path d="M690 400H730" class="flow"/>
 
   <!-- Candidate mesh -->
   <g filter="url(#shadow)">
@@ -114,7 +114,7 @@
   </g>
   <text x="780" y="558" class="small">1:1  ·  1:N  ·  N:1  ·  N:M</text>
 
-  <path d="M1072 400H1120" class="flow"/>
+  <path d="M1072 400H1112" class="flow"/>
 
   <!-- Solver -->
   <g filter="url(#shadow)">
@@ -129,8 +129,8 @@
   <text x="1183" y="500" class="pill" fill="#9cf7c5">AI CANNOT OVERRIDE</text>
 
   <!-- Split -->
-  <path d="M1410 400H1440V290H1462" class="flowMint"/>
-  <path d="M1440 400V510H1462" class="flow"/>
+  <path d="M1410 400H1438V290H1454" class="flowMint"/>
+  <path d="M1438 400V510H1454" class="flow"/>
 
   <g filter="url(#shadow)">
     <rect x="1470" y="222" width="258" height="134" rx="20" fill="url(#mintCard)" stroke="#47735d"/>
@@ -144,7 +144,7 @@
   <text x="1504" y="551" class="cardBody">ties · gaps · control stops</text>
 
   <!-- Approval lane -->
-  <path d="M1599 356V646H1265" class="flowMint"/>
+  <path d="M1599 356V390H1752V604H1155V614" class="flowMint"/>
   <g filter="url(#shadow)">
     <rect x="1000" y="630" width="310" height="150" rx="22" fill="url(#card)" stroke="#315044"/>
     <rect x="1370" y="630" width="358" height="150" rx="22" fill="url(#mintCard)" stroke="#47735d"/>
@@ -152,14 +152,14 @@
   <text x="1034" y="674" class="step">04 · PREPARE</text>
   <text x="1034" y="714" class="cardTitle">Balanced journal</text>
   <text x="1034" y="746" class="cardBody">A proposal—not a posting</text>
-  <path d="M1310 705H1362" class="flowMint"/>
+  <path d="M1310 705H1354" class="flowMint"/>
   <text x="1404" y="674" class="step">05 · HUMAN GATE</text>
   <text x="1404" y="714" class="cardTitle">Approve or reject</text>
   <text x="1404" y="746" class="cardBody">Then record once in the simulation ledger</text>
 
   <!-- AI / evidence sidecar -->
-  <path d="M900 578V852H944" class="soft"/>
-  <path d="M1549 780V852H1416" class="soft"/>
+  <path d="M900 578V814" class="soft"/>
+  <path d="M1549 780V806H1388V814" class="soft"/>
   <g filter="url(#shadow)">
     <rect x="420" y="830" width="1000" height="146" rx="22" fill="#0b1512" stroke="#426154" stroke-width="2" stroke-dasharray="9 8"/>
   </g>
