@@ -152,6 +152,7 @@ platform.
 | `RAZORPAY_KEY_ID` | empty | Optional `rzp_test_...` key only |
 | `RAZORPAY_KEY_SECRET` | empty | Optional Razorpay Test Mode secret |
 | `NEXT_PUBLIC_API_URL` | `http://127.0.0.1:8000` | Browser-visible API URL; set in the web build environment |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Public web origin used for social-preview metadata |
 
 Never commit `.env`. The repository ignores it, the API never returns provider
 keys, and the Razorpay connector rejects live credentials.

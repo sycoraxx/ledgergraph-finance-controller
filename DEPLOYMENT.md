@@ -53,6 +53,7 @@ Web build:
 
 ```dotenv
 NEXT_PUBLIC_API_URL=https://api.example.com
+NEXT_PUBLIC_SITE_URL=https://finance.example.com
 ```
 
 For hosted explanations, add one provider key as documented in the README. The
